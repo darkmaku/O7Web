@@ -9,7 +9,7 @@ namespace Angkor.O7Web.Interface.Security.Controllers
         [HttpPost]
         public JsonResult GetCompanies(string login, string password)
         {
-            var result = _jsonService.ListCompanies();
+            var result = _jsonService.ListCompanies(login, password);
             return Json(result, JsonRequestBehavior.AllowGet);
         }
 
