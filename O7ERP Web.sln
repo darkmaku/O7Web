@@ -1,0 +1,122 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 Domain Layer", "3 Domain Layer", "{FC3F3D7A-16D4-41C8-A325-60899D72D840}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 Data Layer", "4 Data Layer", "{6643AC51-AC7A-4C5C-9B71-37B9FF7A2E0D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 Common Layer", "5 Common Layer", "{59E21263-D669-4F5E-B6F9-3270B774F75C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6 Libraries", "6 Libraries", "{5861FAF9-D92F-4EFA-B8BA-713CA57DDC9B}"
+	ProjectSection(SolutionItems) = preProject
+		6 Libraries\Angkor.O7Framework.Contract.dll = 6 Libraries\Angkor.O7Framework.Contract.dll
+		6 Libraries\Angkor.O7Framework.Data.dll = 6 Libraries\Angkor.O7Framework.Data.dll
+		6 Libraries\Angkor.O7Framework.Utility.dll = 6 Libraries\Angkor.O7Framework.Utility.dll
+		6 Libraries\Angkor.O7Framework.Web.dll = 6 Libraries\Angkor.O7Framework.Web.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angkor.O7Web.Services.FSolution.Data.Finantial", "4 Data Layer\Angkor.O7Web.Services.FSolution.Data.Finantial\Angkor.O7Web.Services.FSolution.Data.Finantial.csproj", "{DD797697-288B-4A6F-8BAB-227A79E91C39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angkor.O7Web.Services.Core.Data", "4 Data Layer\Angkor.O7Web.Services.Core.Data\Angkor.O7Web.Services.Core.Data.csproj", "{D46EB3DD-F9C6-456C-8833-EC2A2381DA4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angkor.O7Web.Services.Core.Data.Entity", "4 Data Layer\Angkor.O7Web.Services.Core.Data.Entity\Angkor.O7Web.Services.Core.Data.Entity.csproj", "{CDD3CF2B-CDC2-4022-8179-5E7F004D44A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angkor.O7Web.Services.Core.Domain", "3 Domain Layer\Angkor.O7Web.Services.Core.Domain\Angkor.O7Web.Services.Core.Domain.csproj", "{6D725F1F-F314-4EF6-96C5-019F944CC663}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angkor.O7Web.Services.Core.Domain.Security", "3 Domain Layer\Angkor.O7Web.Services.Core.Domain.Security\Angkor.O7Web.Services.Core.Domain.Security.csproj", "{81BD7297-94BD-45C5-8136-1DC654AE0F7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angkor.O7Web.Services.Common.Exception", "5 Common Layer\Angkor.O7Web.Services.Common.Exception\Angkor.O7Web.Services.Common.Exception.csproj", "{F4ECC182-5CD2-4F0C-BCCC-6B12AEF909B5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 Interface Layer", "1 Interface Layer", "{A4EE9752-AADF-4FF4-B52D-F96EA3223054}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angkor.O7Web.Interface.Security.Controller", "1 Interface Layer\Angkor.O7Web.Interface.Security.Controller\Angkor.O7Web.Interface.Security.Controller.csproj", "{AEFDF061-0BBE-4BBF-9A49-B4B40111AAD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angkor.O7Web.Interface.Security", "1 Interface Layer\Angkor.O7Web.Interface.Security\Angkor.O7Web.Interface.Security.csproj", "{4FED13CA-B5E6-43ED-A17F-B2374823E8DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angkor.O7Web.Interface.Security.Model", "1 Interface Layer\Angkor.O7Web.Interface.Security.Model\Angkor.O7Web.Interface.Security.Model.csproj", "{5BA0DC6D-211C-4AF5-845A-DB416FB647CE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 Domain Layer", "2 Domain Layer", "{A8D9B24F-B888-4ED8-8429-61D7A4EBF16A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angkor.O7Web.Security.Domain", "2 Domain Layer\Angkor.O7Web.Security.Domain\Angkor.O7Web.Security.Domain.csproj", "{B843FAD2-0C5B-481A-9C86-F92D849AF7EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angkor.O7Web.Interface.AppStart", "1 Interface Layer\Angkor.O7Web.Interface.AppStart\Angkor.O7Web.Interface.AppStart.csproj", "{ADA3E972-2BF5-44A1-9629-DAD33E5FFBE9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 Data Layer", "3 Data Layer", "{91F74A39-DAFF-44EF-8F47-A37360DC4C15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angkor.O7Web.Security.Data", "3 Data Layer\Angkor.O7Web.Security.Data\Angkor.O7Web.Security.Data.csproj", "{A9A8BEF1-EE78-49BA-9AE1-C56096FA369E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD797697-288B-4A6F-8BAB-227A79E91C39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD797697-288B-4A6F-8BAB-227A79E91C39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD797697-288B-4A6F-8BAB-227A79E91C39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD797697-288B-4A6F-8BAB-227A79E91C39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D46EB3DD-F9C6-456C-8833-EC2A2381DA4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D46EB3DD-F9C6-456C-8833-EC2A2381DA4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D46EB3DD-F9C6-456C-8833-EC2A2381DA4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D46EB3DD-F9C6-456C-8833-EC2A2381DA4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDD3CF2B-CDC2-4022-8179-5E7F004D44A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDD3CF2B-CDC2-4022-8179-5E7F004D44A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDD3CF2B-CDC2-4022-8179-5E7F004D44A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDD3CF2B-CDC2-4022-8179-5E7F004D44A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D725F1F-F314-4EF6-96C5-019F944CC663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D725F1F-F314-4EF6-96C5-019F944CC663}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D725F1F-F314-4EF6-96C5-019F944CC663}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D725F1F-F314-4EF6-96C5-019F944CC663}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81BD7297-94BD-45C5-8136-1DC654AE0F7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81BD7297-94BD-45C5-8136-1DC654AE0F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81BD7297-94BD-45C5-8136-1DC654AE0F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81BD7297-94BD-45C5-8136-1DC654AE0F7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4ECC182-5CD2-4F0C-BCCC-6B12AEF909B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4ECC182-5CD2-4F0C-BCCC-6B12AEF909B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4ECC182-5CD2-4F0C-BCCC-6B12AEF909B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4ECC182-5CD2-4F0C-BCCC-6B12AEF909B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEFDF061-0BBE-4BBF-9A49-B4B40111AAD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEFDF061-0BBE-4BBF-9A49-B4B40111AAD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEFDF061-0BBE-4BBF-9A49-B4B40111AAD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEFDF061-0BBE-4BBF-9A49-B4B40111AAD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FED13CA-B5E6-43ED-A17F-B2374823E8DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FED13CA-B5E6-43ED-A17F-B2374823E8DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FED13CA-B5E6-43ED-A17F-B2374823E8DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FED13CA-B5E6-43ED-A17F-B2374823E8DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BA0DC6D-211C-4AF5-845A-DB416FB647CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BA0DC6D-211C-4AF5-845A-DB416FB647CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BA0DC6D-211C-4AF5-845A-DB416FB647CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BA0DC6D-211C-4AF5-845A-DB416FB647CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B843FAD2-0C5B-481A-9C86-F92D849AF7EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B843FAD2-0C5B-481A-9C86-F92D849AF7EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B843FAD2-0C5B-481A-9C86-F92D849AF7EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B843FAD2-0C5B-481A-9C86-F92D849AF7EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADA3E972-2BF5-44A1-9629-DAD33E5FFBE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADA3E972-2BF5-44A1-9629-DAD33E5FFBE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADA3E972-2BF5-44A1-9629-DAD33E5FFBE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADA3E972-2BF5-44A1-9629-DAD33E5FFBE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9A8BEF1-EE78-49BA-9AE1-C56096FA369E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9A8BEF1-EE78-49BA-9AE1-C56096FA369E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9A8BEF1-EE78-49BA-9AE1-C56096FA369E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9A8BEF1-EE78-49BA-9AE1-C56096FA369E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DD797697-288B-4A6F-8BAB-227A79E91C39} = {6643AC51-AC7A-4C5C-9B71-37B9FF7A2E0D}
+		{D46EB3DD-F9C6-456C-8833-EC2A2381DA4D} = {6643AC51-AC7A-4C5C-9B71-37B9FF7A2E0D}
+		{CDD3CF2B-CDC2-4022-8179-5E7F004D44A2} = {6643AC51-AC7A-4C5C-9B71-37B9FF7A2E0D}
+		{6D725F1F-F314-4EF6-96C5-019F944CC663} = {FC3F3D7A-16D4-41C8-A325-60899D72D840}
+		{81BD7297-94BD-45C5-8136-1DC654AE0F7A} = {FC3F3D7A-16D4-41C8-A325-60899D72D840}
+		{F4ECC182-5CD2-4F0C-BCCC-6B12AEF909B5} = {59E21263-D669-4F5E-B6F9-3270B774F75C}
+		{AEFDF061-0BBE-4BBF-9A49-B4B40111AAD6} = {A4EE9752-AADF-4FF4-B52D-F96EA3223054}
+		{4FED13CA-B5E6-43ED-A17F-B2374823E8DA} = {A4EE9752-AADF-4FF4-B52D-F96EA3223054}
+		{5BA0DC6D-211C-4AF5-845A-DB416FB647CE} = {A4EE9752-AADF-4FF4-B52D-F96EA3223054}
+		{B843FAD2-0C5B-481A-9C86-F92D849AF7EF} = {A8D9B24F-B888-4ED8-8429-61D7A4EBF16A}
+		{ADA3E972-2BF5-44A1-9629-DAD33E5FFBE9} = {A4EE9752-AADF-4FF4-B52D-F96EA3223054}
+		{A9A8BEF1-EE78-49BA-9AE1-C56096FA369E} = {91F74A39-DAFF-44EF-8F47-A37360DC4C15}
+	EndGlobalSection
+EndGlobal
