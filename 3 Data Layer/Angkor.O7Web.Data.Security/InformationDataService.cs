@@ -30,5 +30,16 @@ namespace Angkor.O7Web.Data.Security
                 return DataAccess.ExecuteFunction("SECURITY.BRANCHES_LIST", parameter, new BranchMapper());
             }
         }
+
+        public List<Module> ListModules(string companyId, string branchId)
+        {
+            using (DataAccess = new O7DataAccess(DatabaseConnection))
+            {
+                var parameter = new O7Parameter();
+                parameter.Add("COMPANY", companyId);
+                parameter.Add("BRANCH", branchId);
+                return DataAccess.ExecuteFunction("SECURITY.MODULES_INSTALLED", parameter, new ModuleMapper());
+            }
+        }
     }
 }

@@ -44,6 +44,10 @@
     <Compile Include="SecurityWebDomain.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\1 Interface Layer\Angkor.O7Web.Interface.Security.Model\Angkor.O7Web.Interface.Security.Model.csproj">
+      <Project>{5BA0DC6D-211C-4AF5-845A-DB416FB647CE}</Project>
+      <Name>Angkor.O7Web.Interface.Security.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\3 Data Layer\Angkor.O7Web.Data.Security\Angkor.O7Web.Data.Security.csproj">
       <Project>{9F7124F8-DD4A-4A72-859B-EF6C643A9507}</Project>
       <Name>Angkor.O7Web.Data.Security</Name>

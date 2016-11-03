@@ -34,12 +34,12 @@
       <HintPath>..\..\6 Libraries\Angkor.O7Framework.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="InformationDataService.cs" />
     <Compile Include="Mapper\BranchMapper.cs" />
     <Compile Include="Mapper\CompanyMapper.cs" />
+    <Compile Include="Mapper\ModuleMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

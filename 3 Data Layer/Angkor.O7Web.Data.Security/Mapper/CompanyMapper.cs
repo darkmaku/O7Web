@@ -7,12 +7,8 @@ namespace Angkor.O7Web.Data.Security.Mapper
 {
     public class CompanyMapper : O7Mapper<Company>
     {
-        public override Company Map()
-        {
-            var result = new Company();
-            result.Id = O7Row.GetValue<string>(0);
-            result.Description = O7Row.GetValue<string>(1);
-            return result;
-        }
+        public override Company Map() 
+            => new Company { Id = O7Row.GetValue<string>(0), Description = O7Row.GetValue<string>(1) };            
+        
     }
 }

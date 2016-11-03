@@ -21,6 +21,7 @@ namespace Angkor.O7Web.Interface.Security.Controllers
 
         public ActionResult SwitchModule()
         {
+
             return View();
         }
     }

@@ -30,13 +30,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Angkor.O7Framework.Data">
+      <HintPath>..\..\6 Libraries\Angkor.O7Framework.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Branch.cs" />
-    <Compile Include="Company.cs" />
     <Compile Include="LogInViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SwitchModuleViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\4 Common Layer\Angkor.O7Web.Common.Security.Entity\Angkor.O7Web.Common.Security.Entity.csproj">
+      <Project>{3BCC6CB0-D276-4770-BE89-F70826BE9F7D}</Project>
+      <Name>Angkor.O7Web.Common.Security.Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
