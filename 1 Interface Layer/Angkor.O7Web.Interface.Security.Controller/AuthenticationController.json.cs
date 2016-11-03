@@ -11,7 +11,7 @@ namespace Angkor.O7Web.Interface.Security.Controllers
         public JsonResult GetCompanies(string login, string password)
         {
             var result = SecurityJsonDomain.ListCompanies(login, password);
-            return Json(result, JsonRequestBehavior.AllowGet);
+            return Json(result, JsonRequestBehavior.AllowGet);            
         }
 
         [HttpPost]

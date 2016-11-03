@@ -54,10 +54,6 @@
       <Project>{F4793CCD-CFB9-4AFE-A223-4F181C247B88}</Project>
       <Name>Angkor.O7Web.Domain.Security</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\2 Domain Layer\Angkor.O7Web.Security.Domain\Angkor.O7Web.Security.Domain.csproj">
-      <Project>{B843FAD2-0C5B-481A-9C86-F92D849AF7EF}</Project>
-      <Name>Angkor.O7Web.Security.Domain</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Angkor.O7Web.Interface.Security.Model\Angkor.O7Web.Interface.Security.Model.csproj">
       <Project>{5BA0DC6D-211C-4AF5-845A-DB416FB647CE}</Project>
       <Name>Angkor.O7Web.Interface.Security.Model</Name>

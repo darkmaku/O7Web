@@ -5,9 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>O7ERP | Administración</title>
-
     <link href="/Resources/css/bootstrap.min.css" rel="stylesheet">
     <link href="/Resources/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="/Resources/css/plugins/chosen/bootstrap-chosen.css" rel="stylesheet">
@@ -17,57 +15,113 @@
 
 <body class="gray-bg">
 
-    <div class="middle-box text-center loginscreen animated fadeInDown">
+<div class="middle-box text-center loginscreen animated fadeInDown">
+    <div>
         <div>
-            <div>
-                <h1 class="logo-name">O7</h1>
-            </div>
-            <h3>Bienvenido al O7ERP</h3>
-            <p>Versión web 1.0</p>    
-            @using (Html.BeginForm("LogIn", "Authentication", FormMethod.Post, new {@class = "m-t", @role = "form"})) {                
-                <div class="form-group">
-                    @Html.TextBoxFor(model => model.Login, new {@class = "form-control", @placeholder = "Usuario", @required = ""})
-                </div>                
-                <div class="input-group form-group">
-                    @Html.PasswordFor(model => model.Password, new { @class = "form-control", @placeholder = "Contraseña", @required = "" })                    
-                    <span class="input-group-addon" id="validate-user" style="cursor: pointer;"><span class="fa fa-angle-right"></span></span>
-                </div>
-                <div class="form-group" style="text-align: left;">
-                    <select id="Companies" data-placeholder="Elige Compañia" class="chosen-select" disabled="disabled" tabindex="2"></select>
-                </div>
-                <div class="form-group" style="text-align: left;">
-                    <select id="Branches" data-placeholder="Elige Sucursal" class="chosen-select" disabled="disabled" tabindex="2"></select>
-                </div>
-                <button type="submit" class="btn btn-primary block full-width m-b disabled">Ingresar</button>
-                <a href="#"><small>¿Olvidaste la contraseña?</small></a>
-            }
-            <p class="m-t"><small>Desarrollado por AngkorGroup S.A.C &copy; 2016 - @DateTime.Now.Year</small> </p>
+            <h1 class="logo-name">O7</h1>
         </div>
+        <h3>Bienvenido al O7ERP</h3>
+        <p>Versión web 1.0</p>
+        @using (Html.BeginForm("LogIn", "Authentication", FormMethod.Post, new {@class = "m-t", @role = "form"})) {
+            <div class="form-group">
+                @Html.TextBoxFor(model => model.Login, new {@class = "form-control", @placeholder = "Usuario", @required = ""})
+            </div>
+            <div class="input-group form-group">
+                @Html.PasswordFor(model => model.Password, new {@class = "form-control", @placeholder = "Contraseña", @required = ""})
+                <span class="input-group-addon" id="validate-user" style="cursor: pointer;"><span class="fa fa-angle-right"></span></span>
+            </div>
+            <div class="form-group" style="text-align: left;">
+                @Html.HiddenFor(model => model.CompanyId)
+                <select id="Companies" data-placeholder="Elige Compañia" class="chosen-select" disabled="true" tabindex="2"></select>
+            </div>
+            <div class="form-group" style="text-align: left;">
+                @Html.HiddenFor(model => model.BranchId)
+                <select id="Branches" data-placeholder="Elige Sucursal" class="chosen-select" disabled="true" tabindex="2"></select>
+            </div>
+            <button id="Sign" type="submit" class="btn btn-primary block full-width m-b" disabled="true">Ingresar</button>
+            <a href="#">
+                <small>¿Olvidaste la contraseña?</small>
+            </a>
+        }
+        <p class="m-t">
+            <small>Desarrollado por AngkorGroup S.A.C &copy; 2016 - @DateTime.Now.Year</small>
+        </p>
     </div>
+</div>
 
-    <!-- Mainly scripts -->
-    <script src="/Resources/js/jquery-2.1.1.js"></script>
-    <script src="/Resources/js/bootstrap.min.js"></script>
-    <script src="/Resources/js/plugins/chosen/chosen.jquery.js"></script>
+<!-- Mainly scripts -->
+<script src="/Resources/js/jquery-2.1.1.js"></script>
+<script src="/Resources/js/bootstrap.min.js"></script>
+<script src="/Resources/js/plugins/chosen/chosen.jquery.js"></script>
 <script type="text/javascript">
         $(document).ready(function () {
             $(".chosen-select").chosen({
                 width: "100%",
                 "disable_search": true
             });
-            
-            $("#validate-user").on("click", function (e) {
-                var username = $("#Login").val();
-                var pass = $("#Password").val();
-                $.ajax({ method: "POST", url: "/Authentication/GetCompanies", data: {login: username,password:pass} })
-                    .done(function (result) {
 
+            $("#validate-user").on("click", function (e) {
+                var txtLogin = $("#Login");
+                var txtPassword = $("#Password");
+                $.ajax({ method: "POST", url: "/Authentication/GetCompanies", data: { login: txtLogin.val(), password: txtPassword.val() } })
+                    .done(function (result) {
+                        var objResult = jQuery.parseJSON(result);
+                        if (!jQuery.isEmptyObject(objResult)) {
+                            txtLogin.attr("disabled", true);
+                            txtPassword.attr("disabled", true);
+                            var sltCompanies = $("#Companies");
+                            sltCompanies.append("<option value='0'>Elige Compañia</option>");
+                            $.each(objResult, function (index, value) {
+                                var descripcion = value.Description;
+                                if ($.trim(descripcion).length <= 0)
+                                    descripcion = "---";
+                                sltCompanies.append("<option value='" + value.Id + "'>" + descripcion + "</option>");
+                            });
+                            sltCompanies.attr("disabled", false);
+                            sltCompanies.children("option[value=0]").hide();
+                            sltCompanies.trigger("chosen:updated");
+                            $("#validate-user").removeAttr("style");
+                            $("#validate-user").off("click");
+                        }
                     })
                     .fail(function (result) {
-
-                    });                
+                        console.log(result);
+                    });
             });
 
+            $("#Companies").on("change", function (evt, params) {                
+                var txtLogin = $("#Login");
+                var txtPassword = $("#Password");
+                var company = params.selected;
+                $.ajax({ method: "POST", url: "/Authentication/GetBranches", data: { login: txtLogin.val(), password: txtPassword.val(), companyId: company } })
+                    .done(function (result) {
+                        var objResult = jQuery.parseJSON(result);
+                        if (!jQuery.isEmptyObject(objResult)) {
+                            var sltBranches = $("#Branches");
+                            sltBranches.find("option").remove().end().append("<option value='0'>Elige Sucursal</option>");
+                            $.each(objResult, function (index, value) {
+                                var descripcion = value.Description;
+                                if ($.trim(descripcion).length <= 0)
+                                    descripcion = "---";
+                                sltBranches.append("<option value='" + value.Id + "'>" + descripcion + "</option>");
+                            });
+                            sltBranches.attr("disabled", false);
+                            sltBranches.children("option[value=0]").hide();
+                            sltBranches.trigger("chosen:updated");
+                            $("#Sign").attr("disabled", true);
+                            $("#CompanyId").val(company);
+                        }
+                    })
+                    .fail(function (result) {
+                        console.log(result);
+                    });
+            });
+
+            $("#Branches").on("change", function (evt, params) {
+                $("#Sign").attr("disabled", false);
+                var branch = params.selected;
+                $("#BranchId").val(branch);
+            });
         });
     </script>
 </body>

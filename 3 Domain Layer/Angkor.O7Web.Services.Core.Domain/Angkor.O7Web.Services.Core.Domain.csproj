@@ -47,18 +47,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\4 Data Layer\Angkor.O7Web.Services.Core.Data.Entity\Angkor.O7Web.Services.Core.Data.Entity.csproj">
-      <Project>{CDD3CF2B-CDC2-4022-8179-5E7F004D44A2}</Project>
-      <Name>Angkor.O7Web.Services.Core.Data.Entity</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\4 Data Layer\Angkor.O7Web.Services.Core.Data\Angkor.O7Web.Services.Core.Data.csproj">
-      <Project>{D46EB3DD-F9C6-456C-8833-EC2A2381DA4D}</Project>
-      <Name>Angkor.O7Web.Services.Core.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\5 Common Layer\Angkor.O7Web.Services.Common.Exception\Angkor.O7Web.Services.Common.Exception.csproj">
-      <Project>{F4ECC182-5CD2-4F0C-BCCC-6B12AEF909B5}</Project>
-      <Name>Angkor.O7Web.Services.Common.Exception</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Angkor.O7Web.Services.Core.Domain.Security\Angkor.O7Web.Services.Core.Domain.Security.csproj">
       <Project>{81BD7297-94BD-45C5-8136-1DC654AE0F7A}</Project>
       <Name>Angkor.O7Web.Services.Core.Domain.Security</Name>

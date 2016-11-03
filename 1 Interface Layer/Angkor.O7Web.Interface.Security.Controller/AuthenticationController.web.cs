@@ -16,14 +16,12 @@ namespace Angkor.O7Web.Interface.Security.Controllers
         [HttpPost]
         public ActionResult LogIn(LogInViewModel model)
         {
-            var contract = _domainService.ValidateUser(model);
-            if (!contract.Success) return View(contract.ViewModel);
-            return RedirectToAction("SwitchModule");
+            return View("SwitchModule");
         }
 
         public ActionResult SwitchModule()
         {
-            return null;
+            return View();
         }
     }
 }

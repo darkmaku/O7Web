@@ -61,10 +61,6 @@
       <Project>{5BA0DC6D-211C-4AF5-845A-DB416FB647CE}</Project>
       <Name>Angkor.O7Web.Interface.Security.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\4 Data Layer\Angkor.O7Web.Services.Core.Data\Angkor.O7Web.Services.Core.Data.csproj">
-      <Project>{D46EB3DD-F9C6-456C-8833-EC2A2381DA4D}</Project>
-      <Name>Angkor.O7Web.Services.Core.Data</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
