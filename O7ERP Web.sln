@@ -45,6 +45,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-1 Security", "3-1 Securit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angkor.O7Web.Domain.Contract", "2 Domain Layer\Angkor.O7Web.Domain.Contract\Angkor.O7Web.Domain.Contract.csproj", "{DA5A8323-3C94-4BCD-AC1F-ABCB397843B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angkor.O7Web.Interface.Resource", "1 Interface Layer\Angkor.O7Web.Interface.Resource\Angkor.O7Web.Interface.Resource.csproj", "{14C6B9CE-D809-4267-BD36-7F5C3A19C1BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{DA5A8323-3C94-4BCD-AC1F-ABCB397843B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA5A8323-3C94-4BCD-AC1F-ABCB397843B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA5A8323-3C94-4BCD-AC1F-ABCB397843B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14C6B9CE-D809-4267-BD36-7F5C3A19C1BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14C6B9CE-D809-4267-BD36-7F5C3A19C1BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14C6B9CE-D809-4267-BD36-7F5C3A19C1BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14C6B9CE-D809-4267-BD36-7F5C3A19C1BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -105,5 +111,6 @@ Global
 		{0DB67B0C-6434-4EF2-8350-D12E5BB530C3} = {91F74A39-DAFF-44EF-8F47-A37360DC4C15}
 		{0249C2FC-A3D0-48B9-A23B-10BAE8E0288F} = {91F74A39-DAFF-44EF-8F47-A37360DC4C15}
 		{DA5A8323-3C94-4BCD-AC1F-ABCB397843B0} = {A8D9B24F-B888-4ED8-8429-61D7A4EBF16A}
+		{14C6B9CE-D809-4267-BD36-7F5C3A19C1BC} = {5DBBB920-9A51-45A2-9A55-0B9BEB99E54C}
 	EndGlobalSection
 EndGlobal
