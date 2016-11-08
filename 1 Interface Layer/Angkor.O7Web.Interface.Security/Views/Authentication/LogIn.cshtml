@@ -6,16 +6,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O7ERP | Administración</title>
-    @*<link href="/Resources/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/Resources/font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="/Resources/css/plugins/chosen/bootstrap-chosen.css" rel="stylesheet">
-    <link href="/Resources/css/animate.css" rel="stylesheet">
-    <link href="/Resources/css/style.css" rel="stylesheet">*@
-    <link href="http://localhost:4697/Resources/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="http://localhost:4697/Resources/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link href="http://localhost:4697/Resources/css/plugins/chosen/bootstrap-chosen.css" rel="stylesheet" />
-    <link href="http://localhost:4697/Resources/css/animate.css" rel="stylesheet" />
-    <link href="http://localhost:4697/Resources/css/style.css" rel="stylesheet" />
+    @Html.StyleLink("css/bootstrap.min.css")
+    @Html.StyleLink("font-awesome/css/font-awesome.css")
+    @Html.StyleLink("css/plugins/chosen/bootstrap-chosen.css")
+    @Html.StyleLink("css/animate.css")
+    @Html.StyleLink("css/style.css")
 </head>
 
 <body class="gray-bg">
@@ -55,13 +50,10 @@
 </div>
 
 <!-- Mainly scripts -->
-@*<script src="/Resources/js/jquery-2.1.1.js"></script>
-<script src="/Resources/js/bootstrap.min.js"></script>
-<script src="/Resources/js/plugins/chosen/chosen.jquery.js"></script>*@
-    <script src="http://localhost:4697/Resources/js/jquery-2.1.1.js"></script>
-    <script src="http://localhost:4697/Resources/js/bootstrap.min.js"></script>
-    <script src="http://localhost:4697/Resources/js/plugins/chosen/chosen.jquery.js"></script>
-<script type="text/javascript">
+    @Html.JavaScriptLink("js/jquery-2.1.1.js")
+    @Html.JavaScriptLink("js/bootstrap.min.js")
+    @Html.JavaScriptLink("js/plugins/chosen/chosen.jquery.js")
+    <script type="text/javascript">
         $(document).ready(function () {
             $(".chosen-select").chosen({
                 width: "100%",

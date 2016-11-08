@@ -1,6 +1,6 @@
 ﻿// Create by Felix A. Bueno
 
-using Angkor.O7Framework.Web;
+using Angkor.O7Framework.Web.Base;
 
 
 namespace Angkor.O7Web.Interface.Security.Controllers
