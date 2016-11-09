@@ -63,7 +63,7 @@
             $("#validate-user").on("click", function (e) {
                 var txtLogin = $("#Login");
                 var txtPassword = $("#Password");
-                $.ajax({ method: "POST", url: "/Authentication/GetCompanies", data: { login: txtLogin.val(), password: txtPassword.val() } })
+                $.ajax({ method: "POST", url: "/Security/Authentication/GetCompanies", data: { login: txtLogin.val(), password: txtPassword.val() } })
                     .done(function (result) {
                         var objResult = jQuery.parseJSON(result);
                         if (!jQuery.isEmptyObject(objResult)) {
@@ -93,7 +93,7 @@
                 var txtLogin = $("#Login");
                 var txtPassword = $("#Password");
                 var company = params.selected;
-                $.ajax({ method: "POST", url: "/Authentication/GetBranches", data: { login: txtLogin.val(), password: txtPassword.val(), companyId: company } })
+                $.ajax({ method: "POST", url: "/Security/Authentication/GetBranches", data: { login: txtLogin.val(), password: txtPassword.val(), companyId: company } })
                     .done(function (result) {
                         var objResult = jQuery.parseJSON(result);
                         if (!jQuery.isEmptyObject(objResult)) {
