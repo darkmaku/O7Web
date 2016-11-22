@@ -1,18 +1,23 @@
 ﻿// Create by Felix A. Bueno
 
 using Angkor.O7Web.Data.Security;
+using Angkor.O7Web.Domain.Contract;
 using Angkor.O7Web.Interface.Security.Model;
 
 namespace Angkor.O7Web.Domain.Security
 {
-    public class SecurityWebDomain
-    {
-        public static SwitchModuleViewModel ListModules(string login, string password, string companyId, string branchId)
+    public class SecurityWebDomain : BaseDomain
+    {           
+        public SecurityWebDomain(string login, string password) : base(login, password)
         {
-            var dataService = new InformationDataService(login, password);
-            var result = new SwitchModuleViewModel();
-            result.Modules = dataService.ListModules(companyId, branchId);
-            return result;
+        }
+
+        public ListModulesContract ListModules(string companyId, string branchId)
+        {
+            var dataService = new InformationDataService(Login, Password);            
+            var contract = new ListModulesContract();
+            contract.Modules = dataService.ListModules(companyId, branchId);
+            return contract;
         }
     }
 }

@@ -10,15 +10,17 @@ namespace Angkor.O7Web.Interface.Security.Controllers
         [HttpPost]
         public JsonResult GetCompanies(string login, string password)
         {
-            var result = SecurityJsonDomain.ListCompanies(login, password);
-            return Json(result, JsonRequestBehavior.AllowGet);            
+            string companies;
+            using (var domain = new SecurityJsonDomain(login, password)) companies = domain.ListCompanies();
+            return Json(companies, JsonRequestBehavior.AllowGet);
         }
 
         [HttpPost]
         public JsonResult GetBranches(string login, string password, string companyId)
         {
-            var result = SecurityJsonDomain.ListBranches(login, password, companyId);
-            return Json(result, JsonRequestBehavior.AllowGet);
+            string branches;
+            using (var domain = new SecurityJsonDomain(login, password)) branches = domain.ListBranches(companyId);
+            return Json(branches, JsonRequestBehavior.AllowGet);
         }
     }
 }

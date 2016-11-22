@@ -30,6 +30,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Angkor.O7Framework.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\6 Libraries\Angkor.O7Framework.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Angkor.O7Framework.Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\6 Libraries\Angkor.O7Framework.Utility.dll</HintPath>
+    </Reference>
     <Reference Include="Angkor.O7Framework.Web">
       <HintPath>..\..\6 Libraries\Angkor.O7Framework.Web.dll</HintPath>
     </Reference>
@@ -50,9 +58,25 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\2 Domain Layer\Angkor.O7Web.Domain.Contract\Angkor.O7Web.Domain.Contract.csproj">
+      <Project>{DA5A8323-3C94-4BCD-AC1F-ABCB397843B0}</Project>
+      <Name>Angkor.O7Web.Domain.Contract</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\2 Domain Layer\Angkor.O7Web.Domain.Security\Angkor.O7Web.Domain.Security.csproj">
       <Project>{F4793CCD-CFB9-4AFE-A223-4F181C247B88}</Project>
       <Name>Angkor.O7Web.Domain.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\2 Domain Layer\Angkor.O7Web.Domain\Angkor.O7Web.Domain.csproj">
+      <Project>{595A2C1E-9768-4412-8A89-FA031AD0904B}</Project>
+      <Name>Angkor.O7Web.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\4 Common Layer\Angkor.O7Web.Common.Security.Entity\Angkor.O7Web.Common.Security.Entity.csproj">
+      <Project>{3BCC6CB0-D276-4770-BE89-F70826BE9F7D}</Project>
+      <Name>Angkor.O7Web.Common.Security.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\4 Common Layer\Angkor.O7Web.Common.Utility\Angkor.O7Web.Common.Utility.csproj">
+      <Project>{8B44343C-AB45-46B6-9310-AA21152D8268}</Project>
+      <Name>Angkor.O7Web.Common.Utility</Name>
     </ProjectReference>
     <ProjectReference Include="..\Angkor.O7Web.Interface.Security.Model\Angkor.O7Web.Interface.Security.Model.csproj">
       <Project>{5BA0DC6D-211C-4AF5-845A-DB416FB647CE}</Project>

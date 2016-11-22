@@ -1,5 +1,4 @@
 ﻿@model Angkor.O7Web.Interface.Security.Model.LogInViewModel
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,8 +8,14 @@
     @Html.StyleLink("css/bootstrap.min.css")
     @Html.StyleLink("font-awesome/css/font-awesome.css")
     @Html.StyleLink("css/plugins/chosen/bootstrap-chosen.css")
+    @Html.StyleLink("css/plugins/toastr/toastr.min.css")
     @Html.StyleLink("css/animate.css")
     @Html.StyleLink("css/style.css")
+    <style>
+        #toast-container > .toast-warning:before {
+            content: "\f071";
+        }
+    </style>
 </head>
 
 <body class="gray-bg">
@@ -42,7 +47,7 @@
             <a href="#">
                 <small>¿Olvidaste la contraseña?</small>
             </a>
-        }
+        }                
         <p class="m-t">
             <small>Desarrollado por AngkorGroup S.A.C &copy; 2016 - @DateTime.Now.Year</small>
         </p>
@@ -53,75 +58,82 @@
     @Html.JavaScriptLink("js/jquery-2.1.1.js")
     @Html.JavaScriptLink("js/bootstrap.min.js")
     @Html.JavaScriptLink("js/plugins/chosen/chosen.jquery.js")
+    @Html.JavaScriptLink("js/plugins/toastr/toastr.min.js")
     <script type="text/javascript">
         $(document).ready(function () {
+            @if (HttpContext.Current.Request.HttpMethod == "POST")
+            {
+                var messageResult = Model.ErrorMessages.Aggregate("", (current, message) => current + message + ", ");
+                @:toastr.warning('@messageResult', 'Error de validación', { positionClass: "toast-top-full-width" });
+            }
+
             $(".chosen-select").chosen({
-                width: "100%",
-                "disable_search": true
-            });
+            width: "100%",
+            "disable_search": true
+        });
 
-            $("#validate-user").on("click", function (e) {
-                var txtLogin = $("#Login");
-                var txtPassword = $("#Password");
-                $.ajax({ method: "POST", url: "/Security/Authentication/GetCompanies", data: { login: txtLogin.val(), password: txtPassword.val() } })
-                    .done(function (result) {
-                        var objResult = jQuery.parseJSON(result);
-                        if (!jQuery.isEmptyObject(objResult)) {
-                            txtLogin.attr("disabled", true);
-                            txtPassword.attr("disabled", true);
-                            var sltCompanies = $("#Companies");
-                            sltCompanies.append("<option value='0'>Elige Compañia</option>");
-                            $.each(objResult, function (index, value) {
-                                var descripcion = value.Description;
-                                if ($.trim(descripcion).length <= 0)
-                                    descripcion = "---";
-                                sltCompanies.append("<option value='" + value.Id + "'>" + descripcion + "</option>");
-                            });
-                            sltCompanies.attr("disabled", false);
-                            sltCompanies.children("option[value=0]").hide();
-                            sltCompanies.trigger("chosen:updated");
-                            $("#validate-user").removeAttr("style");
-                            $("#validate-user").off("click");
-                        }
-                    })
-                    .fail(function (result) {
-                        console.log(result);
-                    });
-            });
+        $("#validate-user").on("click", function (e) {
+            var txtLogin = $("#Login");
+            var txtPassword = $("#Password");
+            $.ajax({ method: "POST", url: "/Security/Authentication/GetCompanies", data: { login: txtLogin.val(), password: txtPassword.val() } })
+                .done(function (result) {
+                    var objResult = jQuery.parseJSON(result);
+                    if (!jQuery.isEmptyObject(objResult)) {
+                        txtLogin.attr("readonly", "readonly");
+                        txtPassword.attr("readonly", "readonly");
+                        var sltCompanies = $("#Companies");
+                        sltCompanies.append("<option value='0'>Elige Compañia</option>");
+                        $.each(objResult, function (index, value) {
+                            var descripcion = value.Description;
+                            if ($.trim(descripcion).length <= 0)
+                                descripcion = "---";
+                            sltCompanies.append("<option value='" + value.Id + "'>" + descripcion + "</option>");
+                        });
+                        sltCompanies.attr("disabled", false);
+                        sltCompanies.children("option[value=0]").hide();
+                        sltCompanies.trigger("chosen:updated");
+                        $("#validate-user").removeAttr("style");
+                        $("#validate-user").off("click");
+                    }
+                })
+                .fail(function (result) {
+                    console.log(result);
+                });
+        });
 
-            $("#Companies").on("change", function (evt, params) {                
-                var txtLogin = $("#Login");
-                var txtPassword = $("#Password");
-                var company = params.selected;
-                $.ajax({ method: "POST", url: "/Security/Authentication/GetBranches", data: { login: txtLogin.val(), password: txtPassword.val(), companyId: company } })
-                    .done(function (result) {
-                        var objResult = jQuery.parseJSON(result);
-                        if (!jQuery.isEmptyObject(objResult)) {
-                            var sltBranches = $("#Branches");
-                            sltBranches.find("option").remove().end().append("<option value='0'>Elige Sucursal</option>");
-                            $.each(objResult, function (index, value) {
-                                var descripcion = value.Description;
-                                if ($.trim(descripcion).length <= 0)
-                                    descripcion = "---";
-                                sltBranches.append("<option value='" + value.Id + "'>" + descripcion + "</option>");
-                            });
-                            sltBranches.attr("disabled", false);
-                            sltBranches.children("option[value=0]").hide();
-                            sltBranches.trigger("chosen:updated");
-                            $("#Sign").attr("disabled", true);
-                            $("#CompanyId").val(company);
-                        }
-                    })
-                    .fail(function (result) {
-                        console.log(result);
-                    });
-            });
+        $("#Companies").on("change", function (evt, params) {
+            var txtLogin = $("#Login");
+            var txtPassword = $("#Password");
+            var company = params.selected;
+            $.ajax({ method: "POST", url: "/Security/Authentication/GetBranches", data: { login: txtLogin.val(), password: txtPassword.val(), companyId: company } })
+                .done(function (result) {
+                    var objResult = jQuery.parseJSON(result);
+                    if (!jQuery.isEmptyObject(objResult)) {
+                        var sltBranches = $("#Branches");
+                        sltBranches.find("option").remove().end().append("<option value='0'>Elige Sucursal</option>");
+                        $.each(objResult, function (index, value) {
+                            var descripcion = value.Description;
+                            if ($.trim(descripcion).length <= 0)
+                                descripcion = "---";
+                            sltBranches.append("<option value='" + value.Id + "'>" + descripcion + "</option>");
+                        });
+                        sltBranches.attr("disabled", false);
+                        sltBranches.children("option[value=0]").hide();
+                        sltBranches.trigger("chosen:updated");
+                        $("#Sign").attr("disabled", true);
+                        $("#CompanyId").val(company);
+                    }
+                })
+                .fail(function (result) {
+                    console.log(result);
+                });
+        });
 
-            $("#Branches").on("change", function (evt, params) {
-                $("#Sign").attr("disabled", false);
-                var branch = params.selected;
-                $("#BranchId").val(branch);
-            });
+        $("#Branches").on("change", function (evt, params) {
+            $("#Sign").attr("disabled", false);
+            var branch = params.selected;
+            $("#BranchId").val(branch);
+        });
         });
     </script>
 </body>

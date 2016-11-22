@@ -60,6 +60,14 @@
       <Project>{3BCC6CB0-D276-4770-BE89-F70826BE9F7D}</Project>
       <Name>Angkor.O7Web.Common.Security.Entity</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Angkor.O7Web.Domain.Contract\Angkor.O7Web.Domain.Contract.csproj">
+      <Project>{DA5A8323-3C94-4BCD-AC1F-ABCB397843B0}</Project>
+      <Name>Angkor.O7Web.Domain.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Angkor.O7Web.Domain\Angkor.O7Web.Domain.csproj">
+      <Project>{595A2C1E-9768-4412-8A89-FA031AD0904B}</Project>
+      <Name>Angkor.O7Web.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
