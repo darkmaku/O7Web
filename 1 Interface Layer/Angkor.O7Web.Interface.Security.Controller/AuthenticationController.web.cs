@@ -22,8 +22,13 @@ namespace Angkor.O7Web.Interface.Security.Controllers
         {
             if (model.ValidViewModel)
             {
-                var cryptography = new Cryptography(Constant.CRYPTO_KEY);
-                var value = cryptography.Encrypt($"login={model.Login}&password={model.Password}&company={model.CompanyId}&branch={model.BranchId}");                
+                var cryptography = new O7Cryptography(Constant.CRYPTO_KEY);
+                var paramBuilder = new O7ParamBuilder();
+                paramBuilder.AppendParameter("login", model.Login);
+                paramBuilder.AppendParameter("password", model.Password);
+                paramBuilder.AppendParameter("company", model.CompanyId);
+                paramBuilder.AppendParameter("branch", model.BranchId);
+                var value = cryptography.Encrypt(paramBuilder.ToString());
                 var cookie = Response.Cookies[Constant.TEMP_COOKIE] ?? new HttpCookie(Constant.TEMP_COOKIE);
                 cookie.Value = value;                
                 cookie.Expires = DateTime.Now.AddDays(1);
@@ -35,10 +40,14 @@ namespace Angkor.O7Web.Interface.Security.Controllers
 
         public ActionResult SwitchModule()
         {
+            var cookie = Request.Cookies[Constant.TEMP_COOKIE];
+            var cryptography = new O7Cryptography(Constant.CRYPTO_KEY);
+            var cookieValue = cryptography.Decrypt(cookie.Value);
+            var paramBuilder = new O7ParamBuilder(cookieValue);
             var model = new SwitchModuleViewModel();
-            using (var domain = new SecurityWebDomain("CN01", "CN02"))
+            using (var domain = new SecurityWebDomain(paramBuilder.GetParameterValue("login"), paramBuilder.GetParameterValue("password")))
             {
-                model.Modules = domain.ListModules("001", "001").Modules;
+                model.Modules = domain.ListModules(paramBuilder.GetParameterValue("company"), paramBuilder.GetParameterValue("branch")).Modules;
             }
             return View(model);
         }
