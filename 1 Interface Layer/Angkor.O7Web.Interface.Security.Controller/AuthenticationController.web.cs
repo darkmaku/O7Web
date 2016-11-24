@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Angkor.O7Framework.Utility;
 using Angkor.O7Web.Common.Utility;
 using Angkor.O7Web.Domain.Security;
+using Angkor.O7Web.Interface.Security.Controllers.Transfer;
 using Angkor.O7Web.Interface.Security.Model;
 
 namespace Angkor.O7Web.Interface.Security.Controllers
@@ -20,34 +21,44 @@ namespace Angkor.O7Web.Interface.Security.Controllers
         [HttpPost]
         public ActionResult LogIn(LogInViewModel model)
         {
-            if (model.ValidViewModel)
-            {
-                var cryptography = new O7Cryptography(Constant.CRYPTO_KEY);
-                var paramBuilder = new O7ParamBuilder();
-                paramBuilder.AppendParameter("login", model.Login);
-                paramBuilder.AppendParameter("password", model.Password);
-                paramBuilder.AppendParameter("company", model.CompanyId);
-                paramBuilder.AppendParameter("branch", model.BranchId);
-                var value = cryptography.Encrypt(paramBuilder.ToString());
-                var cookie = Response.Cookies[Constant.TEMP_COOKIE] ?? new HttpCookie(Constant.TEMP_COOKIE);
-                cookie.Value = value;                
-                cookie.Expires = DateTime.Now.AddDays(1);
-                Response.Cookies.Add(cookie);
-                return RedirectToAction("SwitchModule");
-            }
-            return View(model);
+            if (!model.ValidViewModel) return View(model);
+
+            var cookieValue = new CredentialCookie (model.Login, model.Password, model.CompanyId, model.BranchId);
+            var serializedValue = O7JsonSerealizer.Serialize(cookieValue);
+
+            var cryptography = new O7Cryptography(Constant.CRYPTO_KEY);
+            var encryptedValue = cryptography.Encrypt(serializedValue);
+
+            var cookie = Response.Cookies[Constant.TEMP_COOKIE] ?? new HttpCookie(Constant.TEMP_COOKIE);
+            cookie.Value = encryptedValue;
+            cookie.Expires = DateTime.Now.AddDays(1);
+
+            Response.Cookies.Add(cookie);
+            return RedirectToAction("SwitchModule");
         }
 
         public ActionResult SwitchModule()
         {
             var cookie = Request.Cookies[Constant.TEMP_COOKIE];
+            if (cookie == null) return RedirectToAction("LogIn");
+
             var cryptography = new O7Cryptography(Constant.CRYPTO_KEY);
-            var cookieValue = cryptography.Decrypt(cookie.Value);
-            var paramBuilder = new O7ParamBuilder(cookieValue);
+            var dencryptedValue = cryptography.Decrypt(cookie.Value);
+            var serializedValue = O7JsonSerealizer.Deserialize<CredentialCookie>(dencryptedValue);
+
             var model = new SwitchModuleViewModel();
-            using (var domain = new SecurityWebDomain(paramBuilder.GetParameterValue("login"), paramBuilder.GetParameterValue("password")))
+            using (var domain = new SecurityWebDomain(serializedValue.Login, serializedValue.Password))
             {
-                model.Modules = domain.ListModules(paramBuilder.GetParameterValue("company"), paramBuilder.GetParameterValue("branch")).Modules;
+                var response = domain.ListModules(serializedValue.CompanyId, serializedValue.BranchId);
+                if (response.HasError)
+                {
+                    model.ErrorMessage = response.ErrorMessage;
+                    model.ErrorCode = response.ErrorCode;
+                }
+                else
+                {
+                    model.Modules = response.Response.Item1;
+                }
             }
             return View(model);
         }

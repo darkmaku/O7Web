@@ -33,10 +33,18 @@
     <Reference Include="Angkor.O7Framework.Data">
       <HintPath>..\..\6 Libraries\Angkor.O7Framework.Data.dll</HintPath>
     </Reference>
+    <Reference Include="Angkor.O7Framework.Infrastructure">
+      <HintPath>..\..\6 Libraries\Angkor.O7Framework.Infrastructure.dll</HintPath>
+    </Reference>
     <Reference Include="Angkor.O7Framework.Utility">
       <HintPath>..\..\6 Libraries\Angkor.O7Framework.Utility.dll</HintPath>
     </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Oracle.ManagedDataAccess.12.1.24160719\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -60,14 +68,10 @@
       <Project>{3BCC6CB0-D276-4770-BE89-F70826BE9F7D}</Project>
       <Name>Angkor.O7Web.Common.Security.Entity</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Angkor.O7Web.Domain.Contract\Angkor.O7Web.Domain.Contract.csproj">
-      <Project>{DA5A8323-3C94-4BCD-AC1F-ABCB397843B0}</Project>
-      <Name>Angkor.O7Web.Domain.Contract</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Angkor.O7Web.Domain\Angkor.O7Web.Domain.csproj">
-      <Project>{595A2C1E-9768-4412-8A89-FA031AD0904B}</Project>
-      <Name>Angkor.O7Web.Domain</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

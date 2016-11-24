@@ -13,9 +13,12 @@
     @Html.StyleLink("css/style.css")
 </head>
 <body>
-    <div class="wrapper wrapper-content animated fadeInRight">
-        <div class="row">
-            @foreach (var module in Model.Modules) {
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        @if (Model.IsCorrect)
+        {
+            foreach (var module in Model.Modules)
+            {
                 <div class="col-lg-3">
                     <div class="contact-box center-version">
                         <a href="#">
@@ -33,8 +36,13 @@
                         </div>
                     </div>
                 </div>
-            }            
-        </div>
+            }
+        }
+        else
+        {
+            @Html.Partial(LinkHelper.PartialLink("view/ErrorPage.cshtml"), Model);
+        }
     </div>
+</div>
 </body>
 </html>

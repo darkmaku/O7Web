@@ -63,7 +63,7 @@
         $(document).ready(function () {
             @if (HttpContext.Current.Request.HttpMethod == "POST")
             {
-                var messageResult = Model.ErrorMessages.Aggregate("", (current, message) => current + message + ", ");
+                var messageResult = Model.ValidationErrorMessages.Aggregate("", (current, message) => current + message + ", ");
                 @:toastr.warning('@messageResult', 'Error de validación', { positionClass: "toast-top-full-width" });
             }
 

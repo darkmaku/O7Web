@@ -4,12 +4,12 @@ using System;
 
 namespace Angkor.O7Web.Domain
 {
-    public abstract class BaseDomain : IDisposable
+    public abstract class Domain : IDisposable
     {
         protected string Login;
         protected string Password;
 
-        protected BaseDomain(string login, string password)
+        protected Domain(string login, string password)
         {
             Login = login;
             Password = password;

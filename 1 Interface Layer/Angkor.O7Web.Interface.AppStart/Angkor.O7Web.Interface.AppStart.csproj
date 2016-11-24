@@ -72,17 +72,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FinantialAppStart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SecurityAppStart.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Angkor.O7Web.Interface.Finantial.Controller\Angkor.O7Web.Interface.Finantial.Controller.csproj">
+      <Project>{107472F1-2362-4C1F-8A3B-24F019113C25}</Project>
+      <Name>Angkor.O7Web.Interface.Finantial.Controller</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Angkor.O7Web.Interface.Security.Controller\Angkor.O7Web.Interface.Security.Controller.csproj">
       <Project>{AEFDF061-0BBE-4BBF-9A49-B4B40111AAD6}</Project>
       <Name>Angkor.O7Web.Interface.Security.Controller</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
