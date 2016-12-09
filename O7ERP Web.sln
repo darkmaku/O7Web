@@ -53,6 +53,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angkor.O7Web.Interface.Fina
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angkor.O7Web.Interface.SharedSource", "1 Interface Layer\Angkor.O7Web.Interface.SharedSource\Angkor.O7Web.Interface.SharedSource.csproj", "{B9F223D3-1A0B-49BF-8FE1-FF12C38AB959}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-3 Advisory", "1-3 Advisory", "{1EC34921-136F-496E-B633-EEAC091F1DC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angkor.O7Web.Interface.Advisory", "1 Interface Layer\Angkor.O7Web.Interface.Advisory\Angkor.O7Web.Interface.Advisory.csproj", "{CA1B3A51-7F2C-41CF-B3AF-6877BCF54AB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angkor.O7Web.Interface.Advisory.Controller", "1 Interface Layer\Angkor.O7Web.Interface.Advisory.Controller\Angkor.O7Web.Interface.Advisory.Controller.csproj", "{91855736-58F0-4595-A8FA-BE54C30E6AE8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -107,6 +113,14 @@ Global
 		{B9F223D3-1A0B-49BF-8FE1-FF12C38AB959}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9F223D3-1A0B-49BF-8FE1-FF12C38AB959}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9F223D3-1A0B-49BF-8FE1-FF12C38AB959}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA1B3A51-7F2C-41CF-B3AF-6877BCF54AB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA1B3A51-7F2C-41CF-B3AF-6877BCF54AB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA1B3A51-7F2C-41CF-B3AF-6877BCF54AB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA1B3A51-7F2C-41CF-B3AF-6877BCF54AB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91855736-58F0-4595-A8FA-BE54C30E6AE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91855736-58F0-4595-A8FA-BE54C30E6AE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91855736-58F0-4595-A8FA-BE54C30E6AE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91855736-58F0-4595-A8FA-BE54C30E6AE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -129,5 +143,8 @@ Global
 		{06F83451-6291-4A6B-9C20-6DD0AF2ED3C5} = {6D94DCA8-76CB-4E19-A532-250286EDDD41}
 		{107472F1-2362-4C1F-8A3B-24F019113C25} = {6D94DCA8-76CB-4E19-A532-250286EDDD41}
 		{B9F223D3-1A0B-49BF-8FE1-FF12C38AB959} = {5DBBB920-9A51-45A2-9A55-0B9BEB99E54C}
+		{1EC34921-136F-496E-B633-EEAC091F1DC4} = {A4EE9752-AADF-4FF4-B52D-F96EA3223054}
+		{CA1B3A51-7F2C-41CF-B3AF-6877BCF54AB9} = {1EC34921-136F-496E-B633-EEAC091F1DC4}
+		{91855736-58F0-4595-A8FA-BE54C30E6AE8} = {1EC34921-136F-496E-B633-EEAC091F1DC4}
 	EndGlobalSection
 EndGlobal
