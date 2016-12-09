@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Angkor.O7Web.Interface.Source")]
+[assembly: AssemblyTitle("Angkor.O7Web.Interface.SharedSource")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Angkor.O7Web.Interface.Source")]
+[assembly: AssemblyProduct("Angkor.O7Web.Interface.SharedSource")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("8f04e9ae-0df1-4741-a6df-2cd30868f308")]
+[assembly: Guid("e78b671a-c976-478b-9fa1-b6e4641dbe5c")]
 
 // Version information for an assembly consists of the following four values:
 //
