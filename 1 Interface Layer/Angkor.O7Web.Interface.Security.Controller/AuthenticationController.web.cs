@@ -57,7 +57,7 @@ namespace Angkor.O7Web.Interface.Security.Controllers
                 }
                 else
                 {
-                    model.Modules = response.Response.Item1.Append("Url",$"?credential={cookie.Value.ToUriPath()}");
+                    model.Modules = response.Response.Item1.Append("Url",$"/Security/Access?credential={cookie.Value.ToUriPath()}");
                 }
             }
             return View(model);

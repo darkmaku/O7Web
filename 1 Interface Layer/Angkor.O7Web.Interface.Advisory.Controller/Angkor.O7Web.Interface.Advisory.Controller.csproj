@@ -80,6 +80,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\4 Common Layer\Angkor.O7Web.Common.TransferObject\Angkor.O7Web.Common.TransferObject.csproj">
+      <Project>{ADF27482-8376-4B42-9C8D-50D1E8EB8AF9}</Project>
+      <Name>Angkor.O7Web.Common.TransferObject</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\4 Common Layer\Angkor.O7Web.Common.Utility\Angkor.O7Web.Common.Utility.csproj">
       <Project>{8B44343C-AB45-46B6-9310-AA21152D8268}</Project>
       <Name>Angkor.O7Web.Common.Utility</Name>

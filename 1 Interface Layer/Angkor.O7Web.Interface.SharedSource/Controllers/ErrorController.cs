@@ -2,6 +2,7 @@
 
 namespace Angkor.O7Web.Interface.SharedSource.Controllers
 {
+    //TODO: Arreglar todos los cshtml del controller
     public class ErrorController : Controller
     {
         public ActionResult Error401()

@@ -4,7 +4,6 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using Angkor.O7Web.Interface.Advisory.Controller;
 
-
 namespace Angkor.O7Web.Interface.AppStart
 {
     public class AdvisoryAppStart

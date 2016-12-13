@@ -59,6 +59,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angkor.O7Web.Interface.Advi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angkor.O7Web.Interface.Advisory.Controller", "1 Interface Layer\Angkor.O7Web.Interface.Advisory.Controller\Angkor.O7Web.Interface.Advisory.Controller.csproj", "{91855736-58F0-4595-A8FA-BE54C30E6AE8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angkor.O7Web.Common.TransferObject", "4 Common Layer\Angkor.O7Web.Common.TransferObject\Angkor.O7Web.Common.TransferObject.csproj", "{ADF27482-8376-4B42-9C8D-50D1E8EB8AF9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -121,6 +123,10 @@ Global
 		{91855736-58F0-4595-A8FA-BE54C30E6AE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91855736-58F0-4595-A8FA-BE54C30E6AE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91855736-58F0-4595-A8FA-BE54C30E6AE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADF27482-8376-4B42-9C8D-50D1E8EB8AF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADF27482-8376-4B42-9C8D-50D1E8EB8AF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADF27482-8376-4B42-9C8D-50D1E8EB8AF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADF27482-8376-4B42-9C8D-50D1E8EB8AF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -146,5 +152,6 @@ Global
 		{1EC34921-136F-496E-B633-EEAC091F1DC4} = {A4EE9752-AADF-4FF4-B52D-F96EA3223054}
 		{CA1B3A51-7F2C-41CF-B3AF-6877BCF54AB9} = {1EC34921-136F-496E-B633-EEAC091F1DC4}
 		{91855736-58F0-4595-A8FA-BE54C30E6AE8} = {1EC34921-136F-496E-B633-EEAC091F1DC4}
+		{ADF27482-8376-4B42-9C8D-50D1E8EB8AF9} = {33DFAF97-A006-432D-93D9-172E39E3246B}
 	EndGlobalSection
 EndGlobal
