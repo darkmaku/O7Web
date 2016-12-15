@@ -1,5 +1,6 @@
 ﻿// Create by Felix A. Bueno
 
+using System;
 using System.Web.Mvc;
 using Angkor.O7Framework.Utility;
 using Angkor.O7Framework.Web.Base;
@@ -14,7 +15,7 @@ namespace Angkor.O7Web.Interface.Advisory.Controller
         public ActionResult Access(string credential)
         {
             if (string.IsNullOrEmpty(credential))
-                return Redirect(LinkHelper.PartialLink("/Views/ErrorPage.cshtml"));
+                return Redirect(LinkHelper.SourceLink("Error", "ManagementError", Tuple.Create("500","Error message")));
             var cryptography = new O7Cryptography(Constant.CRYPTO_KEY);
             var dencryptedValue = cryptography.Decrypt(credential);
             var serializedValue = O7JsonSerealizer.Deserialize<CredentialCookie>(dencryptedValue);

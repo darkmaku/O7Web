@@ -33,18 +33,20 @@
     <Reference Include="Angkor.O7Framework.Data">
       <HintPath>..\..\6 Libraries\Angkor.O7Framework.Data.dll</HintPath>
     </Reference>
+    <Reference Include="Angkor.O7Framework.Domain">
+      <HintPath>..\..\6 Libraries\Angkor.O7Framework.Domain.dll</HintPath>
+    </Reference>
     <Reference Include="Angkor.O7Framework.Infrastructure">
       <HintPath>..\..\6 Libraries\Angkor.O7Framework.Infrastructure.dll</HintPath>
     </Reference>
     <Reference Include="Angkor.O7Framework.Utility">
       <HintPath>..\..\6 Libraries\Angkor.O7Framework.Utility.dll</HintPath>
     </Reference>
-    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Oracle.ManagedDataAccess.12.1.24160719\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="PostSharp, Version=4.3.24.0, Culture=neutral, PublicKeyToken=b13fd38b8f9c99d7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\6 Libraries\PostSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -52,17 +54,9 @@
     <Compile Include="SecurityWebDomain.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\1 Interface Layer\Angkor.O7Web.Interface.Security.Model\Angkor.O7Web.Interface.Security.Model.csproj">
-      <Project>{5BA0DC6D-211C-4AF5-845A-DB416FB647CE}</Project>
-      <Name>Angkor.O7Web.Interface.Security.Model</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\3 Data Layer\Angkor.O7Web.Data.Security\Angkor.O7Web.Data.Security.csproj">
       <Project>{9F7124F8-DD4A-4A72-859B-EF6C643A9507}</Project>
       <Name>Angkor.O7Web.Data.Security</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\3 Data Layer\Angkor.O7Web.Data.Service\Angkor.O7Web.Data.Service.csproj">
-      <Project>{44092376-3962-46AC-8279-58A8EAD7C37C}</Project>
-      <Name>Angkor.O7Web.Data.Service</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\4 Common Layer\Angkor.O7Web.Common.Security.Entity\Angkor.O7Web.Common.Security.Entity.csproj">
       <Project>{3BCC6CB0-D276-4770-BE89-F70826BE9F7D}</Project>
@@ -71,7 +65,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -33,26 +33,25 @@
     <Reference Include="Angkor.O7Framework.Data">
       <HintPath>..\..\6 Libraries\Angkor.O7Framework.Data.dll</HintPath>
     </Reference>
+    <Reference Include="Angkor.O7Framework.Utility">
+      <HintPath>..\..\6 Libraries\Angkor.O7Framework.Utility.dll</HintPath>
+    </Reference>
     <Reference Include="Angkor.O7Framework.Web">
       <HintPath>..\..\6 Libraries\Angkor.O7Framework.Web.dll</HintPath>
     </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InformationDataService.cs" />
-    <Compile Include="Mapper\BranchMapper.cs" />
-    <Compile Include="Mapper\CompanyMapper.cs" />
-    <Compile Include="Mapper\ModuleMapper.cs" />
+    <Compile Include="SecurityDataService.cs" />
+    <Compile Include="DataMapper\BranchDataMapper.cs" />
+    <Compile Include="DataMapper\CompanyDataMapper.cs" />
+    <Compile Include="DataMapper\ModuleDataMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\4 Common Layer\Angkor.O7Web.Common.Security.Entity\Angkor.O7Web.Common.Security.Entity.csproj">
       <Project>{3BCC6CB0-D276-4770-BE89-F70826BE9F7D}</Project>
       <Name>Angkor.O7Web.Common.Security.Entity</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Angkor.O7Web.Data.Service\Angkor.O7Web.Data.Service.csproj">
-      <Project>{44092376-3962-46AC-8279-58A8EAD7C37C}</Project>
-      <Name>Angkor.O7Web.Data.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

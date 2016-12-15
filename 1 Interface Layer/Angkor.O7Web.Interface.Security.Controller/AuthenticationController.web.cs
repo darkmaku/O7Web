@@ -4,9 +4,11 @@ using System;
 using System.Web;
 using System.Web.Mvc;
 using Angkor.O7Framework.Utility;
+using Angkor.O7Framework.Web.WebResult;
 using Angkor.O7Web.Common.Utility;
 using Angkor.O7Web.Domain.Security;
 using Angkor.O7Web.Interface.Security.Controllers.Transfer;
+using Angkor.O7Web.Interface.Security.Controllers.ViewModelMapper;
 using Angkor.O7Web.Interface.Security.Model;
 
 namespace Angkor.O7Web.Interface.Security.Controllers
@@ -33,7 +35,7 @@ namespace Angkor.O7Web.Interface.Security.Controllers
             cookie.Value = encryptedValue;
             cookie.Expires = DateTime.Now.AddDays(1);
 
-            Response.Cookies.Add(cookie);
+            Response.Cookies.Add(cookie);            
             return RedirectToAction("SwitchModule");
         }
 
@@ -46,21 +48,13 @@ namespace Angkor.O7Web.Interface.Security.Controllers
             var dencryptedValue = cryptography.Decrypt(cookie.Value);
             var serializedValue = O7JsonSerealizer.Deserialize<CredentialCookie>(dencryptedValue);
 
-            var model = new SwitchModuleViewModel();
-            using (var domain = new SecurityWebDomain(serializedValue.Login, serializedValue.Password))
-            {
-                var response = domain.ListModules(serializedValue.CompanyId, serializedValue.BranchId);
-                if (response.HasError)
-                {
-                    model.ErrorMessage = response.ErrorMessage;
-                    model.ErrorCode = response.ErrorCode;
-                }
-                else
-                {
-                    model.Modules = response.Response.Item1.Append("Url",$"/Security/Access?credential={cookie.Value.ToUriPath()}");
-                }
-            }
-            return View(model);
+            var domainContext = new SecurityWebDomain(serializedValue.Login, serializedValue.Password);
+            var modules = domainContext.ListModules(serializedValue.CompanyId, serializedValue.BranchId);
+
+            var mapper = new SwitchModuleViewModelMapper();
+            mapper.SetSource(modules);
+
+            return O7HttpResult.MakeActionResult(modules, mapper);
         }
     }
 }
