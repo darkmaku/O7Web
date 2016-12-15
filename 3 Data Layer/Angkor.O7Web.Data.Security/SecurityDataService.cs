@@ -30,14 +30,26 @@ namespace Angkor.O7Web.Data.Security
             }
         }
 
-        public IEnumerable<Module> ListModules(string companyId, string branchId)
+        public List<Module> ListModules(string companyId, string branchId)
         {
             using (var dataAccess = new O7DataAccess(DataConnection))
             {
                 var parameter = new O7Parameter();
                 parameter.Add("COMPANY", companyId);
                 parameter.Add("BRANCH", branchId);
-                return dataAccess.ExecuteFunction<Module>("SECURITY.MODULES_INSTALLED", parameter, typeof(ModuleDataMapper));
+                return dataAccess.ExecuteFunction<Module>("SECURITY.MODULES_INSTALLED", parameter,
+                    typeof(ModuleDataMapper));
+            }
+        }
+
+        public string GetUserName(string companyId, string branchId)
+        {
+            using (var dataAccess = new O7DataAccess(DataConnection))
+            {
+                var parameter = new O7Parameter();
+                parameter.Add("COMPANY", companyId);
+                parameter.Add("BRANCH", branchId);
+                return dataAccess.ExecuteFunction<string>("SECURITY.GET_USER_NAME", parameter);
             }
         }
     }

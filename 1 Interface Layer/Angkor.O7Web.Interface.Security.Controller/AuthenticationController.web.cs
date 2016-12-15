@@ -3,6 +3,7 @@
 using System;
 using System.Web;
 using System.Web.Mvc;
+using Angkor.O7Framework.Domain.Response;
 using Angkor.O7Framework.Utility;
 using Angkor.O7Framework.Web.WebResult;
 using Angkor.O7Web.Common.Utility;
@@ -25,7 +26,14 @@ namespace Angkor.O7Web.Interface.Security.Controllers
         {
             if (!model.ValidViewModel) return View(model);
 
-            var cookieValue = new CredentialCookie (model.Login, model.Password, model.CompanyId, model.BranchId);
+            var domainContext = new SecurityWebDomain(model.Login, model.Password);
+            var userResponse = domainContext.GetUserName(model.CompanyId, model.BranchId);
+
+            var successResponse = userResponse as O7SuccessResponse<string>;
+
+            if (successResponse == null) return O7HttpResult.MakeRedirectError(500, "Error interno del servidor");
+
+            var cookieValue = new CredentialCookie (model.Login, model.Password, model.CompanyId, model.BranchId, successResponse.Value1);
             var serializedValue = O7JsonSerealizer.Serialize(cookieValue);
 
             var cryptography = new O7Cryptography(Constant.CRYPTO_KEY);
@@ -33,9 +41,9 @@ namespace Angkor.O7Web.Interface.Security.Controllers
 
             var cookie = Response.Cookies[Constant.TEMP_COOKIE] ?? new HttpCookie(Constant.TEMP_COOKIE);
             cookie.Value = encryptedValue;
-            cookie.Expires = DateTime.Now.AddDays(1);
+            cookie.Expires = DateTime.Now.AddMinutes(2);
 
-            Response.Cookies.Add(cookie);            
+            Response.Cookies.Add(cookie);
             return RedirectToAction("SwitchModule");
         }
 

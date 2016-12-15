@@ -11,7 +11,7 @@ namespace Angkor.O7Web.Interface.Security.Controllers
         [HttpPost]
         public JsonResult GetCompanies(string login, string password)
         {
-            var domain = new SecurityJsonDomain(login, password);            
+            var domain = new SecurityJsonDomain(login, password);
             return O7HttpResult.MakeJsonResult(domain.ListCompanies());
         }
 

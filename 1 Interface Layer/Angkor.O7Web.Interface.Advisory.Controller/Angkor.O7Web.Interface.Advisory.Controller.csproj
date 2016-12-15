@@ -43,6 +43,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
       <Private>True</Private>
@@ -80,6 +81,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\2 Domain Layer\Angkor.O7Web.Domain.Security\Angkor.O7Web.Domain.Security.csproj">
+      <Project>{F4793CCD-CFB9-4AFE-A223-4F181C247B88}</Project>
+      <Name>Angkor.O7Web.Domain.Security</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\4 Common Layer\Angkor.O7Web.Common.TransferObject\Angkor.O7Web.Common.TransferObject.csproj">
       <Project>{ADF27482-8376-4B42-9C8D-50D1E8EB8AF9}</Project>
       <Name>Angkor.O7Web.Common.TransferObject</Name>
