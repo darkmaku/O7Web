@@ -1,11 +1,13 @@
 ﻿//Create by Felix A. Bueno
 
 using System;
+using System.Collections.Generic;
 using System.Web;
 using System.Web.Mvc;
 using Angkor.O7Framework.Domain.Response;
 using Angkor.O7Framework.Utility;
 using Angkor.O7Framework.Web.WebResult;
+using Angkor.O7Web.Common.Security.Entity;
 using Angkor.O7Web.Common.Utility;
 using Angkor.O7Web.Domain.Security;
 using Angkor.O7Web.Interface.Security.Controllers.Transfer;
@@ -59,8 +61,14 @@ namespace Angkor.O7Web.Interface.Security.Controllers
             var domainContext = new SecurityWebDomain(serializedValue.Login, serializedValue.Password);
             var modules = domainContext.ListModules(serializedValue.CompanyId, serializedValue.BranchId);
 
+            var currentSource = modules as O7SuccessResponse<List<Module>>;
+
+            if (currentSource == null) return O7HttpResult.MakeRedirectError(500, "");
+
+            currentSource.Value1.Append("Url", $"?credential={cookie.Value.ToUriPath()}");
+
             var mapper = new SwitchModuleViewModelMapper();
-            mapper.SetSource(modules);
+            mapper.SetSource(currentSource);
 
             return O7HttpResult.MakeActionResult(modules, mapper);
         }

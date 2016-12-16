@@ -42,6 +42,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Angkor.O7Framework.Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\6 Libraries\Angkor.O7Framework.Utility.dll</HintPath>
+    </Reference>
     <Reference Include="Angkor.O7Framework.Web">
       <HintPath>..\..\6 Libraries\Angkor.O7Framework.Web.dll</HintPath>
     </Reference>
@@ -121,9 +125,15 @@
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Views\_Layout.cshtml" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Security\Access.cshtml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Views\Settings\Period.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

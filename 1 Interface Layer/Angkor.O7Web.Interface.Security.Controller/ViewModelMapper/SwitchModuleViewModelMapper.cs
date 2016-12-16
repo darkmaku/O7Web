@@ -2,6 +2,7 @@
 
 using System.Collections.Generic;
 using Angkor.O7Framework.Domain.Response;
+using Angkor.O7Framework.Utility;
 using Angkor.O7Framework.Web.Utility;
 using Angkor.O7Web.Common.Security.Entity;
 using Angkor.O7Web.Interface.Security.Model;
@@ -12,7 +13,7 @@ namespace Angkor.O7Web.Interface.Security.Controllers.ViewModelMapper
     {
         public override SwitchModuleViewModel MapTarget()
         {
-            var currentSource = Source as O7SuccessResponse<IEnumerable<Module>>;
+            var currentSource = Source as O7SuccessResponse<List<Module>>;            
             return currentSource == null ? null : new SwitchModuleViewModel {Modules = currentSource.Value1};
         }
     }

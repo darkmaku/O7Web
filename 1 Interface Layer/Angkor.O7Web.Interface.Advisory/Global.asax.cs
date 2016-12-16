@@ -19,8 +19,7 @@ namespace Angkor.O7Web.Interface.Advisory
         protected void Application_PostAuthenticateRequest(object sender, EventArgs e)
         {
             var authCookie = Request.Cookies[FormsAuthentication.FormsCookieName];
-            if (authCookie != null)
-                HttpContext.Current.User = O7Authentication.Extract(authCookie);
+            if (authCookie != null) HttpContext.Current.User = O7Authentication.Extract(authCookie);            
         }
     }
 }
