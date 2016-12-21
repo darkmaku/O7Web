@@ -30,10 +30,35 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Angkor.O7Framework.Data">
+      <HintPath>..\..\6 Libraries\Angkor.O7Framework.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Angkor.O7Framework.Domain">
+      <HintPath>..\..\6 Libraries\Angkor.O7Framework.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="Angkor.O7Framework.Utility">
+      <HintPath>..\..\6 Libraries\Angkor.O7Framework.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Angkor.O7Framework.Web">
+      <HintPath>..\..\6 Libraries\Angkor.O7Framework.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="PostSharp, Version=4.3.24.0, Culture=neutral, PublicKeyToken=b13fd38b8f9c99d7, processorArchitecture=MSIL" />
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PeriodJsonDomain.cs" />
+    <Compile Include="PeriodWebDomain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\3 Data Layer\Angkor.O7Web.Data.Advisory\Angkor.O7Web.Data.Advisory.csproj">
+      <Project>{D2978B2A-01A5-4537-B706-808E069B3800}</Project>
+      <Name>Angkor.O7Web.Data.Advisory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\4 Common Layer\Angkor.O7Web.Common.Advisory.Entity\Angkor.O7Web.Common.Advisory.Entity.csproj">
+      <Project>{B4F75A5F-0F9A-48B7-AFBC-A0094BEDF1C2}</Project>
+      <Name>Angkor.O7Web.Common.Advisory.Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

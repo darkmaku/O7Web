@@ -25,7 +25,7 @@ namespace Angkor.O7Web.Interface.Advisory.Controller
 
             Response.Cookies.Add(cookie);
 
-            return View();
+            return RedirectToAction("Index", "Home");
         }
     }
 }

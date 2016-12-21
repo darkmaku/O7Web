@@ -4,9 +4,9 @@ using Angkor.O7Framework.Data.Common;
 
 namespace Angkor.O7Web.Common.Advisory.Entity
 {
-    public class PeriodState : O7Entity
+    public class Year : O7Entity
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
         public string Description { get; set; }
     }
 }

@@ -25,25 +25,26 @@ namespace Angkor.O7Web.Data.Advisory
             }
         }
 
-        public List<PeriodState> ListPeriodStates(string companyId, string branchId)
+        public List<Year> ListAvalibleYears(string companyId, string branchId)
         {
             using (var dataAccess = new O7DataAccess(DataConnection))
             {
                 var parameter = new O7Parameter();
                 parameter.Add("COMPANY", companyId);
                 parameter.Add("BRANCH", branchId);
-                return dataAccess.ExecuteFunction<PeriodState>("ADVISORY_PERIOD.LIST_ESTATES", parameter, typeof(PeriodStateDataMapper));
+                return dataAccess.ExecuteFunction<Year>("ADVISORY_PERIOD.LIST_AVALIBLE_YEAR", parameter, typeof(PeriodStateDataMapper));
             }
         }
 
-        public bool ActivatePeriod(string companyId, string branchId)
+        public bool ActivatePeriod(string companyId, string branchId, string periodId)
         {
             using (var dataAccess = new O7DataAccess(DataConnection))
             {
                 var parameter = new O7Parameter();
                 parameter.Add("COMPANY", companyId);
                 parameter.Add("BRANCH", branchId);
-                return dataAccess.ExecuteFunction<bool>("ADVISORY_PERIOD.ACTIVATE_YEAR", parameter);
+                parameter.Add("YEAR", periodId);
+                return dataAccess.ExecuteFunction<int>("ADVISORY_PERIOD.ACTIVATE_YEAR", parameter) != 0;
             }
         } 
     }

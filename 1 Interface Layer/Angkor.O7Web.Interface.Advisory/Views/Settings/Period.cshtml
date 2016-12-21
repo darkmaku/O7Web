@@ -1,7 +1,124 @@
 ﻿@{
-    ViewBag.Title = "Period";
+    ViewBag.Title = "Periodo";
+    ViewBag.Section = "Ajustes del sistema";
     Layout = "~/Views/_Layout.cshtml";
 }
 
-<h2>Period</h2>
+@section styles_link {
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/dataTables.bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css" />    
+    @Html.StyleLink("css/plugins/chosen/bootstrap-chosen.css")
+}
 
+@section scripts_link {
+    <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
+    @Html.JavaScriptLink("js/plugins/chosen/chosen.jquery.js")
+}
+
+@section section_script {
+    var periods;
+    $.ajax({ method: "POST", url: "/Advisory/Settings/PeriodsAvalible", async: false })
+        .done(function (result) {
+            periods = jQuery.parseJSON(result);
+        });
+
+    var tables = $("#tblPeriods").DataTable( {
+        searching: false,
+        data: periods,
+        columns: [{ data: "Id" },
+                  { data: "State" },
+                  { data: "Owner" },
+                  { data: "Creation" }],
+        dom: 'Bfrtip',
+        buttons: [{
+                    text: 'Aperturar periodos',
+                    action: function ( e, dt, node, config ) {                        
+                        $.ajax({method: "POST", url: "/Advisory/Settings/YearsAvalible"})
+                            .done(function (result) {
+                                var years = jQuery.parseJSON(result);                                
+                                var choosenPeriods = $("#chsPeriod");
+                                $.each(years, function (index, value){
+                                    choosenPeriods.append("<option value='"+value.Id+"'>"+value.Description+"</option>");
+                                })
+                                choosenPeriods.trigger("chosen:updated");
+                            });
+                    }
+                 }]
+    });
+
+    $("#chsPeriod").chosen({
+        width: "100%",
+        "disable_search": true
+    });
+    
+    $(".dt-button").removeClass("dt-button").addClass("btn btn-w-m btn-default").attr("data-toggle", "modal").attr("data-target", "#mdlPeriods");
+    
+    $("#mdlPeriods").on("hidden.bs.modal", function (e) {
+        $("#chsPeriod").find("option").remove();
+    });
+    
+    $("#btnOpenPeriod").on("click", function (e) {
+        var currentPeriod = $("#chsPeriod").val();
+        $.ajax({method: "POST", url: "/Advisory/Settings/OpenPeriod", data: {periodId: currentPeriod}})
+            .done(function (result) {
+                $("#mdlPeriods").modal("hide");
+                if(result == "True") {
+                    toastr.success("Se aperturó correctamente el periodo.", "Mensaje", { positionClass: "toast-top-full-width" });
+                } else {
+                    toastr.error("No se aperturó correctamente el periodo.", "Mensaje", { positionClass: "toast-top-full-width" });
+                }
+                $.ajax({method: "POST", url: "/Advisory/Settings/PeriodsAvalible"})
+                    .done(function (result) {
+                        periodsResult = jQuery.parseJSON(result);
+                        tables.clear().rows.add(periodsResult).draw()
+                    });
+            });
+    });
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-content">                
+                <div class="table-responsive">
+                    <table id="tblPeriods" class="table table-striped table-bordered table-hover dataTables-example">
+                        <thead>
+                        <tr>
+                            <th>Periodo</th>
+                            <th>Estado</th>
+                            <th>Creador</th>
+                            <th>Creación</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal inmodal" id="mdlPeriods" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animated fadeIn">
+            <div class="modal-header">                
+                <h4 class="modal-title">Apertura de periodo</h4>                
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <p>Seleccione el periodo el que se desea aperturar.</p>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Periodo hábil</label>
+                        <div class="col-lg-9">
+                            <select id="chsPeriod"></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white" data-dismiss="modal">Cancelar</button>
+                <button type="button" id="btnOpenPeriod" class="btn btn-primary">Aperturar</button>
+            </div>
+        </div>
+    </div>
+</div>

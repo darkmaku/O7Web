@@ -65,7 +65,7 @@ namespace Angkor.O7Web.Interface.Security.Controllers
 
             if (currentSource == null) return O7HttpResult.MakeRedirectError(500, "");
 
-            currentSource.Value1.Append("Url", $"?credential={cookie.Value.ToUriPath()}");
+            currentSource.Value1.Append("Url", $"/Security/Access?credential={cookie.Value.ToUriPath()}");
 
             var mapper = new SwitchModuleViewModelMapper();
             mapper.SetSource(currentSource);

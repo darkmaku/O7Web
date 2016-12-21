@@ -1,0 +1,109 @@
+﻿@{
+    ViewBag.Title = "Administración";
+    ViewBag.Section = "Actividades";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+@section styles_link {
+    @Html.StyleLink("css/plugins/chosen/bootstrap-chosen.css")
+    @Html.StyleLink("css/plugins/fullcalendar/fullcalendar.css")
+    @Html.StyleLink("css/plugins/fullcalendar/fullcalendar.print.css", "print")
+    @Html.StyleLink("css/plugins/daterangepicker/daterangepicker-bs3.css")
+}
+
+@section scripts_link {
+    @Html.JavaScriptLink("js/plugins/chosen/chosen.jquery.js")
+    @Html.JavaScriptLink("js/plugins/fullcalendar/moment.min.js")
+    @Html.JavaScriptLink("js/plugins/fullcalendar/fullcalendar.min.js")
+    @Html.JavaScriptLink("js/plugins/daterangepicker/daterangepicker.js")
+}
+
+@section section_script {
+    moment.locale('es');
+
+    $("#chsCCO").chosen({
+        width: "100%",
+        "disable_search": true
+    });    
+       
+    $("#calendar").fullCalendar();
+
+    $('#reportrange').daterangepicker({
+        format: 'DD/MM/YYYY hh:mm',                
+        showDropdowns: true,
+        timePicker: true,
+        timePickerIncrement: 1,
+        timePicker12Hour: true,                
+        opens: 'right',
+        drops: 'down',
+        buttonClasses: ['btn', 'btn-sm'],
+        applyClass: 'btn-primary',
+        cancelClass: 'btn-default',
+        separator: ' to ',
+        locale: {
+            applyLabel: 'Aceptar',
+            cancelLabel: 'Cancelar',
+            fromLabel: 'Desde',
+            toLabel: 'Hasta'
+        }
+    }, function(start, end, label) {
+        console.log(start.toISOString(), end.toISOString(), label);
+        $('#reportrange span').html(start.format('MMMM D, YYYY hh:mm') + ' - ' + end.format('MMMM D, YYYY hh:mm'));
+    });
+}
+
+<div class="col-lg-3">
+    <div class="ibox float-e-margins">
+        <div class="ibox-content">
+            <h2>Actividades</h2>
+            <button type="button" class="btn btn-primary btn-block" data-target="#myModal" data-toggle="modal"><i class="fa fa-calendar-plus-o"></i> Agregar</button>
+        </div>
+    </div>
+</div>
+<div class="col-lg-9">
+    <div class="ibox float-e-margins">
+        <div class="ibox-content">
+            <div id="calendar"></div>
+        </div>
+    </div>
+</div>
+<div class="modal inmodal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Agregar actividad</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Centro de Costo</label>
+                        <div class="col-lg-9">
+                            <select id="chsCCO">
+                                <option>holi boli</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Duración</label>
+                        <div class="col-lg-9">
+                            <div id="reportrange" class="form-control">
+                                <i class="fa fa-calendar"></i>
+                                <span></span> <b class="caret"></b>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Descripción</label>
+                        <div class="col-lg-9">
+                            <textarea class="form-control" style="resize: none;"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary">Agregar</button>
+            </div>
+        </div>
+    </div>
+</div>

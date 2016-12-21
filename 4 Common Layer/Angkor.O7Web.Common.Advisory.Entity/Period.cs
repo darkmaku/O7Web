@@ -8,5 +8,7 @@ namespace Angkor.O7Web.Common.Advisory.Entity
     {
         public int Id { get; set; }
         public string State { get; set; }
+        public string Owner { get; set; }
+        public string Creation { get; set; }
     }
 }

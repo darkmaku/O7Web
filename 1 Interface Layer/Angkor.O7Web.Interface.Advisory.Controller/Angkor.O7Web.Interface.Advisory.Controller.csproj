@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Angkor.O7Framework.Domain, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\6 Libraries\Angkor.O7Framework.Domain.dll</HintPath>
+    </Reference>
     <Reference Include="Angkor.O7Framework.Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\6 Libraries\Angkor.O7Framework.Utility.dll</HintPath>
@@ -74,14 +78,21 @@
     <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActivityController.cs" />
+    <Compile Include="HomeController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SecurityController.cs" />
     <Compile Include="SettingsController.cs" />
+    <Compile Include="SettingsController.json.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\2 Domain Layer\Angkor.O7Web.Domain.Advisory\Angkor.O7Web.Domain.Advisory.csproj">
+      <Project>{87B7FAD4-FFAF-4F51-BFB3-6EECFE680A74}</Project>
+      <Name>Angkor.O7Web.Domain.Advisory</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\2 Domain Layer\Angkor.O7Web.Domain.Security\Angkor.O7Web.Domain.Security.csproj">
       <Project>{F4793CCD-CFB9-4AFE-A223-4F181C247B88}</Project>
       <Name>Angkor.O7Web.Domain.Security</Name>
