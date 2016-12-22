@@ -58,8 +58,7 @@
             <div id="logo-o">O</div>
             <div id="logo-7">7</div>
         </div>
-        <h3>Bienvenido al O7ERP</h3>
-        <p>Versión web 1.0</p>
+        <h3 style="margin-top: -30px;">Bienvenido al O7ERP</h3>
         @using (Html.BeginForm("LogIn", "Authentication", FormMethod.Post, new {@class = "m-t", @role = "form"})) {
             <div class="form-group">
                 @Html.TextBoxFor(model => model.Login, new {@class = "form-control", @placeholder = "Usuario", @required = ""})
