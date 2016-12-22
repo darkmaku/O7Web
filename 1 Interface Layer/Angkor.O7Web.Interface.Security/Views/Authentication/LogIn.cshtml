@@ -17,6 +17,36 @@
         #toast-container > .toast-warning:before {
             content: "\f071";
         }
+
+        #capa1 {
+			margin-top: 0px;
+			position: absolute;
+			z-index: 0;
+			margin-left: 0px;
+        }
+        #capa2 {
+			margin-top: 0px;
+			position: absolute;
+			z-index: 1;
+			margin-left: 0px;
+        }
+        #logo-o {
+        z-index: 0;
+        margin-top: -86px;
+        font-family: "Times New Roman", Georgia, Serif;
+        font-style: italic;
+        font-size: 250px;
+        color: #999c9e;
+        }
+        #logo-7 {
+        z-index: 1;
+        margin-top: -225px;
+        padding-left: 46px;
+        font-family: Arial Black Arial Bold, Gadget, sans-serif;
+        font-size: 160px;
+        font-weight: bolder;
+        color: #676A6C;
+        }
     </style>
 </head>
 
@@ -25,7 +55,8 @@
 <div class="middle-box text-center loginscreen animated fadeInDown">
     <div>
         <div>
-            <h1 class="logo-name">O7</h1>
+            <div id="logo-o">O</div>
+            <div id="logo-7">7</div>
         </div>
         <h3>Bienvenido al O7ERP</h3>
         <p>Versión web 1.0</p>
