@@ -36,6 +36,13 @@
     <Reference Include="Angkor.O7Framework.Domain">
       <HintPath>..\..\6 Libraries\Angkor.O7Framework.Domain.dll</HintPath>
     </Reference>
+    <Reference Include="Angkor.O7Framework.Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\6 Libraries\Angkor.O7Framework.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Angkor.O7Framework.Web">
+      <HintPath>..\..\6 Libraries\Angkor.O7Framework.Web.dll</HintPath>
+    </Reference>
     <Reference Include="PostSharp, Version=4.3.24.0, Culture=neutral, PublicKeyToken=b13fd38b8f9c99d7, processorArchitecture=MSIL" />
     <Reference Include="System" />
   </ItemGroup>

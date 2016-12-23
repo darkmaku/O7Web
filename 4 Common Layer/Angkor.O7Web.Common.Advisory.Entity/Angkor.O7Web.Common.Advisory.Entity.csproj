@@ -36,6 +36,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activity.cs" />
     <Compile Include="Period.cs" />
     <Compile Include="Year.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

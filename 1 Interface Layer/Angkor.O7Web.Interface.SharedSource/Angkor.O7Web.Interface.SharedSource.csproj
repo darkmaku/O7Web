@@ -109,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\SecurityController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -173,8 +174,8 @@
     <Content Include="css\plugins\dualListbox\bootstrap-duallistbox.min.css" />
     <Content Include="css\plugins\footable\fonts\footable.svg" />
     <Content Include="css\plugins\footable\footable.core.css" />
-    <Content Include="css\plugins\fullcalendar\fullcalendar.css" />
-    <Content Include="css\plugins\fullcalendar\fullcalendar.print.css" />
+    <Content Include="css\plugins\fullcalendar\fullcalendar.min.css" />
+    <Content Include="css\plugins\fullcalendar\fullcalendar.print.min.css" />
     <Content Include="css\plugins\iCheck\custom.css" />
     <Content Include="css\plugins\iCheck\green%402x.png" />
     <Content Include="css\plugins\iCheck\green.png" />
@@ -487,8 +488,10 @@
     <Content Include="js\plugins\flot\jquery.flot.time.js" />
     <Content Include="js\plugins\flot\jquery.flot.tooltip.min.js" />
     <Content Include="js\plugins\footable\footable.all.min.js" />
+    <Content Include="js\plugins\fullcalendar\fullcalendar-es.js" />
     <Content Include="js\plugins\fullcalendar\fullcalendar.min.js" />
-    <Content Include="js\plugins\fullcalendar\moment.min.js" />
+    <Content Include="js\plugins\fullcalendar\locale-all.js" />
+    <Content Include="js\plugins\moment\moment.min.js" />
     <Content Include="js\plugins\gritter\images\gritter-light.png" />
     <Content Include="js\plugins\gritter\images\gritter-long.png" />
     <Content Include="js\plugins\gritter\images\gritter.png" />
@@ -652,6 +655,7 @@
     <Content Include="js\plugins\ladda\spin.min.js" />
     <Content Include="js\plugins\masonary\masonry.pkgd.min.js" />
     <Content Include="js\plugins\metisMenu\jquery.metisMenu.js" />
+    <Content Include="js\plugins\moment\moment-es.js" />
     <Content Include="js\plugins\morris\morris.js" />
     <Content Include="js\plugins\morris\raphael-2.1.0.min.js" />
     <Content Include="js\plugins\nestable\jquery.nestable.js" />
@@ -857,6 +861,10 @@
       <Project>{A34E6D60-9763-4163-A416-735075CEDC48}</Project>
       <Name>Angkor.O7Web.Common.Entity</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Views\Security\Signout.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

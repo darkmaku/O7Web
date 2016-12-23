@@ -15,6 +15,29 @@
     <script src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
     @Html.JavaScriptLink("js/plugins/chosen/chosen.jquery.js")
+    <script>
+        function open_period(period){
+            $.ajax({ method: "POST", url: "/Advisory/Settings/OpenPeriod", data: { periodId: period } })
+                .done(function (result) {
+                    if (result == "True") {
+                        window.location.reload();
+                    } else {
+                        toastr.error("No se abrió correctamente el periodo.", "Mensaje", { positionClass: "toast-top-full-width" });
+                    }
+                });
+        }
+        
+        function close_period(period) {
+            $.ajax({ method: "POST", url: "/Advisory/Settings/ClosePeriod", data: { periodId: period } })
+                .done(function (result) {
+                    if (result == "True") {
+                        window.location.reload();
+                    } else {
+                        toastr.error("No se cerro correctamente el periodo.", "Mensaje", { positionClass: "toast-top-full-width" });
+                    }
+                });
+        }
+    </script>
 }
 
 @section section_script {
@@ -23,14 +46,27 @@
         .done(function (result) {
             periods = jQuery.parseJSON(result);
         });
-
+    
     var tables = $("#tblPeriods").DataTable( {
         searching: false,
         data: periods,
-        columns: [{ data: "Id" },
-                  { data: "State" },
-                  { data: "Owner" },
-                  { data: "Creation" }],
+        columns: [{ data: "Id", width: "15%" },
+                  { data: "State", width: "15%" },
+                  { data: "Owner", width: "15%" },
+                  { data: "Creation", width: "15%" },
+                  { orderable: false,
+                    data: "Id",
+                    render: function(data, type, full, meta){       
+                        if(full.State==='ABIERTO') {
+                            return "<a class='btn btn-w-m btn-primary btn-open-period' onclick='open_period("+full.Id+")'><i class='fa fa-check'></i>&nbsp;Utilizar periodo</a>"
+                        }
+                        if(full.State==='EN USO') {
+                            return "<a class='btn btn-w-m btn-danger btn-close-period' onclick='close_period("+full.Id+")'><i class='fa fa-times'></i>&nbsp;Cerrar periodo</a>"
+                        }
+                        return "";
+                    },    
+                     width: "8%"
+                  }],
         dom: 'Bfrtip',
         buttons: [{
                     text: 'Aperturar periodos',
@@ -45,7 +81,7 @@
                                 choosenPeriods.trigger("chosen:updated");
                             });
                     }
-                 }]
+                }]
     });
 
     $("#chsPeriod").chosen({
@@ -61,13 +97,13 @@
     
     $("#btnOpenPeriod").on("click", function (e) {
         var currentPeriod = $("#chsPeriod").val();
-        $.ajax({method: "POST", url: "/Advisory/Settings/OpenPeriod", data: {periodId: currentPeriod}})
+        $.ajax({method: "POST", url: "/Advisory/Settings/OpenYear", data: {year: currentPeriod}})
             .done(function (result) {
                 $("#mdlPeriods").modal("hide");
                 if(result == "True") {
-                    toastr.success("Se aperturó correctamente el periodo.", "Mensaje", { positionClass: "toast-top-full-width" });
+                    toastr.success("Se aperturó correctamente el año.", "Mensaje", { positionClass: "toast-top-full-width" });
                 } else {
-                    toastr.error("No se aperturó correctamente el periodo.", "Mensaje", { positionClass: "toast-top-full-width" });
+                    toastr.error("No se aperturó correctamente el año.", "Mensaje", { positionClass: "toast-top-full-width" });
                 }
                 $.ajax({method: "POST", url: "/Advisory/Settings/PeriodsAvalible"})
                     .done(function (result) {
@@ -90,6 +126,7 @@
                             <th>Estado</th>
                             <th>Creador</th>
                             <th>Creación</th>
+                            <th>Acción</th>
                         </tr>
                         </thead>
                     </table>
@@ -102,7 +139,7 @@
     <div class="modal-dialog">
         <div class="modal-content animated fadeIn">
             <div class="modal-header">                
-                <h4 class="modal-title">Apertura de periodo</h4>                
+                <h4 class="modal-title">Apertura de año</h4>                
             </div>
             <div class="modal-body">
                 <div class="form-horizontal">

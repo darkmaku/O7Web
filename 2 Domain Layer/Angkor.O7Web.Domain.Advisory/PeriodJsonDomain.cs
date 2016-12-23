@@ -39,9 +39,30 @@ namespace Angkor.O7Web.Domain.Advisory
             return O7SuccessResponse.MakeResponse(yearsSerialized);
         }
 
-        public O7Response ActivatePeriod(string periodId)
+        public O7Response ActivateYear(string year)
         {
-            var response = _dataService.ActivatePeriod(_principal.Company, _principal.Branch, periodId);
+            var response = _dataService.ActivateYear(_principal.Company, _principal.Branch, year);
+            var responseSerialized = O7JsonSerealizer.Serialize(response);
+            return O7SuccessResponse.MakeResponse(responseSerialized);
+        }
+
+        public O7Response OpenPeriod(string periodId)
+        {
+            var response = _dataService.OpenPeriod(_principal.Company, _principal.Branch, periodId);
+            var responseSerialized = O7JsonSerealizer.Serialize(response);
+            return O7SuccessResponse.MakeResponse(responseSerialized);
+        }
+
+        public O7Response ValidPeriod(string month, string year)
+        {
+            var response = _dataService.ValidPeriod(_principal.Company, _principal.Branch, month, year);
+            var responseSerialized = O7JsonSerealizer.Serialize(response);
+            return O7SuccessResponse.MakeResponse(responseSerialized);
+        }
+
+        public O7Response ClosePeriod(string periodId)
+        {
+            var response = _dataService.ClosePeriod(_principal.Company, _principal.Branch, periodId);
             var responseSerialized = O7JsonSerealizer.Serialize(response);
             return O7SuccessResponse.MakeResponse(responseSerialized);
         }

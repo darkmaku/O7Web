@@ -25,8 +25,8 @@ namespace Angkor.O7Web.Data.Security
             using (var dataAccess = new O7DataAccess(DataConnection))
             {
                 var parameter = new O7Parameter();
-                parameter.Add("COMPANY", companyId);
-                return dataAccess.ExecuteFunction<Branch>("SECURITY.BRANCHES_LIST", parameter, typeof(BranchDataMapper));
+                parameter.Add("p_company", companyId);
+                return dataAccess.ExecuteFunction<Branch>("SECURITY.branches_list", parameter, typeof(BranchDataMapper));
             }
         }
 

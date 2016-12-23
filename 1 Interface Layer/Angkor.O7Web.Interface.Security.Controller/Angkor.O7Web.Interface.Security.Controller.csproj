@@ -48,6 +48,7 @@
       <HintPath>..\..\6 Libraries\Angkor.O7Framework.Web.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PostSharp, Version=4.3.24.0, Culture=neutral, PublicKeyToken=b13fd38b8f9c99d7, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">

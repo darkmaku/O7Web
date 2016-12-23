@@ -6,34 +6,65 @@
 
 @section styles_link {
     @Html.StyleLink("css/plugins/chosen/bootstrap-chosen.css")
-    @Html.StyleLink("css/plugins/fullcalendar/fullcalendar.css")
-    @Html.StyleLink("css/plugins/fullcalendar/fullcalendar.print.css", "print")
-    @Html.StyleLink("css/plugins/daterangepicker/daterangepicker-bs3.css")
+    @Html.StyleLink("css/plugins/fullcalendar/fullcalendar.min.css")
+    @Html.StyleLink("css/plugins/fullcalendar/fullcalendar.print.min.css", "print")
+    @Html.StyleLink("css/plugins/daterangepicker/daterangepicker-bs3.css")    
 }
 
 @section scripts_link {
     @Html.JavaScriptLink("js/plugins/chosen/chosen.jquery.js")
-    @Html.JavaScriptLink("js/plugins/fullcalendar/moment.min.js")
-    @Html.JavaScriptLink("js/plugins/fullcalendar/fullcalendar.min.js")
+    @Html.JavaScriptLink("js/plugins/moment/moment.min.js")
+    @Html.JavaScriptLink("js/plugins/moment/moment-es.js")    
     @Html.JavaScriptLink("js/plugins/daterangepicker/daterangepicker.js")
+    @Html.JavaScriptLink("js/plugins/fullcalendar/fullcalendar.min.js")
+    @Html.JavaScriptLink("js/plugins/fullcalendar/fullcalendar-es.js")
 }
 
 @section section_script {
     moment.locale('es');
 
     $("#chsCCO").chosen({
-        width: "100%",
-        "disable_search": true
+        width: "100%"
     });    
        
-    $("#calendar").fullCalendar();
+    $('#calendar').fullCalendar({
+        events: function(start, end, timezone, callback) {    
+            $.ajax({ method: "POST", url: "/Advisory/Activity/GetActivies", data: {startDate:start.format("DD/MM/YYYY"), endDate:end.format("DD/MM/YYYY")} })
+                .done(function (result) {
+                    var eventSerialized = jQuery.parseJSON(result);
+                    var events = [];
+                    $.each(eventSerialized, function (index, value) {
+                        events.push({ title: value.Title, start: value.Date });
+                    });                        
+                    callback(events);
+                });
+        }
+    });
+            
+    $("#calendar .fc-header-toolbar .fc-left h2").append("<small>periodo:</small><small id='smlPeriod'></small>");
+    
+    var current_date = $("#calendar").fullCalendar("getDate");    
+    var month_int = current_date.month() + 1;
+    var year_int = current_date.years();
+    
+    $.ajax({ method: "POST", url: "/Advisory/Activity/ValidPeriod", data: {month: month_int, year: year_int} })
+        .done(function (result) {
+            if (result == "True") {
+                $("#smlPeriod").text(year_int+""+month_int);
+            }else{
+                $("#smlPeriod").text("El periodo no esta activo.");
+                $("#btnAddActivityModal").prop( "disabled", true );
+            }
+        });
 
-    $('#reportrange').daterangepicker({
-        format: 'DD/MM/YYYY hh:mm',                
-        showDropdowns: true,
+    $('#reportrange span').html(moment().format("DD MMMM YYYY hh:mm"));
+
+    $("#reportrange").daterangepicker({
+        format: "DD/MM/YYYY hh:mm",
+        singleDatePicker: true,
         timePicker: true,
-        timePickerIncrement: 1,
-        timePicker12Hour: true,                
+        timePickerIncrement: 5,
+        timePicker24Hour: true,                
         opens: 'right',
         drops: 'down',
         buttonClasses: ['btn', 'btn-sm'],
@@ -42,21 +73,62 @@
         separator: ' to ',
         locale: {
             applyLabel: 'Aceptar',
-            cancelLabel: 'Cancelar',
-            fromLabel: 'Desde',
-            toLabel: 'Hasta'
+            cancelLabel: 'Cancelar'            
         }
-    }, function(start, end, label) {
-        console.log(start.toISOString(), end.toISOString(), label);
-        $('#reportrange span').html(start.format('MMMM D, YYYY hh:mm') + ' - ' + end.format('MMMM D, YYYY hh:mm'));
+    }, function(start, end, label) {        
+        $("#reportrange span").html(start.format("DD MMMM YYYY hh:mm"));
     });
+    
+    $("#btnAddActivity").on("click", function (e) {        
+        var activityStartDate = moment($("#reportrange span").text(), "DD MMMM YYYY hh:mm").format("DD/MM/YYYY HH:mm");
+        $.ajax({ method: "POST", url: "/Advisory/Activity/InsertActivity", data: {centerCostId: $("#chsCCO").val(), periodId: $("#smlPeriod").text(), activityStart: activityStartDate, activityDescription: $("#txtDescription").val()} })
+            .done(function (result) {                
+                if(result == "True"){
+                    $("#txtDescription").val("");
+                    $("#myModal").modal("hide");
+                    toastr.success("Se creo correctamente la actividad.", "Mensaje", { positionClass: "toast-top-full-width" });                    
+                } else {
+                    toastr.error("No se creo correctamente la actividad.", "Mensaje", { positionClass: "toast-top-full-width" });
+                }
+            });
+    });
+    
+    $("#btnAddActivityModal").on("click", function (e) {
+        $.ajax({ method: "POST", url: "/Advisory/Activity/ListCostCenter" })
+            .done(function (result) {                
+                var costCenters = jQuery.parseJSON(result);
+                var sltCCO = $("#chsCCO");
+                sltCCO.find("option").remove();
+                $.each(costCenters, function (index, value) {
+                    sltCCO.append("<option value='"+value.Id+"'>"+value.Description+"</option>");
+                });
+                sltCCO.trigger("chosen:updated");
+            });
+    });
+    
+    $('.fc-button').click(function(){
+        $("#calendar .fc-header-toolbar .fc-left h2").append("<small>periodo:</small><small id='smlPeriod'></small>");
+        current_date = $("#calendar").fullCalendar("getDate");
+        month_int = current_date.month() + 1;
+        year_int = current_date.years();
+        $.ajax({ method: "POST", url: "/Advisory/Activity/ValidPeriod", data: {month: month_int, year: year_int} })
+            .done(function (result) {
+                if (result == "True") {
+                    $("#smlPeriod").text(year_int+""+month_int);
+                }else{
+                    $("#smlPeriod").text("El periodo no esta activo.");
+                    $("#btnAddActivityModal").prop( "disabled", true );
+                }
+            });
+    });
+    
 }
 
 <div class="col-lg-3">
     <div class="ibox float-e-margins">
         <div class="ibox-content">
             <h2>Actividades</h2>
-            <button type="button" class="btn btn-primary btn-block" data-target="#myModal" data-toggle="modal"><i class="fa fa-calendar-plus-o"></i> Agregar</button>
+            <button type="button" id="btnAddActivityModal" class="btn btn-primary btn-block" data-target="#myModal" data-toggle="modal"><i class="fa fa-calendar-plus-o"></i> Agregar</button>
         </div>
     </div>
 </div>
@@ -78,9 +150,7 @@
                     <div class="form-group">
                         <label class="col-lg-3 control-label">Centro de Costo</label>
                         <div class="col-lg-9">
-                            <select id="chsCCO">
-                                <option>holi boli</option>
-                            </select>
+                            <select id="chsCCO"></select>
                         </div>
                     </div>
                     <div class="form-group">
@@ -95,14 +165,14 @@
                     <div class="form-group">
                         <label class="col-lg-3 control-label">Descripción</label>
                         <div class="col-lg-9">
-                            <textarea class="form-control" style="resize: none;"></textarea>
+                            <textarea id="txtDescription" class="form-control" style="resize: none;"></textarea>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-white" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-primary">Agregar</button>
+                <button type="button" id="btnAddActivity" class="btn btn-primary">Agregar</button>
             </div>
         </div>
     </div>

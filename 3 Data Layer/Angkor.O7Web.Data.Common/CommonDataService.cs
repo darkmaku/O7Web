@@ -1,5 +1,6 @@
 ﻿// Create by Felix A. Bueno
 
+using System.Collections.Generic;
 using System.Linq;
 using Angkor.O7Framework.Data;
 using Angkor.O7Framework.Data.Common;
@@ -22,6 +23,17 @@ namespace Angkor.O7Web.Data.Common
                 parameter.Add("COMPANY", companyId);
                 parameter.Add("BRANCH", branchId);
                 return dataAccess.ExecuteFunction<Supervisor>("SUPPORT.GET_SUPERVISOR", parameter, typeof(SupervisorDataMapper)).FirstOrDefault();
+            }
+        }
+
+        public List<CentroCosto> GetCentroCostos(string companyId, string branchId)
+        {
+            using (var dataAccess = new O7DataAccess(DataConnection))
+            {
+                var parameter = new O7Parameter();
+                parameter.Add("p_company", companyId);
+                parameter.Add("p_branch", branchId);
+                return dataAccess.ExecuteFunction<CentroCosto>("common_function.list_cost_center", parameter, typeof(CentroCostoDataMapper));
             }
         }
     }

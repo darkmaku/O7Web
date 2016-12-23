@@ -93,6 +93,10 @@
       <Project>{87B7FAD4-FFAF-4F51-BFB3-6EECFE680A74}</Project>
       <Name>Angkor.O7Web.Domain.Advisory</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\2 Domain Layer\Angkor.O7Web.Domain.Common\Angkor.O7Web.Domain.Common.csproj">
+      <Project>{9C6779FB-7CC4-4891-AE05-6AD0E07C2CE2}</Project>
+      <Name>Angkor.O7Web.Domain.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\2 Domain Layer\Angkor.O7Web.Domain.Security\Angkor.O7Web.Domain.Security.csproj">
       <Project>{F4793CCD-CFB9-4AFE-A223-4F181C247B88}</Project>
       <Name>Angkor.O7Web.Domain.Security</Name>

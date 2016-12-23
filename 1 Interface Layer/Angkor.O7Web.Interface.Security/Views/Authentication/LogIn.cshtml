@@ -4,11 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O7ERP | Administración</title>
+    <title>O7ERP Web | Administración</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://use.fontawesome.com/b6f7189985.js"></script>
-    @*TODO: No usar CDN en font awesome  
-        @Html.StyleLink("font-awesome/css/font-awesome.css")*@
+    <script src="https://use.fontawesome.com/b6f7189985.js"></script>    
     @Html.StyleLink("css/plugins/chosen/bootstrap-chosen.css")
     @Html.StyleLink("css/plugins/toastr/toastr.min.css")
     @Html.StyleLink("css/animate.css")
@@ -32,7 +30,7 @@
         }
         #logo-o {
         z-index: 0;
-        margin-top: -86px;
+        margin-top: -110px;
         font-family: "Times New Roman", Georgia, Serif;
         font-style: italic;
         font-size: 250px;
@@ -54,11 +52,11 @@
 
 <div class="middle-box text-center loginscreen animated fadeInDown">
     <div>
-        <div>
+        <div style="height: 325px !important;">
             <div id="logo-o">O</div>
             <div id="logo-7">7</div>
         </div>
-        <h3>Bienvenido al O7ERP</h3>
+        <h3>Bienvenido</h3>
         <p>Versión web 1.0</p>
         @using (Html.BeginForm("LogIn", "Authentication", FormMethod.Post, new {@class = "m-t", @role = "form"})) {
             <div class="form-group">
@@ -70,13 +68,13 @@
             </div>
             <div class="form-group" style="text-align: left;">
                 @Html.HiddenFor(model => model.CompanyId)
-                <select id="Companies" data-placeholder="Elige Compañia" class="chosen-select" disabled="true" tabindex="2"></select>
+                <select id="Companies" data-placeholder="Elige Compañia" class="chosen-select" disabled="disabled" tabindex="2"></select>
             </div>
             <div class="form-group" style="text-align: left;">
                 @Html.HiddenFor(model => model.BranchId)
-                <select id="Branches" data-placeholder="Elige Sucursal" class="chosen-select" disabled="true" tabindex="2"></select>
+                <select id="Branches" data-placeholder="Elige Sucursal" class="chosen-select" disabled="disabled" tabindex="2"></select>
             </div>
-            <button id="Sign" type="submit" class="btn btn-primary block full-width m-b" disabled="true">Ingresar</button>
+            <button id="Sign" type="submit" class="btn btn-primary block full-width m-b" disabled="disabled">Ingresar</button>
             <a href="#">
                 <small>¿Olvidaste la contraseña?</small>
             </a>
@@ -92,18 +90,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     @Html.JavaScriptLink("js/plugins/chosen/chosen.jquery.js")
     @Html.JavaScriptLink("js/plugins/toastr/toastr.min.js")
-    <script type="text/javascript">
+<script type="text/javascript">
         $(document).ready(function () {
-            @if (HttpContext.Current.Request.HttpMethod == "POST")
-            {
-                var messageResult = Model.ValidationErrorMessages.Aggregate("", (current, message) => current + message + ", ");
-                @:toastr.warning('@messageResult', 'Error de validación', { positionClass: "toast-top-full-width" });
-            }
-
             $(".chosen-select").chosen({
-            width: "100%",
-            "disable_search": true
-        });
+                width: "100%",
+                disable_search: true
+            });
 
         $("#validate-user").on("click", function (e) {
             var txtLogin = $("#Login");
@@ -130,7 +122,9 @@
                     }
                 })
                 .fail(function (result) {
+                    console.log("Error");
                     console.log(result);
+                    toastr.error("No se creo correctamente la actividad.", "Mensaje", { positionClass: "toast-top-full-width" });
                 });
         });
 

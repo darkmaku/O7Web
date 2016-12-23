@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Angkor Group | O7Advisory</title>
+    <title>O7ERP Web | O7Advisory</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://use.fontawesome.com/b6f7189985.js"></script>
     @Html.StyleLink("css/plugins/toastr/toastr.min.css")
@@ -44,6 +44,25 @@
 
         #li:hover {
             background-color: #006db9;
+        }
+        
+        .cool-link {
+            display: inline-block;
+            color: #676a6c;
+            text-decoration: none;
+        }
+
+        .cool-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #676a6c;
+            transition: width .3s;
+        }
+
+        .cool-link:hover::after {
+            width: 100%;            
         }
     </style>
 </head>
@@ -149,7 +168,7 @@
                         <span>Cambiar contraseña</span>
                     </div>
                     <div class="setings-item">
-                        <span>Cerrar sesión</span>
+                        <span onclick="location='/Advisory/Security/Logout'" style="cursor: pointer;" class="cool-link">Cerrar sesión</span>
                     </div>
                 </div>
                 <div id="tab-2" class="tab-pane">

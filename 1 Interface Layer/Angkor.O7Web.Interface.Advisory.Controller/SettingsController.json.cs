@@ -23,10 +23,25 @@ namespace Angkor.O7Web.Interface.Advisory.Controller
         }
 
         [HttpPost]
+        public JsonResult OpenYear(string year)
+        {
+            var domain = new PeriodJsonDomain(User);
+            return O7HttpResult.MakeJsonResult(domain.ActivateYear(year));
+        }
+
+        [HttpPost]
         public JsonResult OpenPeriod(string periodId)
         {
             var domain = new PeriodJsonDomain(User);
-            return O7HttpResult.MakeJsonResult(domain.ActivatePeriod(periodId));
+            return O7HttpResult.MakeJsonResult(domain.OpenPeriod(periodId));
         }
+
+        [HttpPost]
+        public JsonResult ClosePeriod(string periodId)
+        {
+            var domain = new PeriodJsonDomain(User);
+            return O7HttpResult.MakeJsonResult(domain.ClosePeriod(periodId));
+        }
+        
     }
 }

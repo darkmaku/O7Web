@@ -30,13 +30,26 @@ namespace Angkor.O7Web.Data.Advisory
             using (var dataAccess = new O7DataAccess(DataConnection))
             {
                 var parameter = new O7Parameter();
-                parameter.Add("COMPANY", companyId);
-                parameter.Add("BRANCH", branchId);
-                return dataAccess.ExecuteFunction<Year>("ADVISORY_PERIOD.LIST_AVALIBLE_YEAR", parameter, typeof(PeriodStateDataMapper));
+                parameter.Add("p_company", companyId);
+                parameter.Add("p_branch", branchId);
+                return dataAccess.ExecuteFunction<Year>("ADVISORY_PERIOD.list_avalible_year", parameter, typeof(PeriodStateDataMapper));
             }
         }
 
-        public bool ActivatePeriod(string companyId, string branchId, string periodId)
+        public bool ValidPeriod(string companyId, string branchId, string month, string year)
+        {
+            using (var dataAccess = new O7DataAccess(DataConnection))
+            {
+                var parameter = new O7Parameter();
+                parameter.Add("p_company", companyId);
+                parameter.Add("p_branch", branchId);
+                parameter.Add("p_month", month);
+                parameter.Add("p_year", year);
+                return dataAccess.ExecuteFunction<int>("ADVISORY_PERIOD.valid_period_id", parameter) > 0;
+            }
+        }
+
+        public bool ActivateYear(string companyId, string branchId, string periodId)
         {
             using (var dataAccess = new O7DataAccess(DataConnection))
             {
@@ -46,6 +59,30 @@ namespace Angkor.O7Web.Data.Advisory
                 parameter.Add("YEAR", periodId);
                 return dataAccess.ExecuteFunction<int>("ADVISORY_PERIOD.ACTIVATE_YEAR", parameter) != 0;
             }
-        } 
+        }
+
+        public bool OpenPeriod(string companyId, string branchId, string periodId)
+        {
+            using (var dataAccess = new O7DataAccess(DataConnection))
+            {
+                var parameter = new O7Parameter();
+                parameter.Add("p_company", companyId);
+                parameter.Add("p_branch", branchId);
+                parameter.Add("p_period_id", periodId);
+                return dataAccess.ExecuteFunction<int>("ADVISORY_PERIOD.active_period", parameter) != 0;
+            }
+        }
+
+        public bool ClosePeriod(string companyId, string branchId, string periodId)
+        {
+            using (var dataAccess = new O7DataAccess(DataConnection))
+            {
+                var parameter = new O7Parameter();
+                parameter.Add("p_company", companyId);
+                parameter.Add("p_branch", branchId);
+                parameter.Add("p_period_id", periodId);
+                return dataAccess.ExecuteFunction<int>("ADVISORY_PERIOD.close_period", parameter) != 0;
+            }
+        }
     }
 }
