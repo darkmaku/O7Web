@@ -13,6 +13,6 @@ namespace Angkor.O7Web.Interface.Security.Model
             Modules = new List<Module>();
         }
 
-        public IEnumerable<Module> Modules { get; set; }
+        public List<Module> Modules { get; set; }
     }
 }

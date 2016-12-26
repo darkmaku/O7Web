@@ -13,7 +13,6 @@ using Angkor.O7Web.Domain.Security;
 using Angkor.O7Web.Interface.Security.Controllers.Transfer;
 using Angkor.O7Web.Interface.Security.Controllers.ViewModelMapper;
 using Angkor.O7Web.Interface.Security.Model;
-using PostSharp.Aspects;
 
 namespace Angkor.O7Web.Interface.Security.Controllers
 {
