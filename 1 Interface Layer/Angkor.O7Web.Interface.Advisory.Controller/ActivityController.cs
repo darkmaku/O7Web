@@ -15,6 +15,11 @@ namespace Angkor.O7Web.Interface.Advisory.Controller
             return View();
         }
 
+        public ActionResult WorkerManagment()
+        {
+            return View();
+        }
+
         [HttpPost]
         public JsonResult InsertActivity(string centerCostId, string periodId, string activityStart, string activityDescription)
         {
@@ -41,6 +46,16 @@ namespace Angkor.O7Web.Interface.Advisory.Controller
         {
             var domain = new ActivityJsonDomain(User);
             return O7HttpResult.MakeJsonResult(domain.GetActivies(startDate, endDate));
+        }
+
+        [HttpPost]
+        public JsonResult GetReportActivities(string workerId, string workerName, string workerLastName,
+            string workerSecondLastName, string costCenterId, string startActivity, string endActivity)
+        {
+            var domain = new ActivityJsonDomain(User);
+            var activities = domain.GetReportActivities(workerId, workerName, workerLastName,
+            workerSecondLastName, costCenterId, startActivity, endActivity);
+            return O7HttpResult.MakeJsonResult(activities);
         }
     }
 }

@@ -42,5 +42,25 @@ namespace Angkor.O7Web.Data.Advisory
                 return dataAccess.ExecuteFunction<Activity>("advisory_activity.list_activities", parameter, typeof(ActivityDataMapper));
             }
         }
+
+        public List<ActivityReport> ListActivityReports(string companyId, string branchId, string workerId,
+            string workerName, string workerLastName, string workerSecondLastName, string costCenterId, 
+            string startActivity, string endActivity)
+        {
+            using (var dataAccess = new O7DataAccess(DataConnection))
+            {
+                var parameter = new O7Parameter();
+                parameter.Add("p_company", companyId);
+                parameter.Add("p_branch", branchId);
+                parameter.Add("p_worker_id", workerId);
+                parameter.Add("p_worker_name", workerName);
+                parameter.Add("p_worker_last_name", workerLastName);
+                parameter.Add("p_worker_second_last_name", workerSecondLastName);
+                parameter.Add("p_cost_center_id", costCenterId);
+                parameter.Add("p_start_date", startActivity);
+                parameter.Add("p_end_date", endActivity);
+                return dataAccess.ExecuteFunction<ActivityReport>("advisory_activity.list_activities_by_worker", parameter, typeof(ActivityReportDataMapper));
+            }
+        }
     }
 }

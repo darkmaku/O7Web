@@ -1,6 +1,7 @@
 ﻿// Create by Felix A. Bueno
 
 using System;
+using System.Security.Cryptography.X509Certificates;
 using Angkor.O7Framework.Domain;
 using Angkor.O7Framework.Domain.Response;
 using Angkor.O7Framework.Utility;
@@ -37,6 +38,15 @@ namespace Angkor.O7Web.Domain.Advisory
         public O7Response GetActivies(string startDate, string endDate)
         {
             var result = _dataService.ListActivities(_principal.Company, _principal.Branch, startDate, endDate);
+            var resultSerialized = O7JsonSerealizer.Serialize(result);
+            return O7SuccessResponse.MakeResponse(resultSerialized);
+        }
+
+        public O7Response GetReportActivities(string workerId, string workerName, string workerLastName,
+            string workerSecondLastName, string costCenterId, string startActivity, string endActivity)
+        {
+            var result = _dataService.ListActivityReports(_principal.Company, _principal.Branch, workerId, workerName,
+                workerLastName, workerSecondLastName, costCenterId, startActivity, endActivity);
             var resultSerialized = O7JsonSerealizer.Serialize(result);
             return O7SuccessResponse.MakeResponse(resultSerialized);
         }

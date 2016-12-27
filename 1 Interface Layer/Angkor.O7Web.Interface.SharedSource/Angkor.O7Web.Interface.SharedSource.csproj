@@ -680,6 +680,8 @@
     <Content Include="js\plugins\toastr\toastr.min.js" />
     <Content Include="js\plugins\topojson\topojson.js" />
     <Content Include="js\plugins\touchspin\jquery.bootstrap-touchspin.min.js" />
+    <Content Include="js\plugins\typehead\bootstrap-typeahead.js" />
+    <Content Include="js\plugins\typehead\bootstrap3-typeahead.js" />
     <Content Include="js\plugins\typehead\bootstrap3-typeahead.min.js" />
     <Content Include="js\plugins\validate\jquery.validate.min.js" />
     <Content Include="js\plugins\video\responsible-video.js" />
@@ -862,7 +864,9 @@
       <Name>Angkor.O7Web.Common.Entity</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="js\plugins\dataTables\datatables-spanish.json" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Security\Signout.cshtml" />
   </ItemGroup>

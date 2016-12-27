@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="ActivityDataService.cs" />
     <Compile Include="DataMapper\ActivityDataMapper.cs" />
+    <Compile Include="DataMapper\ActivityReportDataMapper.cs" />
     <Compile Include="DataMapper\PeriodDataMapper.cs" />
     <Compile Include="DataMapper\PeriodStateDataMapper.cs" />
     <Compile Include="PeriodDataService.cs" />
