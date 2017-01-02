@@ -130,6 +130,7 @@
   <ItemGroup>
     <None Include="Properties\PublishProfiles\BuenoDev.pubxml" />
     <Content Include="Views\Authentication\SwitchModule.cshtml" />
+    <None Include="Properties\PublishProfiles\FBueno.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,6 +1,5 @@
 ﻿// Create by Felix A. Bueno
 
-using System;
 using System.Collections.Generic;
 using Angkor.O7Framework.Data;
 using Angkor.O7Framework.Data.Common;
