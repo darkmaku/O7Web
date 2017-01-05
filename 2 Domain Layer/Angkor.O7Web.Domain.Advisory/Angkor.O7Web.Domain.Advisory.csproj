@@ -53,8 +53,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActivityJsonDomain.cs" />
-    <Compile Include="Components\FlowAdvisory.cs" />
-    <Compile Include="Components\BasicFunction.cs" />
     <Compile Include="PeriodJsonDomain.cs" />
     <Compile Include="PeriodWebDomain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

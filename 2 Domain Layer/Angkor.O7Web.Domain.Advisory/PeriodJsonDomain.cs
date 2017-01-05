@@ -1,7 +1,5 @@
 ﻿// Create by Felix A. Bueno
 
-using Angkor.O7Framework.Domain;
-using Angkor.O7Framework.Domain.Response;
 using Angkor.O7Framework.Utility;
 using Angkor.O7Framework.Web.Security;
 using Angkor.O7Web.Data.Advisory;

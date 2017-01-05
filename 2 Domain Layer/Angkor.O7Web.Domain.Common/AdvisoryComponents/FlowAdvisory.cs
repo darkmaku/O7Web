@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Angkor.O7Framework.Infraestructure;
 
-namespace Angkor.O7Web.Domain.Advisory.Components
+namespace Angkor.O7Web.Domain.Common.AdvisoryComponents
 {
     class FlowAdvisory: O7AbstractDomain
     {

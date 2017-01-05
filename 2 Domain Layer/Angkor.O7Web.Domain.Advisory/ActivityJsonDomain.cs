@@ -3,7 +3,6 @@
 using System;
 using System.Security.Cryptography.X509Certificates;
 using Angkor.O7Framework.Domain;
-using Angkor.O7Framework.Domain.Response;
 using Angkor.O7Framework.Utility;
 using Angkor.O7Framework.Web.Security;
 using Angkor.O7Web.Data.Advisory;
@@ -41,7 +40,7 @@ namespace Angkor.O7Web.Domain.Advisory
             return O7SuccessResponse.MakeResponse(resultSerialized);
         }
 
-        public virtual O7Response GetReportActivities(string workerId, string workerName, string workerLastName,
+        public  O7Response GetReportActivities(string workerId, string workerName, string workerLastName,
             string workerSecondLastName, string costCenterId, string startActivity, string endActivity)
         {
             var result = _dataService.ListActivityReports(_principal.Company, _principal.Branch, workerId, workerName,
