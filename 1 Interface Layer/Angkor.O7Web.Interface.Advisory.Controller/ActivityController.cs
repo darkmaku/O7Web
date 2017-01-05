@@ -6,6 +6,7 @@ using Angkor.O7Framework.Web.WebResult;
 using Angkor.O7Web.Domain.Advisory;
 using Angkor.O7Web.Domain.Common;
 
+
 namespace Angkor.O7Web.Interface.Advisory.Controller
 {
     public class ActivityController : O7Controller
@@ -23,7 +24,8 @@ namespace Angkor.O7Web.Interface.Advisory.Controller
         [HttpPost]
         public JsonResult InsertActivity(string centerCostId, string periodId, string activityStart, string activityDescription)
         {
-            var domain = new ActivityJsonDomain(User);
+            var domain = BasicFunction.InitialMethod<ActivityJsonDomain, FlowAdvisory>(User);
+            //var domain = new ActivityJsonDomain(User);
             return O7HttpResult.MakeJsonResult(domain.InsertActivity(centerCostId, periodId, activityStart, activityDescription));
         }
 
@@ -37,14 +39,16 @@ namespace Angkor.O7Web.Interface.Advisory.Controller
         [HttpPost]
         public JsonResult ValidPeriod(string month, string year)
         {
-            var domain = new PeriodJsonDomain(User);
+            var domain = BasicFunction.InitialMethod<PeriodJsonDomain, FlowAdvisory>(User);
+            //var domain = new PeriodJsonDomain(User);
             return O7HttpResult.MakeJsonResult(domain.ValidPeriod(month, year));
         }
 
         [HttpPost]
         public JsonResult GetActivies(string startDate, string endDate)
         {
-            var domain = new ActivityJsonDomain(User);
+            var domain = BasicFunction.InitialMethod<ActivityJsonDomain, FlowAdvisory>(User);
+            //var domain = new ActivityJsonDomain(User);
             return O7HttpResult.MakeJsonResult(domain.GetActivies(startDate, endDate));
         }
 
@@ -52,7 +56,8 @@ namespace Angkor.O7Web.Interface.Advisory.Controller
         public JsonResult GetReportActivities(string workerId, string workerName, string workerLastName,
             string workerSecondLastName, string costCenterId, string startActivity, string endActivity)
         {
-            var domain = new ActivityJsonDomain(User);
+            var domain = BasicFunction.InitialMethod<ActivityJsonDomain, FlowAdvisory>(User);
+            //var domain = new ActivityJsonDomain(User);
             var activities = domain.GetReportActivities(workerId, workerName, workerLastName,
             workerSecondLastName, costCenterId, startActivity, endActivity);
             return O7HttpResult.MakeJsonResult(activities);
