@@ -1,11 +1,10 @@
 ﻿// Create by Felix A. Bueno
 
+using Angkor.O7Framework.Common.Model;
 using Angkor.O7Framework.Domain;
 using Angkor.O7Framework.Domain.Response;
 using Angkor.O7Framework.Utility;
 using Angkor.O7Web.Data.Security;
-
-[assembly: O7DomainException]
 
 namespace Angkor.O7Web.Domain.Security
 {

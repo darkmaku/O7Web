@@ -4,12 +4,14 @@ using System;
 using System.Collections.Generic;
 using System.Web;
 using System.Web.Mvc;
+using Angkor.O7Framework.Common.Model;
 using Angkor.O7Framework.Domain.Response;
 using Angkor.O7Framework.Utility;
 using Angkor.O7Framework.Web.WebResult;
 using Angkor.O7Web.Common.Security.Entity;
 using Angkor.O7Web.Common.Utility;
 using Angkor.O7Web.Domain.Security;
+using Angkor.O7Web.Domain.Security.Components;
 using Angkor.O7Web.Interface.Security.Controllers.Transfer;
 using Angkor.O7Web.Interface.Security.Controllers.ViewModelMapper;
 using Angkor.O7Web.Interface.Security.Model;
@@ -28,7 +30,9 @@ namespace Angkor.O7Web.Interface.Security.Controllers
         {
             if (!model.ValidViewModel) return View(model);
 
-            var domainContext = new SecurityWebDomain(model.Login, model.Password);
+            object[] args = new object[] { model.Login, model.Password };
+            var domainContext = SecurityInterface.Make<SecurityWebDomain, SecurityFlow>(args);
+            //var domainContext = new SecurityWebDomain(model.Login, model.Password);
             var userResponse = domainContext.GetUserName(model.CompanyId, model.BranchId);
 
             var successResponse = userResponse as O7SuccessResponse<string>;
