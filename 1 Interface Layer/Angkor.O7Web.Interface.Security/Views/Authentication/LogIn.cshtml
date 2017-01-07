@@ -57,6 +57,7 @@
             <div id="logo-7">7</div>
         </div>
         <h3>Bienvenido</h3>
+        @ViewData
         <p>Versión web 1.0</p>
         @using (Html.BeginForm("LogIn", "Authentication", FormMethod.Post, new {@class = "m-t", @role = "form"})) {
             <div class="form-group">

@@ -1,9 +1,6 @@
 ﻿// Create by Felix A. Bueno
 
 using System.Collections.Generic;
-using System.Linq;
-using Angkor.O7Framework.Data;
-using Angkor.O7Framework.Data.Common;
 using Angkor.O7Web.Common.Entity;
 using Angkor.O7Web.Data.Common.DataMapper;
 
