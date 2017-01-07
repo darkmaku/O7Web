@@ -15,7 +15,7 @@
     <AssemblyName>Angkor.O7Web.Interface.SharedSource</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -891,7 +891,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>2503</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:120/SharedSource</IISUrl>
+          <IISUrl>http://localhost:2503/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

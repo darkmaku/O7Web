@@ -6,8 +6,6 @@ using Angkor.O7Framework.Utility;
 using Angkor.O7Framework.Web.Security;
 using Angkor.O7Web.Data.Common;
 
-[assembly: O7DomainException]
-
 namespace Angkor.O7Web.Domain.Common
 {
     public class ManagmentWebDomain

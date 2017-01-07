@@ -5,7 +5,6 @@ using Angkor.O7Framework.Domain.Response;
 using Angkor.O7Framework.Web.Security;
 using Angkor.O7Web.Data.Advisory;
 
-[assembly: O7DomainException]
 namespace Angkor.O7Web.Domain.Advisory
 {    
     public class PeriodWebDomain

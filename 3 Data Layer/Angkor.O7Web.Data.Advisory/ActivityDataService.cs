@@ -44,8 +44,7 @@ namespace Angkor.O7Web.Data.Advisory
 
         public List<ActivityReport> ListActivityReports(string companyId, string branchId, string workerId,
             string workerName, string workerLastName, string workerSecondLastName, string costCenterId, 
-            string startActivity, string endActivity)
-        {
+            string startActivity, string endActivity){
             using (var dataAccess = new O7DataAccess(DataConnection))
             {
                 var parameter = new O7Parameter();
