@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 Libraries", "5 Libraries", "{5861FAF9-D92F-4EFA-B8BA-713CA57DDC9B}"
 	ProjectSection(SolutionItems) = preProject
 		6 Libraries\Angkor.O7Framework.Common.dll = 6 Libraries\Angkor.O7Framework.Common.dll
+		6 Libraries\Angkor.O7Framework.Components.dll = 6 Libraries\Angkor.O7Framework.Components.dll
 		6 Libraries\Angkor.O7Framework.Data.dll = 6 Libraries\Angkor.O7Framework.Data.dll
 		6 Libraries\Angkor.O7Framework.Domain.dll = 6 Libraries\Angkor.O7Framework.Domain.dll
 		6 Libraries\Angkor.O7Framework.Infraestructure.dll = 6 Libraries\Angkor.O7Framework.Infraestructure.dll
