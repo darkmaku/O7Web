@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="AdvisoryComponents\BasicFunction.cs" />
     <Compile Include="AdvisoryComponents\FlowAdvisory.cs" />
+    <Compile Include="ErrorResponseComponents\ErrorResponse.cs" />
     <Compile Include="SecurityComponents\SecurityFlow.cs" />
     <Compile Include="SecurityComponents\SecurityInterface.cs" />
     <Compile Include="ManagmentWebDomain.cs" />

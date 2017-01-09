@@ -10,6 +10,7 @@ using Angkor.O7Framework.Utility;
 using Angkor.O7Framework.Web.WebResult;
 using Angkor.O7Web.Common.Security.Entity;
 using Angkor.O7Web.Common.Utility;
+using Angkor.O7Web.Domain.Common.ErrorResponseComponents;
 using Angkor.O7Web.Domain.Common.SecurityComponents;
 using Angkor.O7Web.Domain.Security;
 using Angkor.O7Web.Domain.Security.Components;
@@ -43,7 +44,8 @@ namespace Angkor.O7Web.Interface.Security.Controllers
             var successResponse = userResponse as O7SuccessResponse<string>;
 
             //TODO: cambiar proceso
-            if (successResponse == null) return O7HttpResult.MakeRedirectError(500, "Error interno del servidor");
+            if (successResponse == null) return ErrorResponse.Make(500, "Error interno del servidor");
+            //if (successResponse == null) return O7HttpResult.MakeRedirectError(500, "Error interno del servidor");
 
             var cookieValue = new CredentialCookie(login, password, company, branch, successResponse.Value1);
             var serializedValue = O7JsonSerealizer.Serialize(cookieValue);
@@ -72,8 +74,8 @@ namespace Angkor.O7Web.Interface.Security.Controllers
             var modules = domainContext.ListModules(serializedValue.CompanyId, serializedValue.BranchId);
 
             var currentSource = modules as O7SuccessResponse<List<Module>>;
-
-            if (currentSource == null) return O7HttpResult.MakeRedirectError(500, "");
+            //TODO: cambiar proceso
+            if (currentSource == null) return ErrorResponse.Make(500, "");
 
             currentSource.Value1.Append("Url", $"/Security/Access?credential={cookie.Value.ToUriPath()}");
 
