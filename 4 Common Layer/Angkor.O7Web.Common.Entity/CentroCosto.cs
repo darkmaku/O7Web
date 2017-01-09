@@ -1,10 +1,9 @@
 ﻿// Create by Felix A. Bueno
 
-using Angkor.O7Framework.Data.Common;
 
 namespace Angkor.O7Web.Common.Entity
 {
-    public class CentroCosto : O7Entity
+    public class CentroCosto
     {
         public string Id { get; set; }
         public string Description { get; set; }

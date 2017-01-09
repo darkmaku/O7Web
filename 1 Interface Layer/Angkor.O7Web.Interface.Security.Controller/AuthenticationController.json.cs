@@ -1,9 +1,9 @@
-﻿ // Create by Felix A. Bueno
+﻿// Create by Felix A. Bueno
 
 using System.Web.Mvc;
 using Angkor.O7Framework.Web.WebResult;
 using Angkor.O7Web.Domain.Security;
-using Angkor.O7Web.Domain.Security.Components;
+using Angkor.O7Web.Domain.Common.SecurityComponents;
 
 namespace Angkor.O7Web.Interface.Security.Controllers
 {

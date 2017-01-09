@@ -14,7 +14,7 @@ namespace Angkor.O7Web.Domain.Advisory.Components
         public static TClass InitialMethod<TClass,TFlowAdvisory>(params object[] parametros) 
             where TClass: class where TFlowAdvisory:O7AbstractDomain
         {
-            var x = O7DomainAccess.MakeInstance<TClass, TFlowAdvisory>();
+            var x = O7DomainAccess.MakeInstance<TClass, TFlowAdvisory>(parametros);
             return x;
         }
 

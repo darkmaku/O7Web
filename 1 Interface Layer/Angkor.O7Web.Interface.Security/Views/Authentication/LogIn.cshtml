@@ -59,27 +59,31 @@
         <h3>Bienvenido</h3>
         @ViewData
         <p>Versión web 1.0</p>
-        @using (Html.BeginForm("LogIn", "Authentication", FormMethod.Post, new {@class = "m-t", @role = "form"})) {
+
+        <form action="/Authentication/LogInPost" method="post" id="LogInForm" class = "m-t" role = "form">
             <div class="form-group">
-                @Html.TextBoxFor(model => model.Login, new {@class = "form-control", @placeholder = "Usuario", @required = ""})
+                <label class="control-label">Login</label>
+                <input type="text" id="logIn" class="form-control" name="logIn" placeholder="Usuario" required>
             </div>
             <div class="input-group form-group">
-                @Html.PasswordFor(model => model.Password, new {@class = "form-control", @placeholder = "Contraseña", @required = ""})
+                <label class="control-label">Password</label>
+                <input type="password" id="password" class="form-control" name="password" placeholder="Contraseña" required>
                 <span class="input-group-addon" id="validate-user" style="cursor: pointer;"><span class="fa fa-angle-right"></span></span>
             </div>
             <div class="form-group" style="text-align: left;">
-                @Html.HiddenFor(model => model.CompanyId)
-                <select id="Companies" data-placeholder="Elige Compañia" class="chosen-select" disabled="disabled" tabindex="2"></select>
+                <input type="hidden" id="companyId" name="companies">
+                <select id="companies" data-placeholder="Elige Compañia" class="chosen-select" disabled="disabled" tabindex="2"></select>
             </div>
             <div class="form-group" style="text-align: left;">
-                @Html.HiddenFor(model => model.BranchId)
-                <select id="Branches" data-placeholder="Elige Sucursal" class="chosen-select" disabled="disabled" tabindex="2"></select>
+                <input type="hidden" id="branchId" name="branches">
+                <select id="branches" data-placeholder="Elige Sucursal" class="chosen-select" disabled="disabled" tabindex="2"></select>
             </div>
-            <button id="Sign" type="submit" class="btn btn-primary block full-width m-b" disabled="disabled">Ingresar</button>
+            <button id="sign" type="submit" class="btn btn-primary block full-width m-b" disabled="disabled">Ingresar</button>
             <a href="#">
                 <small>¿Olvidaste la contraseña?</small>
             </a>
-        }                
+        </form>
+               
         <p class="m-t">
             <small>Desarrollado por AngkorGroup S.A.C &copy; 2016 - @DateTime.Now.Year</small>
         </p>
@@ -99,15 +103,15 @@
             });
 
         $("#validate-user").on("click", function (e) {
-            var txtLogin = $("#Login");
-            var txtPassword = $("#Password");
+            var txtLogin = $("#logIn");
+            var txtPassword = $("#password");
             $.ajax({ method: "POST", url: "/Security/Authentication/GetCompanies", data: { login: txtLogin.val(), password: txtPassword.val() } })
                 .done(function (result) {
                     var objResult = jQuery.parseJSON(result);
                     if (!jQuery.isEmptyObject(objResult)) {
                         txtLogin.attr("readonly", "readonly");
                         txtPassword.attr("readonly", "readonly");
-                        var sltCompanies = $("#Companies");
+                        var sltCompanies = $("#companies");
                         sltCompanies.append("<option value='0'>Elige Compañia</option>");
                         $.each(objResult, function (index, value) {
                             var descripcion = value.Description;
@@ -129,15 +133,15 @@
                 });
         });
 
-        $("#Companies").on("change", function (evt, params) {
-            var txtLogin = $("#Login");
-            var txtPassword = $("#Password");
+        $("#companies").on("change", function (evt, params) {
+            var txtLogin = $("#logIn");
+            var txtPassword = $("#password");
             var company = params.selected;
             $.ajax({ method: "POST", url: "/Security/Authentication/GetBranches", data: { login: txtLogin.val(), password: txtPassword.val(), companyId: company } })
                 .done(function (result) {
                     var objResult = jQuery.parseJSON(result);
                     if (!jQuery.isEmptyObject(objResult)) {
-                        var sltBranches = $("#Branches");
+                        var sltBranches = $("#branches");
                         sltBranches.find("option").remove().end().append("<option value='0'>Elige Sucursal</option>");
                         $.each(objResult, function (index, value) {
                             var descripcion = value.Description;
@@ -148,8 +152,8 @@
                         sltBranches.attr("disabled", false);
                         sltBranches.children("option[value=0]").hide();
                         sltBranches.trigger("chosen:updated");
-                        $("#Sign").attr("disabled", true);
-                        $("#CompanyId").val(company);
+                        $("#sign").attr("disabled", true);
+                        $("#companyId").val(company);
                     }
                 })
                 .fail(function (result) {
@@ -157,10 +161,10 @@
                 });
         });
 
-        $("#Branches").on("change", function (evt, params) {
-            $("#Sign").attr("disabled", false);
+        $("#branches").on("change", function (evt, params) {
+            $("#sign").attr("disabled", false);
             var branch = params.selected;
-            $("#BranchId").val(branch);
+            $("#branchId").val(branch);
         });
         });
     </script>
