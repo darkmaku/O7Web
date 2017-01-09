@@ -1,10 +1,8 @@
 ﻿// Create by Felix A. Bueno
 
-using Angkor.O7Framework.Data.Common;
-
 namespace Angkor.O7Web.Common.Security.Entity
 {
-    public class Company : O7Entity
+    public class Company 
     {
         public string Id { get; set; }
         public string Description { get; set; }
