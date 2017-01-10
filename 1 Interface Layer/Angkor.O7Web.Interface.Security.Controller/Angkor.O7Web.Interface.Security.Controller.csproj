@@ -71,7 +71,6 @@
     <Compile Include="AuthenticationController.json.cs" />
     <Compile Include="AuthenticationController.web.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModelMapper\SwitchModuleViewModelMapper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -96,10 +95,6 @@
     <ProjectReference Include="..\..\4 Common Layer\Angkor.O7Web.Common.Utility\Angkor.O7Web.Common.Utility.csproj">
       <Project>{8B44343C-AB45-46B6-9310-AA21152D8268}</Project>
       <Name>Angkor.O7Web.Common.Utility</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Angkor.O7Web.Interface.Security.Model\Angkor.O7Web.Interface.Security.Model.csproj">
-      <Project>{5BA0DC6D-211C-4AF5-845A-DB416FB647CE}</Project>
-      <Name>Angkor.O7Web.Interface.Security.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

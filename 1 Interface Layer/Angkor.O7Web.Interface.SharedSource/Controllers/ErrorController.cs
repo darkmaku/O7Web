@@ -31,7 +31,7 @@ namespace Angkor.O7Web.Interface.SharedSource.Controllers
             var mapper = new ErrorViewModelMapper();
             mapper.SetSource(response);
 
-            return O7HttpResult.MakeActionResult(response, mapper);
+            return O7HttpResult.MakeActionResult(response);
         }
 
         public ActionResult Error404(string companyId, string branchId)
@@ -42,7 +42,7 @@ namespace Angkor.O7Web.Interface.SharedSource.Controllers
             var mapper = new ErrorViewModelMapper();
             mapper.SetSource(response);
 
-            return O7HttpResult.MakeActionResult(response, mapper);
+            return O7HttpResult.MakeActionResult(response);
         }
 
         public ActionResult Error500(string companyId, string branchId)
@@ -53,7 +53,7 @@ namespace Angkor.O7Web.Interface.SharedSource.Controllers
             var mapper = new ErrorViewModelMapper();
             mapper.SetSource(response);
 
-            return O7HttpResult.MakeActionResult(response, mapper);
+            return O7HttpResult.MakeActionResult(response);
         }
     }
 }

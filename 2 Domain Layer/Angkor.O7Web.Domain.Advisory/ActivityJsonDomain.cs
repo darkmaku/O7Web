@@ -1,8 +1,6 @@
 ﻿// Create by Felix A. Bueno
 
-using System;
-using System.Security.Cryptography.X509Certificates;
-using Angkor.O7Framework.Domain;
+using Angkor.O7Framework.Common.Model;
 using Angkor.O7Framework.Utility;
 using Angkor.O7Framework.Web.Security;
 using Angkor.O7Web.Data.Advisory;

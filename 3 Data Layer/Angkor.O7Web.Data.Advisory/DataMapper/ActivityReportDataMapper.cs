@@ -1,12 +1,15 @@
 ﻿// Create by Felix A. Bueno
 
-using Angkor.O7Framework.Data.Utility;
+using System;
+using Angkor.O7Framework.Data.Tool;
 using Angkor.O7Web.Common.Advisory.Entity;
 
 namespace Angkor.O7Web.Data.Advisory.DataMapper
 {
-    public class ActivityReportDataMapper : O7DataMapper<ActivityReport>
+    public class ActivityReportDataMapper : O7DbMapper<ActivityReport>
     {
+        public static Type Class => typeof(ActivityReportDataMapper);
+        
         public override ActivityReport MapTarget()
             => new ActivityReport
             {

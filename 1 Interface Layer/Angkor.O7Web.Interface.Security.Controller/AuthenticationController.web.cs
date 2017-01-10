@@ -5,17 +5,13 @@ using System.Collections.Generic;
 using System.Web;
 using System.Web.Mvc;
 using Angkor.O7Framework.Common.Model;
-using Angkor.O7Framework.Domain.Response;
 using Angkor.O7Framework.Utility;
 using Angkor.O7Framework.Web.WebResult;
 using Angkor.O7Web.Common.Security.Entity;
 using Angkor.O7Web.Common.Utility;
 using Angkor.O7Web.Domain.Common.SecurityComponents;
 using Angkor.O7Web.Domain.Security;
-using Angkor.O7Web.Domain.Security.Components;
 using Angkor.O7Web.Interface.Security.Controllers.Transfer;
-using Angkor.O7Web.Interface.Security.Controllers.ViewModelMapper;
-using Angkor.O7Web.Interface.Security.Model;
 
 namespace Angkor.O7Web.Interface.Security.Controllers
 {
@@ -75,12 +71,9 @@ namespace Angkor.O7Web.Interface.Security.Controllers
 
             if (currentSource == null) return O7HttpResult.MakeRedirectError(500, "");
 
-            currentSource.Value1.Append("Url", $"/Security/Access?credential={cookie.Value.ToUriPath()}");
+            currentSource.Value1.Append("Url", $"/Security/Access?credential={cookie.Value.ToUriPath()}");            
 
-            var mapper = new SwitchModuleViewModelMapper();
-            mapper.SetSource(currentSource);
-
-            return O7HttpResult.MakeActionResult(modules, mapper);
+            return O7HttpResult.MakeActionResult(modules);
         }
     }
 }
