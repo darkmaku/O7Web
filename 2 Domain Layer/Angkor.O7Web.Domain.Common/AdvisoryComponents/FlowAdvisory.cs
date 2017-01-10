@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Angkor.O7Framework.Infraestructure;
+﻿using Angkor.O7Framework.Infrastructure;
 
 namespace Angkor.O7Web.Domain.Common.AdvisoryComponents
 {
-    class FlowAdvisory: O7AbstractDomain
+    public class FlowAdvisory: O7AbstractDomain
     {
 
     }

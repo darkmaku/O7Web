@@ -1,7 +1,5 @@
-﻿using System.Runtime.Remoting.Messaging;
-using System.Threading;
-using Angkor.O7Framework.Domain;
-using Angkor.O7Framework.Infraestructure;
+﻿using Angkor.O7Framework.Domain;
+using Angkor.O7Framework.Infrastructure;
 
 namespace Angkor.O7Web.Domain.Common.SecurityComponents
 {

@@ -116,10 +116,6 @@
       <Project>{AEFDF061-0BBE-4BBF-9A49-B4B40111AAD6}</Project>
       <Name>Angkor.O7Web.Interface.Security.Controller</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Angkor.O7Web.Interface.Security.Model\Angkor.O7Web.Interface.Security.Model.csproj">
-      <Project>{5BA0DC6D-211C-4AF5-845A-DB416FB647CE}</Project>
-      <Name>Angkor.O7Web.Interface.Security.Model</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

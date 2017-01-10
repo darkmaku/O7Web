@@ -15,13 +15,13 @@ namespace Angkor.O7Web.Data.Security
         }
 
         public List<Company> ListCompanies()
-            => DataAccess.ExecuteFunction<Company>("SECURITY.companies_list", typeof(CompanyDataMapper));
+            => DataAccess.ExecuteFunction<Company>("SECURITY.companies_list", CompanyDataMapper.Class);
 
         public List<Branch> ListBranches(string companyId)
         {
             var parameters = O7DbParameterCollection.Make;
             parameters.Add(O7Parameter.Make("p_company", companyId));
-            return DataAccess.ExecuteFunction<Branch>("SECURITY.branches_list", parameters, typeof(BranchDataMapper));
+            return DataAccess.ExecuteFunction<Branch>("SECURITY.branches_list", parameters, BranchDataMapper.Class);
         }
 
         public List<Module> ListModules(string companyId, string branchId)
@@ -29,7 +29,7 @@ namespace Angkor.O7Web.Data.Security
             var parameters = O7DbParameterCollection.Make;
             parameters.Add(O7Parameter.Make("p_company", companyId));
             parameters.Add(O7Parameter.Make("p_branch", branchId));
-            return DataAccess.ExecuteFunction<Module>("SECURITY.modules_installed", parameters, typeof(ModuleDataMapper));
+            return DataAccess.ExecuteFunction<Module>("SECURITY.modules_installed", parameters, ModuleDataMapper.Class);
         }
 
         public string GetUserName(string companyId, string branchId)

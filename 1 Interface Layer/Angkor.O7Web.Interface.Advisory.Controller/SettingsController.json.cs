@@ -13,7 +13,7 @@ namespace Angkor.O7Web.Interface.Advisory.Controller
         [HttpPost]
         public JsonResult PeriodsAvalible()
         {
-            var domain = BasicFunction.MakeInstance<PeriodJsonDomain, FlowAdvisory>(User);
+            var domain = BasicFunction.InitialMethod<PeriodJsonDomain, FlowAdvisory>(User);
             //var domain = new PeriodJsonDomain(User);
             return O7HttpResult.MakeJsonResult(domain.RecordedPeriods());
         }
@@ -21,7 +21,7 @@ namespace Angkor.O7Web.Interface.Advisory.Controller
         [HttpPost]
         public JsonResult YearsAvalible()
         {
-            var domain = BasicFunction.MakeInstance<PeriodJsonDomain, FlowAdvisory>(User);
+            var domain = BasicFunction.InitialMethod<PeriodJsonDomain, FlowAdvisory>(User);
             //var domain = new PeriodJsonDomain(User);
             return O7HttpResult.MakeJsonResult(domain.ListAvalibleYears());
         }
@@ -29,7 +29,7 @@ namespace Angkor.O7Web.Interface.Advisory.Controller
         [HttpPost]
         public JsonResult OpenYear(string year)
         {
-            var domain = BasicFunction.MakeInstance<PeriodJsonDomain, FlowAdvisory>(User);
+            var domain = BasicFunction.InitialMethod<PeriodJsonDomain, FlowAdvisory>(User);
             //var domain = new PeriodJsonDomain(User);
             return O7HttpResult.MakeJsonResult(domain.ActivateYear(year));
         }
@@ -37,7 +37,7 @@ namespace Angkor.O7Web.Interface.Advisory.Controller
         [HttpPost]
         public JsonResult OpenPeriod(string periodId)
         {
-            var domain = BasicFunction.MakeInstance<PeriodJsonDomain, FlowAdvisory>(User);
+            var domain = BasicFunction.InitialMethod<PeriodJsonDomain, FlowAdvisory>(User);
             //var domain = new PeriodJsonDomain(User);
             return O7HttpResult.MakeJsonResult(domain.OpenPeriod(periodId));
         }
@@ -45,7 +45,7 @@ namespace Angkor.O7Web.Interface.Advisory.Controller
         [HttpPost]
         public JsonResult ClosePeriod(string periodId)
         {
-            var domain = BasicFunction.MakeInstance<PeriodJsonDomain, FlowAdvisory>(User);
+            var domain = BasicFunction.InitialMethod<PeriodJsonDomain, FlowAdvisory>(User);
             //var domain = new PeriodJsonDomain(User);
             return O7HttpResult.MakeJsonResult(domain.ClosePeriod(periodId));
         }
