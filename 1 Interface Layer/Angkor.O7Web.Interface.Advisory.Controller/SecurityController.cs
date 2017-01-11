@@ -5,7 +5,6 @@ using Angkor.O7Framework.Utility;
 using Angkor.O7Framework.Web.Base;
 using Angkor.O7Framework.Web.HtmlHelper;
 using Angkor.O7Framework.Web.Security;
-using Angkor.O7Framework.Web.WebResult;
 using Angkor.O7Web.Common.Utility;
 using Angkor.O7Web.Interface.Security.Controllers.Transfer;
 
@@ -15,7 +14,7 @@ namespace Angkor.O7Web.Interface.Advisory.Controller
     {
         public ActionResult Access(string credential)
         {
-            if (string.IsNullOrEmpty(credential)) return O7HttpResult.MakeRedirectLogin();
+            if (string.IsNullOrEmpty(credential)) return null;
 
             var cryptography = new O7Cryptography(Constant.CRYPTO_KEY);
             var dencryptedValue = cryptography.Decrypt(credential);

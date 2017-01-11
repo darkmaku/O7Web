@@ -15,7 +15,7 @@ namespace Angkor.O7Web.Interface.Security.Controllers
             var argDomain = new object[] {login, password};
             var argFlow = new object[] {login};
             var domain = O7DomainInstanceMaker.MakeInstance<SecurityJsonDomain, BasicFlow>(argDomain, argFlow);
-            return O7HttpResult.MakeJsonResult(domain.ListCompanies());
+            return new O7JsonResult(domain.ListCompanies());
         }
 
         [HttpPost]
@@ -24,7 +24,7 @@ namespace Angkor.O7Web.Interface.Security.Controllers
             var argDomain = new object[] {login, password};
             var argFlow = new object[] {login};
             var domain = O7DomainInstanceMaker.MakeInstance<SecurityJsonDomain, BasicFlow>(argDomain, argFlow);
-            return O7HttpResult.MakeJsonResult(domain.ListBranches(companyId));
+            return new O7JsonResult(domain.ListBranches(companyId));
         }
     }
 }
