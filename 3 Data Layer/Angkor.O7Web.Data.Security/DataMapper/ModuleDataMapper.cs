@@ -11,6 +11,12 @@ namespace Angkor.O7Web.Data.Security.DataMapper
         public static Type Class => typeof(ModuleDataMapper);
 
         public override Module MapTarget()
-            => new Module { Title = Source.GetValue<string>(0), Version = Source.GetValue<string>(1), Url = Source.GetValue<string>(2) };
+            => new Module
+                {
+                    Title = Source.GetValue<string>(0),
+                    Version = Source.GetValue<string>(1),
+                    Url = Source.GetValue<string>(2),
+                    Icon = Source.GetValue<string>(3)
+                };
     }
 }

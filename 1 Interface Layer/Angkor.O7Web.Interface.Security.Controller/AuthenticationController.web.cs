@@ -2,14 +2,16 @@
 
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Web;
 using System.Web.Mvc;
 using Angkor.O7Framework.Common.Model;
+using Angkor.O7Framework.Domain;
 using Angkor.O7Framework.Utility;
 using Angkor.O7Framework.Web.WebResult;
 using Angkor.O7Web.Common.Security.Entity;
 using Angkor.O7Web.Common.Utility;
-using Angkor.O7Web.Domain.Common.SecurityComponents;
+using Angkor.O7Web.Domain.Common;
 using Angkor.O7Web.Domain.Security;
 using Angkor.O7Web.Interface.Security.Controllers.Transfer;
 
@@ -22,26 +24,32 @@ namespace Angkor.O7Web.Interface.Security.Controllers
             return View();
         }
 
-        [HttpPost]
-        public ActionResult LogInPost()
+        private Tuple<string, string, string, string> get_values_login_post(NameValueCollection formCollection)
         {
-            var formCollection = Request.Form;
-
             var login = formCollection["logIn"];
             var password = formCollection["password"];
-            var company = formCollection["companies"];
-            var branch = formCollection["branches"];
+            var company = formCollection["company"];
+            var branch = formCollection["branch"];
+            return Tuple.Create(login, password, company, branch);
+        }
 
-            object[] args = { login, password };
-            var domainContext = SecurityInterface.Make<SecurityWebDomain, SecurityFlow>(args);
-            var userResponse = domainContext.GetUserName(company, branch);
+        [HttpPost]
+        [ActionName("LogIn")]
+        public ActionResult LogInPost()
+        {
+            var model = get_values_login_post(Request.Form);
+
+            var argDomain = new object[] { model.Item1, model.Item2 };
+            var argFlow = new object[] { model.Item1 };
+            var domain = O7DomainInstanceMaker.MakeInstance<SecurityWebDomain, BasicFlow>(argDomain, argFlow);
+            var userResponse = domain.GetUserName(model.Item3, model.Item4);
 
             var successResponse = userResponse as O7SuccessResponse<string>;
 
-            //TODO: cambiar proceso
+            //TODO: cambiar proceso de O7HttpResult, ya que debe leer el config y nada mas
             if (successResponse == null) return O7HttpResult.MakeRedirectError(500, "Error interno del servidor");
 
-            var cookieValue = new CredentialCookie(login, password, company, branch, successResponse.Value1);
+            var cookieValue = new CredentialCookie(model.Item1, model.Item2, model.Item3, model.Item4, successResponse.Value1);
             var serializedValue = O7JsonSerealizer.Serialize(cookieValue);
 
             var cryptography = new O7Cryptography(Constant.CRYPTO_KEY);
@@ -64,16 +72,19 @@ namespace Angkor.O7Web.Interface.Security.Controllers
             var dencryptedValue = cryptography.Decrypt(cookie.Value);
             var serializedValue = O7JsonSerealizer.Deserialize<CredentialCookie>(dencryptedValue);
 
-            var domainContext = new SecurityWebDomain(serializedValue.Login, serializedValue.Password);
-            var modules = domainContext.ListModules(serializedValue.CompanyId, serializedValue.BranchId);
+            var argDomain = new object[] { serializedValue.Login, serializedValue.Password };
+            var argFlow = new object[] { serializedValue.Login };
+            var domain = O7DomainInstanceMaker.MakeInstance<SecurityWebDomain, BasicFlow>(argDomain, argFlow);            
+            var modules = domain.ListModules(serializedValue.CompanyId, serializedValue.BranchId);
 
             var currentSource = modules as O7SuccessResponse<List<Module>>;
 
             if (currentSource == null) return O7HttpResult.MakeRedirectError(500, "");
 
-            currentSource.Value1.Append("Url", $"/Security/Access?credential={cookie.Value.ToUriPath()}");            
+            currentSource.Value1.Append("Url", $"/Security/Access?credential={cookie.Value.ToUriPath()}");
+            ViewData["modules"] = currentSource.Value1;
 
-            return O7HttpResult.MakeActionResult(modules);
+            return View();
         }
     }
 }

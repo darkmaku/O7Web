@@ -1,4 +1,7 @@
-﻿@model Angkor.O7Web.Interface.Security.Model.SwitchModuleViewModel
+﻿@using Angkor.O7Web.Common.Security.Entity
+@{
+    var modules = (List<Module>)ViewData["modules"];
+}
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,13 +46,12 @@
         </div>
         <div class="wrapper wrapper-content" style="margin-top: 40px ! important;">
             <div class="container">
-                @for (var count = 0; count < Model.Modules.Count; count++) {
-                    var module = Model.Modules[count];
+                @foreach (var module in modules) {
                     <div class="row col-lg-4">
                         <div class="col-lg-11">
                             <div class="contact-box center-version">
-                                <a href="#">
-                                    <i class="fa fa-window-maximize fa-5x"></i>
+                                <a href="#">                                    
+                                    <i class="@module.Icon fa-5x"></i>
                                     <h3 class="m-b-xs">
                                         <strong>@module.Title</strong>
                                     </h3>

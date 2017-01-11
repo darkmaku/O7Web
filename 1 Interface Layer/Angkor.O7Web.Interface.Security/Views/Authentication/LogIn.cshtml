@@ -57,25 +57,20 @@
         </div>
         <h3>Bienvenido</h3>
         <p>Versión web 1.0</p>
-
-        <form action="/Authentication/LogInPost" method="post" id="LogInForm" class = "m-t" role = "form">
+        <form action="Authentication/LogIn" method="post" id="LogInForm" class="m-t" role="form">
             <div class="form-group">
-                <label class="control-label">Login</label>
                 <input type="text" id="logIn" class="form-control" name="logIn" placeholder="Usuario" required>
             </div>
             <div class="input-group form-group">
-                <label class="control-label">Password</label>
-                <div class="input-group">
-                    <input type="password" id="password" class="form-control" name="password" placeholder="Contraseña" required>
-                    <span class="input-group-addon" id="validate-user" style="cursor: pointer;"><span class="fa fa-angle-right"></span></span>
-                </div>
+                <input type="password" id="password" class="form-control" name="password" placeholder="Contraseña" required>
+                <span class="input-group-addon" id="validate-user" style="cursor: pointer;"><span class="fa fa-angle-right"></span></span>
             </div>
             <div class="form-group" style="text-align: left;">
-                <input type="hidden" id="companyId" name="companies">
+                <input type="hidden" id="companyId" name="company">
                 <select id="companies" data-placeholder="Elige Compañia" class="chosen-select" disabled="disabled" tabindex="2"></select>
             </div>
             <div class="form-group" style="text-align: left;">
-                <input type="hidden" id="branchId" name="branches">
+                <input type="hidden" id="branchId" name="branch">
                 <select id="branches" data-placeholder="Elige Sucursal" class="chosen-select" disabled="disabled" tabindex="2"></select>
             </div>
             <button id="sign" type="submit" class="btn btn-primary block full-width m-b" disabled="disabled">Ingresar</button>
@@ -83,7 +78,6 @@
                 <small>¿Olvidaste la contraseña?</small>
             </a>
         </form>
-               
         <p class="m-t">
             <small>Desarrollado por AngkorGroup S.A.C &copy; 2016 - @DateTime.Now.Year</small>
         </p>

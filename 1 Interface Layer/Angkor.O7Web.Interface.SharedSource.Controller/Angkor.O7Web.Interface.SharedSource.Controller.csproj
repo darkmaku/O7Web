@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{ADA3E972-2BF5-44A1-9629-DAD33E5FFBE9}</ProjectGuid>
+    <ProjectGuid>{00A48F50-12F3-4B04-B208-019FE38A7C5B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Angkor.O7Web.Interface.AppStart</RootNamespace>
-    <AssemblyName>Angkor.O7Web.Interface.AppStart</AssemblyName>
+    <RootNamespace>Angkor.O7Web.Interface.SharedSource.Controller</RootNamespace>
+    <AssemblyName>Angkor.O7Web.Interface.SharedSource.Controller</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,16 +30,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Angkor.O7Framework.Web">
-      <HintPath>..\..\6 Libraries\Angkor.O7Framework.Web.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
       <Private>True</Private>
@@ -64,35 +59,14 @@
       <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdvisoryAppStart.cs" />
-    <Compile Include="FinantialAppStart.cs" />
+    <Compile Include="ErrorController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SecurityAppStart.cs" />
-    <Compile Include="SharedAppStart.cs" />
+    <Compile Include="SecurityController.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Angkor.O7Web.Interface.Advisory.Controller\Angkor.O7Web.Interface.Advisory.Controller.csproj">
-      <Project>{91855736-58F0-4595-A8FA-BE54C30E6AE8}</Project>
-      <Name>Angkor.O7Web.Interface.Advisory.Controller</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Angkor.O7Web.Interface.Finantial.Controller\Angkor.O7Web.Interface.Finantial.Controller.csproj">
-      <Project>{107472F1-2362-4C1F-8A3B-24F019113C25}</Project>
-      <Name>Angkor.O7Web.Interface.Finantial.Controller</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Angkor.O7Web.Interface.Security.Controller\Angkor.O7Web.Interface.Security.Controller.csproj">
-      <Project>{AEFDF061-0BBE-4BBF-9A49-B4B40111AAD6}</Project>
-      <Name>Angkor.O7Web.Interface.Security.Controller</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Angkor.O7Web.Interface.SharedSource.Controller\Angkor.O7Web.Interface.SharedSource.Controller.csproj">
-      <Project>{00A48F50-12F3-4B04-B208-019FE38A7C5B}</Project>
-      <Name>Angkor.O7Web.Interface.SharedSource.Controller</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -33,6 +33,9 @@
     <Reference Include="Angkor.O7Framework.Common">
       <HintPath>..\..\6 Libraries\Angkor.O7Framework.Common.dll</HintPath>
     </Reference>
+    <Reference Include="Angkor.O7Framework.Components">
+      <HintPath>..\..\6 Libraries\Angkor.O7Framework.Components.dll</HintPath>
+    </Reference>
     <Reference Include="Angkor.O7Framework.Data">
       <HintPath>..\..\6 Libraries\Angkor.O7Framework.Data.dll</HintPath>
     </Reference>
@@ -56,11 +59,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdvisoryComponents\BasicFunction.cs" />
-    <Compile Include="AdvisoryComponents\FlowAdvisory.cs" />
-    <Compile Include="SecurityComponents\SecurityFlow.cs" />
-    <Compile Include="SecurityComponents\SecurityInterface.cs" />
-    <Compile Include="ManagmentWebDomain.cs" />
+    <Compile Include="BasicFlow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -75,9 +74,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
