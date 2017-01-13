@@ -1,5 +1,4 @@
 ﻿//Create by Felix A. Bueno
-
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -9,7 +8,6 @@ using Angkor.O7Framework.Common.Model;
 using Angkor.O7Framework.Domain;
 using Angkor.O7Framework.Utility;
 using Angkor.O7Framework.Web.HtmlHelper;
-using Angkor.O7Framework.Web.WebResult;
 using Angkor.O7Web.Common.Security.Entity;
 using Angkor.O7Web.Common.Utility;
 using Angkor.O7Web.Domain.Common;
