@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using Angkor.O7Framework.Common.Model;
 using Angkor.O7Framework.Domain;
 using Angkor.O7Framework.Utility;
+using Angkor.O7Framework.Web.HtmlHelper;
 using Angkor.O7Framework.Web.WebResult;
 using Angkor.O7Web.Common.Security.Entity;
 using Angkor.O7Web.Common.Utility;
@@ -44,10 +45,8 @@ namespace Angkor.O7Web.Interface.Security.Controllers
             var domain = O7DomainInstanceMaker.MakeInstance<SecurityWebDomain, BasicFlow>(argDomain, argFlow);
             var userResponse = domain.GetUserName(model.Item3, model.Item4);
 
-            var successResponse = userResponse as O7SuccessResponse<string>;
-
-            //TODO: cambiar proceso de O7HttpResult, ya que debe leer el config y nada mas
-            if (successResponse == null) return null;
+            var successResponse = userResponse as O7SuccessResponse<string>;            
+            if (successResponse == null) return Redirect(LinkHelper.SourceLink("Error", "ServerError"));
 
             var cookieValue = new CredentialCookie(model.Item1, model.Item2, model.Item3, model.Item4, successResponse.Value1);
             var serializedValue = O7JsonSerealizer.Serialize(cookieValue);
@@ -78,12 +77,10 @@ namespace Angkor.O7Web.Interface.Security.Controllers
             var modules = domain.ListModules(serializedValue.CompanyId, serializedValue.BranchId);
 
             var currentSource = modules as O7SuccessResponse<List<Module>>;
-
-            if (currentSource == null) return null;
-
+            if (currentSource == null) return Redirect(LinkHelper.SourceLink("Error", "ServerError", Tuple.Create("credential", cookie.Value)));
             currentSource.Value1.Append("Url", cookie.Value.ToUriPath());
-            ViewData["modules"] = currentSource.Value1;
 
+            ViewData["modules"] = currentSource.Value1;
             return View();
         }
     }

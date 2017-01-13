@@ -5,7 +5,7 @@ using Angkor.O7Web.Interface.AppStart;
 namespace Angkor.O7Web.Interface.Finantial
 {
     public class MvcApplication : System.Web.HttpApplication
-    {
+    {        
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();

@@ -83,6 +83,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angkor.O7Web.Domain.Advisor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angkor.O7Web.Interface.SharedSource.Controller", "1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\Angkor.O7Web.Interface.SharedSource.Controller.csproj", "{00A48F50-12F3-4B04-B208-019FE38A7C5B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-2 Finantial", "2-2 Finantial", "{4138DA62-E8A9-47BD-BD68-9DC10A254E5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angkor.O7Web.Domain.Finantial", "2 Domain Layer\Angkor.O7Web.Domain.Finantial\Angkor.O7Web.Domain.Finantial.csproj", "{691A7691-1E29-4225-868D-48A513F57C91}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -169,6 +173,10 @@ Global
 		{00A48F50-12F3-4B04-B208-019FE38A7C5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00A48F50-12F3-4B04-B208-019FE38A7C5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00A48F50-12F3-4B04-B208-019FE38A7C5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{691A7691-1E29-4225-868D-48A513F57C91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{691A7691-1E29-4225-868D-48A513F57C91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{691A7691-1E29-4225-868D-48A513F57C91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{691A7691-1E29-4225-868D-48A513F57C91}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -204,5 +212,7 @@ Global
 		{23A19807-8CC5-410E-ADB9-C80991884821} = {A8D9B24F-B888-4ED8-8429-61D7A4EBF16A}
 		{87B7FAD4-FFAF-4F51-BFB3-6EECFE680A74} = {23A19807-8CC5-410E-ADB9-C80991884821}
 		{00A48F50-12F3-4B04-B208-019FE38A7C5B} = {5DBBB920-9A51-45A2-9A55-0B9BEB99E54C}
+		{4138DA62-E8A9-47BD-BD68-9DC10A254E5A} = {A8D9B24F-B888-4ED8-8429-61D7A4EBF16A}
+		{691A7691-1E29-4225-868D-48A513F57C91} = {4138DA62-E8A9-47BD-BD68-9DC10A254E5A}
 	EndGlobalSection
 EndGlobal

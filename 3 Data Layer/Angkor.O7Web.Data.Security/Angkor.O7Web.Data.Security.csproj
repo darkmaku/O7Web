@@ -48,6 +48,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataMapper\MenuDataMapper.cs" />
     <Compile Include="SecurityDataService.cs" />
     <Compile Include="DataMapper\BranchDataMapper.cs" />
     <Compile Include="DataMapper\CompanyDataMapper.cs" />
