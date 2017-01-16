@@ -4,7 +4,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using Angkor.O7Web.Interface.SharedSource.Controller;
 
-namespace Angkor.O7Web.Interface.AppStart
+namespace Angkor.O7Web.Interface.AppStart.AppStart
 {
     public class SharedAppStart
     {

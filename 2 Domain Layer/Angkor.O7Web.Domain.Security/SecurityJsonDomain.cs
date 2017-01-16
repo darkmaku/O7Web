@@ -1,9 +1,6 @@
 ﻿// Create by Felix A. Bueno
-
-using System.Collections.Generic;
 using Angkor.O7Framework.Common.Model;
 using Angkor.O7Framework.Utility;
-using Angkor.O7Framework.Web.Model;
 using Angkor.O7Web.Data.Security;
 using Angkor.O7Web.Domain.Security.Model;
 

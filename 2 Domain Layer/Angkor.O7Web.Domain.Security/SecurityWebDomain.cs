@@ -13,6 +13,12 @@ namespace Angkor.O7Web.Domain.Security
             _dataService = new SecurityDataService(login, password);
         }
 
+        public O7Response ValidAccess(string companyId, string branchId, string menuId)
+        {
+            var result = _dataService.ValidAccess(companyId, branchId, menuId);
+            return O7SuccessResponse.MakeResponse(result);
+        }
+
         public O7Response GetUserName(string companyId, string branchId)
         {
             var userName = _dataService.GetUserName(companyId, branchId);

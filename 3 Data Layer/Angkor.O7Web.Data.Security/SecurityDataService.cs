@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Angkor.O7Framework.Common.Model;
 using Angkor.O7Framework.Data.Tool;
 using Angkor.O7Framework.Infrastructure;
-using Angkor.O7Framework.Web.Model;
 using Angkor.O7Web.Common.Security.Entity;
 using Angkor.O7Web.Data.Security.DataMapper;
 
@@ -13,6 +12,15 @@ namespace Angkor.O7Web.Data.Security
     {
         public SecurityDataService(string login, string password) : base(login, password)
         {
+        }
+
+        public string ValidAccess(string companyId, string branchId, string menuId)
+        {
+            var parameters = O7DbParameterCollection.Make;
+            parameters.Add(O7Parameter.Make("p_company", companyId));
+            parameters.Add(O7Parameter.Make("p_branch", branchId));
+            parameters.Add(O7Parameter.Make("p_menu_id", menuId));
+            return DataAccess.ExecuteFunction<string>("security.is_permited", parameters);
         }
 
         public List<Company> ListCompanies()

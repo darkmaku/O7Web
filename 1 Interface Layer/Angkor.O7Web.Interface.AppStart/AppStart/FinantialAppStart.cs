@@ -2,11 +2,11 @@
 
 using System.Web.Mvc;
 using System.Web.Routing;
-using Angkor.O7Web.Interface.Security.Controllers;
+using Angkor.O7Web.Interface.Finantial.Controller;
 
-namespace Angkor.O7Web.Interface.AppStart
+namespace Angkor.O7Web.Interface.AppStart.AppStart
 {
-    public class SecurityAppStart
+    public class FinantialAppStart
     {
         public static void BuildRouteConfig(RouteCollection routes)
         {
@@ -15,8 +15,8 @@ namespace Angkor.O7Web.Interface.AppStart
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Authentication", action = "LogIn", id = UrlParameter.Optional },
-                namespaces: new[] { typeof(AuthenticationController).Namespace }
+                defaults: new { controller = "Security", action = "Access", id = UrlParameter.Optional },
+                namespaces: new[] { typeof(SecurityController).Namespace }
             );
         }
     }
