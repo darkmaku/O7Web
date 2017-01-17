@@ -38,12 +38,6 @@ namespace Angkor.O7Web.Interface.Security.Controllers
             return O7JsonSerealizer.Deserialize<CredentialCookie>(dencryptedValue);
         }
 
-        private SecurityFlow make_domain(string login, string password)
-        {
-            var argDomain = new object[] { login, password };
-            var argFlow = new object[] { login };
-            return O7DomainInstanceMaker.MakeInstance<SecurityFlow, BasicFlow>(argDomain, argFlow);
-        }
 
         private Tuple<string, string, string, string> get_values_login_post(NameValueCollection formCollection)
         {

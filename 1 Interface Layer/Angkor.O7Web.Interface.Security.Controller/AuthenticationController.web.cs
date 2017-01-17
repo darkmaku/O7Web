@@ -1,6 +1,7 @@
 ﻿//Create by Felix A. Bueno
 using System;
 using System.Collections.Generic;
+using System.Web;
 using System.Web.Mvc;
 using Angkor.O7Framework.Common.Model;
 using Angkor.O7Framework.Utility;
@@ -12,7 +13,7 @@ using Angkor.O7Web.Comunication;
 namespace Angkor.O7Web.Interface.Security.Controllers
 {
     public partial class AuthenticationController
-    {
+    {        
         public ActionResult LogIn()
         {
             return View();
@@ -32,8 +33,9 @@ namespace Angkor.O7Web.Interface.Security.Controllers
 
             var encryptedValue = serialize_cookie(model.Item1, model.Item2, model.Item3, model.Item4, successResponse.Value1);
             var cookie = make_cookie(encryptedValue);
+            
             Response.Cookies.Add(cookie);
-
+            
             return RedirectToAction("SwitchModule");
         }        
 

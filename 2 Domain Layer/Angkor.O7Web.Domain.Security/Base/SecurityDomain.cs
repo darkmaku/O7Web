@@ -15,7 +15,7 @@ namespace Angkor.O7Web.Domain.Security.Base
             SecurityDataService = O7DataInstanceMaker.MakeInstance<SecurityDataService>(new object[] {login, password});
         }
 
-        public abstract O7Response Companies { get; }
+        public abstract O7Response Companies();
 
         public abstract O7Response Branches(string companyId);
 

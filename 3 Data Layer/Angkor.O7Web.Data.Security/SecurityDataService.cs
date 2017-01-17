@@ -14,7 +14,7 @@ namespace Angkor.O7Web.Data.Security
         {
         }
 
-        public string ValidAccess(string companyId, string branchId, string menuId)
+        public virtual string ValidAccess(string companyId, string branchId, string menuId)
         {
             var parameters = O7DbParameterCollection.Make;
             parameters.Add(O7Parameter.Make("p_company", companyId));
@@ -23,17 +23,17 @@ namespace Angkor.O7Web.Data.Security
             return DataAccess.ExecuteFunction<string>("security.is_permited", parameters);
         }
 
-        public List<Company> Companies
+        public virtual List<Company> Companies()
             => DataAccess.ExecuteFunction<Company>("security.companies", CompanyDataMapper.Class);
 
-        public List<Branch> Branches(string companyId)
+        public virtual List<Branch> Branches(string companyId)
         {
             var parameters = O7DbParameterCollection.Make;
             parameters.Add(O7Parameter.Make("p_company", companyId));
             return DataAccess.ExecuteFunction<Branch>("security.branches", parameters, BranchDataMapper.Class);
         }
 
-        public List<Module> Modules(string companyId, string branchId)
+        public virtual List<Module> Modules(string companyId, string branchId)
         {
             var parameters = O7DbParameterCollection.Make;
             parameters.Add(O7Parameter.Make("p_company", companyId));
@@ -41,7 +41,7 @@ namespace Angkor.O7Web.Data.Security
             return DataAccess.ExecuteFunction<Module>("security.modules_installed", parameters, ModuleDataMapper.Class);
         }
 
-        public List<Menu> Menus(string companyId, string branchId, string menuId)
+        public virtual List<Menu> Menus(string companyId, string branchId, string menuId)
         {
             var parameters = O7DbParameterCollection.Make;
             parameters.Add(O7Parameter.Make("p_company", companyId));
@@ -50,7 +50,7 @@ namespace Angkor.O7Web.Data.Security
             return DataAccess.ExecuteFunction<Menu>("security.menus", parameters, MenuDataMapper.Class);
         }
 
-        public string UserName(string companyId, string branchId)
+        public virtual string UserName(string companyId, string branchId)
         {
             var parameters = O7DbParameterCollection.Make;
             parameters.Add(O7Parameter.Make("p_company", companyId));

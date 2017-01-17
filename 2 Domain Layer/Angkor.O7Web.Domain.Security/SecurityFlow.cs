@@ -12,14 +12,11 @@ namespace Angkor.O7Web.Domain.Security
         {            
         }
 
-        public override O7Response Companies
-        {
-            get
-            {
-                var companies = SecurityDataService.Companies;
-                var companiesSerialized = O7JsonSerealizer.Serialize(companies);
-                return O7SuccessResponse.MakeResponse(companiesSerialized);
-            }
+        public override O7Response Companies()
+        {            
+            var companies = SecurityDataService.Companies();
+            var companiesSerialized = O7JsonSerealizer.Serialize(companies);
+            return O7SuccessResponse.MakeResponse(companiesSerialized);    
         }
 
         public override O7Response Branches(string companyId)

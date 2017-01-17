@@ -11,7 +11,7 @@ namespace Angkor.O7Web.Interface.Security.Controllers
         public JsonResult GetCompanies(string login, string password)
         {
             var domain = ProxyDomain.Instance.SecurityDomain(login, password);
-            var companies = domain.Companies;
+            var companies = domain.Companies();
             return new O7JsonResult(companies);
         }
 
