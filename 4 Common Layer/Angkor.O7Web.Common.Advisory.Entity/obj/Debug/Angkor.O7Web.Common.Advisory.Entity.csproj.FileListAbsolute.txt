@@ -1,0 +1,7 @@
+D:\Projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Advisory.Entity\bin\Debug\Angkor.O7Web.Common.Advisory.Entity.dll
+D:\Projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Advisory.Entity\bin\Debug\Angkor.O7Web.Common.Advisory.Entity.pdb
+D:\Projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Advisory.Entity\bin\Debug\Angkor.O7Framework.Data.dll
+D:\Projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Advisory.Entity\bin\Debug\Angkor.O7Framework.Utility.dll
+D:\Projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Advisory.Entity\bin\Debug\Angkor.O7Framework.Common.dll
+D:\Projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Advisory.Entity\obj\Debug\Angkor.O7Web.Common.Advisory.Entity.dll
+D:\Projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Advisory.Entity\obj\Debug\Angkor.O7Web.Common.Advisory.Entity.pdb

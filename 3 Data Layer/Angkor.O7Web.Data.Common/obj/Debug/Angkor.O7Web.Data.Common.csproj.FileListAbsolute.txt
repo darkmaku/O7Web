@@ -1,0 +1,12 @@
+D:\Projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Common\bin\Debug\Angkor.O7Web.Data.Common.dll
+D:\Projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Common\bin\Debug\Angkor.O7Web.Data.Common.pdb
+D:\Projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Common\bin\Debug\Angkor.O7Framework.Common.dll
+D:\Projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Common\bin\Debug\Angkor.O7Framework.Data.dll
+D:\Projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Common\bin\Debug\Angkor.O7Framework.Infrastructure.dll
+D:\Projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Common\bin\Debug\Angkor.O7Framework.Utility.dll
+D:\Projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Common\bin\Debug\Angkor.O7Web.Common.Entity.dll
+D:\Projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Common\bin\Debug\Angkor.O7Framework.Components.dll
+D:\Projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Common\bin\Debug\Angkor.O7Web.Common.Entity.pdb
+D:\Projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Common\obj\Debug\Angkor.O7Web.Data.Common.csprojResolveAssemblyReference.cache
+D:\Projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Common\obj\Debug\Angkor.O7Web.Data.Common.dll
+D:\Projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Common\obj\Debug\Angkor.O7Web.Data.Common.pdb

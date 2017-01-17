@@ -1,15 +1,49 @@
 ﻿// Create by Felix A. Bueno
-
 using System;
 using System.Collections.Specialized;
+using System.Web;
+using Angkor.O7Framework.Infrastructure;
+using Angkor.O7Framework.Utility;
 using Angkor.O7Framework.Web.Base;
-
+using Angkor.O7Web.Common.Utility;
+using Angkor.O7Web.Domain.Common;
+using Angkor.O7Web.Domain.Security;
+using Angkor.O7Web.Interface.Security.Controllers.Transfer;
 
 namespace Angkor.O7Web.Interface.Security.Controllers
 {
     public partial class AuthenticationController : O7Controller
     {
-        //TODO: Add dependency injections
+        private HttpCookie make_cookie(string value)
+        {
+            var cookie = Response.Cookies[Constant.TEMP_COOKIE] ?? new HttpCookie(Constant.TEMP_COOKIE);
+            cookie.Value = value;
+            cookie.Expires = DateTime.Now.AddMinutes(2);
+            return cookie;
+        }
+
+        private string serialize_cookie(string login, string password, string companyId, string branchId, string name)
+        {
+            var cookieValue = new CredentialCookie(login, password, companyId, branchId, name);
+            var serializedValue = O7JsonSerealizer.Serialize(cookieValue);
+
+            var cryptography = new O7Cryptography(Constant.CRYPTO_KEY);
+            return cryptography.Encrypt(serializedValue);
+        }
+
+        private CredentialCookie deserialize_cookie(string value)
+        {
+            var cryptography = new O7Cryptography(Constant.CRYPTO_KEY);
+            var dencryptedValue = cryptography.Decrypt(value);
+            return O7JsonSerealizer.Deserialize<CredentialCookie>(dencryptedValue);
+        }
+
+        private SecurityFlow make_domain(string login, string password)
+        {
+            var argDomain = new object[] { login, password };
+            var argFlow = new object[] { login };
+            return O7DomainInstanceMaker.MakeInstance<SecurityFlow, BasicFlow>(argDomain, argFlow);
+        }
 
         private Tuple<string, string, string, string> get_values_login_post(NameValueCollection formCollection)
         {

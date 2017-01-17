@@ -37,9 +37,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\6 Libraries\Angkor.O7Framework.Data.dll</HintPath>
     </Reference>
-    <Reference Include="Angkor.O7Framework.Domain">
-      <HintPath>..\..\6 Libraries\Angkor.O7Framework.Domain.dll</HintPath>
-    </Reference>
     <Reference Include="Angkor.O7Framework.Infrastructure">
       <HintPath>..\..\6 Libraries\Angkor.O7Framework.Infrastructure.dll</HintPath>
     </Reference>
@@ -54,8 +51,6 @@
       <HintPath>..\..\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="PostSharp, Version=4.3.24.0, Culture=neutral, PublicKeyToken=b13fd38b8f9c99d7, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -73,6 +68,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\2 Comunication Layer\Angkor.O7Web.Comunication\Angkor.O7Web.Comunication.csproj">
+      <Project>{D84D16E6-372D-4082-9A1C-DAD26EED7536}</Project>
+      <Name>Angkor.O7Web.Comunication</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\2 Domain Layer\Angkor.O7Web.Domain.Common\Angkor.O7Web.Domain.Common.csproj">
       <Project>{9C6779FB-7CC4-4891-AE05-6AD0E07C2CE2}</Project>
       <Name>Angkor.O7Web.Domain.Common</Name>

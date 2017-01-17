@@ -1,0 +1,17 @@
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Common\bin\Debug\Angkor.O7Web.Domain.Common.dll
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Common\bin\Debug\Angkor.O7Web.Domain.Common.pdb
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Common\bin\Debug\Angkor.O7Framework.Common.dll
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Common\bin\Debug\Angkor.O7Framework.Components.dll
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Common\bin\Debug\Angkor.O7Framework.Data.dll
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Common\bin\Debug\Angkor.O7Framework.Infrastructure.dll
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Common\bin\Debug\Angkor.O7Framework.Utility.dll
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Common\bin\Debug\Angkor.O7Framework.Web.dll
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Common\bin\Debug\Angkor.O7Web.Common.Entity.dll
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Common\bin\Debug\Angkor.O7Web.Data.Common.dll
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Common\bin\Debug\Castle.Core.dll
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Common\bin\Debug\Angkor.O7Web.Data.Common.pdb
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Common\bin\Debug\Angkor.O7Web.Common.Entity.pdb
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Common\bin\Debug\Castle.Core.xml
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Common\obj\Debug\Angkor.O7Web.Domain.Common.csprojResolveAssemblyReference.cache
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Common\obj\Debug\Angkor.O7Web.Domain.Common.dll
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Common\obj\Debug\Angkor.O7Web.Domain.Common.pdb

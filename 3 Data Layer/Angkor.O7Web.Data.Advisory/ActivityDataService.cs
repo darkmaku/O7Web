@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Angkor.O7Framework.Common.Model;
 using Angkor.O7Framework.Data.Tool;
-using Angkor.O7Framework.Infrastructure;
+using Angkor.O7Framework.Infrastructure.Data;
 using Angkor.O7Web.Common.Advisory.Entity;
 using Angkor.O7Web.Data.Advisory.DataMapper;
 

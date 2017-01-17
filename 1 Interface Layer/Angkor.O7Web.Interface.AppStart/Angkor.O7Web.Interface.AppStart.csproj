@@ -34,11 +34,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\6 Libraries\Angkor.O7Framework.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Angkor.O7Framework.Domain, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\6 Libraries\Angkor.O7Framework.Domain.dll</HintPath>
+    <Reference Include="Angkor.O7Framework.Domain">
+      <HintPath>..\Angkor.O7Web.Interface.Advisory\Bin\Angkor.O7Framework.Domain.dll</HintPath>
     </Reference>
-    <Reference Include="Angkor.O7Framework.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="Angkor.O7Framework.Infrastructure">
+      <HintPath>..\..\6 Libraries\Angkor.O7Framework.Infrastructure.dll</HintPath>
+    </Reference>
     <Reference Include="Angkor.O7Framework.Web">
       <HintPath>..\..\6 Libraries\Angkor.O7Framework.Web.dll</HintPath>
     </Reference>
@@ -57,6 +58,7 @@
   <ItemGroup>
     <Compile Include="AppStart\AdvisoryAppStart.cs" />
     <Compile Include="AppStart\CommonAppStart.cs" />
+    <Compile Include="Controller\Security\AuthenticationStartController.cs" />
     <Compile Include="Filter\PrivilegeAccessFilter.cs" />
     <Compile Include="AppStart\FinantialAppStart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -64,6 +66,10 @@
     <Compile Include="AppStart\SharedAppStart.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\2 Comunication Layer\Angkor.O7Web.Comunication\Angkor.O7Web.Comunication.csproj">
+      <Project>{D84D16E6-372D-4082-9A1C-DAD26EED7536}</Project>
+      <Name>Angkor.O7Web.Comunication</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\2 Domain Layer\Angkor.O7Web.Domain.Common\Angkor.O7Web.Domain.Common.csproj">
       <Project>{9C6779FB-7CC4-4891-AE05-6AD0E07C2CE2}</Project>
       <Name>Angkor.O7Web.Domain.Common</Name>

@@ -1,0 +1,14 @@
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Finantial\bin\Debug\Angkor.O7Web.Domain.Finantial.dll
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Finantial\bin\Debug\Angkor.O7Web.Domain.Finantial.pdb
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Finantial\bin\Debug\Angkor.O7Framework.Infrastructure.dll
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Finantial\bin\Debug\Angkor.O7Web.Data.Security.dll
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Finantial\bin\Debug\Angkor.O7Framework.Data.dll
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Finantial\bin\Debug\Angkor.O7Web.Common.Security.Entity.dll
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Finantial\bin\Debug\Angkor.O7Framework.Common.dll
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Finantial\bin\Debug\Angkor.O7Framework.Utility.dll
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Finantial\bin\Debug\Angkor.O7Framework.Components.dll
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Finantial\bin\Debug\Angkor.O7Web.Data.Security.pdb
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Finantial\bin\Debug\Angkor.O7Web.Common.Security.Entity.pdb
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Finantial\obj\Debug\Angkor.O7Web.Domain.Finantial.csprojResolveAssemblyReference.cache
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Finantial\obj\Debug\Angkor.O7Web.Domain.Finantial.dll
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Finantial\obj\Debug\Angkor.O7Web.Domain.Finantial.pdb

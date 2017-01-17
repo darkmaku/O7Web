@@ -91,6 +91,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\2 Comunication Layer\Angkor.O7Web.Comunication\Angkor.O7Web.Comunication.csproj">
+      <Project>{D84D16E6-372D-4082-9A1C-DAD26EED7536}</Project>
+      <Name>Angkor.O7Web.Comunication</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\2 Domain Layer\Angkor.O7Web.Domain.Common\Angkor.O7Web.Domain.Common.csproj">
       <Project>{9C6779FB-7CC4-4891-AE05-6AD0E07C2CE2}</Project>
       <Name>Angkor.O7Web.Domain.Common</Name>

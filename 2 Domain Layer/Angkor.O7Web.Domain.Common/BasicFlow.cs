@@ -1,7 +1,7 @@
 ﻿// Create by Felix A. Bueno
 using System;
 using Angkor.O7Framework.Common.Model;
-using Angkor.O7Framework.Infrastructure;
+using Angkor.O7Framework.Infrastructure.Domain;
 
 namespace Angkor.O7Web.Domain.Common
 {

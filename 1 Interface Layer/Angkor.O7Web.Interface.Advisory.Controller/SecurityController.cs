@@ -3,7 +3,7 @@
 using System.Collections.Generic;
 using System.Web.Mvc;
 using Angkor.O7Framework.Common.Model;
-using Angkor.O7Framework.Domain;
+using Angkor.O7Framework.Infrastructure;
 using Angkor.O7Framework.Utility;
 using Angkor.O7Framework.Web.Base;
 using Angkor.O7Framework.Web.HtmlHelper;
@@ -38,8 +38,8 @@ namespace Angkor.O7Web.Interface.Advisory.Controller
             var argDomain = new object[] { credentialCookie.Login, credentialCookie.Password };
             var argFlow = new object[] { credentialCookie.Login };
 
-            var domain = O7DomainInstanceMaker.MakeInstance<SecurityJsonDomain, BasicFlow>(argDomain, argFlow);
-            var menus = domain.ListMenus(credentialCookie.CompanyId, credentialCookie.BranchId, menuId);
+            var domain = O7DomainInstanceMaker.MakeInstance<SecurityFlow, BasicFlow>(argDomain, argFlow);
+            var menus = domain.Menus(credentialCookie.CompanyId, credentialCookie.BranchId, menuId);
 
             var menusResult = menus as O7SuccessResponse<List<O7Menu>>;
             if (menusResult == null) return null;

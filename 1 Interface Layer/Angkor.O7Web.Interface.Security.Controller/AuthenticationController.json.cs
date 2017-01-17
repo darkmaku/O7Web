@@ -1,9 +1,7 @@
 ﻿// Create by Felix A. Bueno
 using System.Web.Mvc;
-using Angkor.O7Framework.Domain;
 using Angkor.O7Framework.Web.WebResult;
-using Angkor.O7Web.Domain.Common;
-using Angkor.O7Web.Domain.Security;
+using Angkor.O7Web.Comunication;
 
 namespace Angkor.O7Web.Interface.Security.Controllers
 {
@@ -12,19 +10,17 @@ namespace Angkor.O7Web.Interface.Security.Controllers
         [HttpPost]
         public JsonResult GetCompanies(string login, string password)
         {
-            var argDomain = new object[] {login, password};
-            var argFlow = new object[] {login};
-            var domain = O7DomainInstanceMaker.MakeInstance<SecurityJsonDomain, BasicFlow>(argDomain, argFlow);
-            return new O7JsonResult(domain.ListCompanies());
+            var domain = ProxyDomain.Instance.SecurityDomain(login, password);
+            var companies = domain.Companies;
+            return new O7JsonResult(companies);
         }
 
         [HttpPost]
         public JsonResult GetBranches(string login, string password, string companyId)
         {
-            var argDomain = new object[] {login, password};
-            var argFlow = new object[] {login};
-            var domain = O7DomainInstanceMaker.MakeInstance<SecurityJsonDomain, BasicFlow>(argDomain, argFlow);
-            return new O7JsonResult(domain.ListBranches(companyId));
+            var domain = ProxyDomain.Instance.SecurityDomain(login, password);
+            var branches = domain.Branches(companyId);
+            return new O7JsonResult(branches);
         }
     }
 }

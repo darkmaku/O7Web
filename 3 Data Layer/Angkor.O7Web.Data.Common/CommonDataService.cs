@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Angkor.O7Framework.Common.Model;
 using Angkor.O7Framework.Data.Tool;
-using Angkor.O7Framework.Infrastructure;
+using Angkor.O7Framework.Infrastructure.Data;
 using Angkor.O7Web.Common.Entity;
 using Angkor.O7Web.Data.Common.DataMapper;
 

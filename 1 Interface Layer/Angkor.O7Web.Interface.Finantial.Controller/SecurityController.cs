@@ -1,15 +1,13 @@
 ﻿// Create by Felix A. Bueno
 using System.Collections.Generic;
-using System.Web;
 using System.Web.Mvc;
 using Angkor.O7Framework.Common.Model;
-using Angkor.O7Framework.Domain;
 using Angkor.O7Framework.Utility;
 using Angkor.O7Framework.Web.Base;
 using Angkor.O7Framework.Web.Model;
 using Angkor.O7Framework.Web.Security;
 using Angkor.O7Web.Common.Utility;
-using Angkor.O7Web.Domain.Common;
+using Angkor.O7Web.Comunication;
 using Angkor.O7Web.Interface.Security.Controllers.Transfer;
 
 namespace Angkor.O7Web.Interface.Finantial.Controller
@@ -32,11 +30,8 @@ namespace Angkor.O7Web.Interface.Finantial.Controller
             var credentialCookie = make_credential_cookie(credential);
             authenticate_user(credentialCookie);
 
-            var argDomain = new object[] { credentialCookie.Login, credentialCookie.Password };
-            var argFlow = new object[] { credentialCookie.Login };
-
-            var domain = O7DomainInstanceMaker.MakeInstance<Domain.Security.SecurityJsonDomain, BasicFlow>(argDomain, argFlow);
-            var menus = domain.ListMenus(credentialCookie.CompanyId, credentialCookie.BranchId, menuId);
+            var domain = ProxyDomain.Instance.SecurityDomain(credentialCookie.Login, credentialCookie.Password);
+            var menus = domain.Menus(credentialCookie.CompanyId, credentialCookie.BranchId, menuId);
 
             var menusResult = menus as O7SuccessResponse<List<O7Menu>>;
             if (menusResult == null) return null;            
