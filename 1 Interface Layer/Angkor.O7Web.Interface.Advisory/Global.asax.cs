@@ -16,12 +16,5 @@ namespace Angkor.O7Web.Interface.Advisory
             AreaRegistration.RegisterAllAreas();
             AdvisoryAppStart.BuildRouteConfig(RouteTable.Routes);
         }
-
-        protected void Application_PostAuthenticateRequest(object sender, EventArgs e)
-        {
-            
-            //var authCookie = Request.Cookies[FormsAuthentication.FormsCookieName];
-            //if (authCookie != null) HttpContext.Current.User = O7Authentication.ExtractUser(authCookie);            
-        }
     }
 }
