@@ -14,5 +14,10 @@ namespace Angkor.O7Web.Interface.Finantial.Controller
             var response = domain.AllSeries(User.Company, User.Branch);
             return new O7JsonResult(response);
         }
+
+        public ActionResult InvoiceDocuments()
+        {
+            return View();
+        }
     }
 }

@@ -9,7 +9,7 @@ namespace Angkor.O7Web.Interface.Finantial.Controller
     {
         public JsonResult Insert_ClientSearch(string id, string name, string identifier)
         {
-            
+            return null;
         }
     }
 }

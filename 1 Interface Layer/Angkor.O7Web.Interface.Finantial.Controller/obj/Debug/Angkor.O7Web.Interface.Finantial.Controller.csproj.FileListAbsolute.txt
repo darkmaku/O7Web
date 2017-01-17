@@ -47,3 +47,7 @@ D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\obj\Debug\Angkor.O7Web.Interface.Finantial.Controller.csprojResolveAssemblyReference.cache
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\obj\Debug\Angkor.O7Web.Interface.Finantial.Controller.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\obj\Debug\Angkor.O7Web.Interface.Finantial.Controller.pdb
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Web.Common.Finantial.Entity.dll
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Web.Data.Finantial.dll
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Web.Common.Finantial.Entity.pdb
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Web.Data.Finantial.pdb
