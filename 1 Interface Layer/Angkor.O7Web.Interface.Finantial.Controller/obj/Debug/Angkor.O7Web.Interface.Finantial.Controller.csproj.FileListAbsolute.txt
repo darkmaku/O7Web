@@ -18,6 +18,7 @@ D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\System.Web.WebPages.Deployment.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\System.Web.WebPages.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Oracle.ManagedDataAccess.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Framework.Components.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Web.Data.Security.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Web.Common.Security.Entity.dll

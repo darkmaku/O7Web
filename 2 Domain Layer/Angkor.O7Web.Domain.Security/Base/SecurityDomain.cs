@@ -25,6 +25,7 @@ namespace Angkor.O7Web.Domain.Security.Base
 
         public abstract O7Response UserName(string companyId, string branchId);
 
-        public abstract O7Response Modules(string companyId, string branchId);
+        public abstract O7Response AllModules(string companyId, string branchId);
+        public abstract O7Response AnotherModules(string companyId, string branchId, string moduleId);
     }
 }

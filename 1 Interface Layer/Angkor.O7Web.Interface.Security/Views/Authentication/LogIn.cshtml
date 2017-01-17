@@ -120,10 +120,8 @@
                         $("#validate-user").off("click");
                     }
                 })
-                .fail(function (result) {
-                    console.log("Error");
-                    console.log(result);
-                    toastr.error("No se creo correctamente la actividad.", "Mensaje", { positionClass: "toast-top-full-width" });
+                .fail(function (result) {                   
+                    toastr.error(result.statusText, "Mensaje", { positionClass: "toast-top-full-width" });
                 });
         });
 
@@ -151,7 +149,7 @@
                     }
                 })
                 .fail(function (result) {
-                    console.log(result);
+                    toastr.error(result.statusText, "Mensaje", { positionClass: "toast-top-full-width" });
                 });
         });
 

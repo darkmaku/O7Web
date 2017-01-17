@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Angkor.O7Framework.Common.Model;
 using Angkor.O7Framework.Data.Tool;
 using Angkor.O7Framework.Infrastructure.Data;
+using Angkor.O7Framework.Web.Model;
 using Angkor.O7Web.Common.Security.Entity;
 using Angkor.O7Web.Data.Security.DataMapper;
 
@@ -33,12 +34,21 @@ namespace Angkor.O7Web.Data.Security
             return DataAccess.ExecuteFunction<Branch>("security.branches", parameters, BranchDataMapper.Class);
         }
 
-        public virtual List<Module> Modules(string companyId, string branchId)
+        public virtual List<O7Module> AllModules(string companyId, string branchId)
         {
             var parameters = O7DbParameterCollection.Make;
             parameters.Add(O7Parameter.Make("p_company", companyId));
             parameters.Add(O7Parameter.Make("p_branch", branchId));
-            return DataAccess.ExecuteFunction<Module>("security.modules_installed", parameters, ModuleDataMapper.Class);
+            return DataAccess.ExecuteFunction<O7Module>("security.modules_installed", parameters, ModuleDataMapper.Class);
+        }
+
+        public virtual List<O7Module> AnotherModules(string companyId, string branchId, string moduleId)
+        {
+            var parameters = O7DbParameterCollection.Make;
+            parameters.Add(O7Parameter.Make("p_company", companyId));
+            parameters.Add(O7Parameter.Make("p_branch", branchId));
+            parameters.Add(O7Parameter.Make("p_module", moduleId));
+            return DataAccess.ExecuteFunction<O7Module>("security.others_modules", parameters, ModuleDataMapper.Class);
         }
 
         public virtual List<Menu> Menus(string companyId, string branchId, string menuId)

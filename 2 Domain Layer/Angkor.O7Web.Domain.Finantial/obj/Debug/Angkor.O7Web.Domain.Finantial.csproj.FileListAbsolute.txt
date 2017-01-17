@@ -12,3 +12,4 @@ D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Finantial\bin\Debug\Angkor.
 D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Finantial\obj\Debug\Angkor.O7Web.Domain.Finantial.csprojResolveAssemblyReference.cache
 D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Finantial\obj\Debug\Angkor.O7Web.Domain.Finantial.dll
 D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Finantial\obj\Debug\Angkor.O7Web.Domain.Finantial.pdb
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Finantial\bin\Debug\Angkor.O7Framework.Web.dll

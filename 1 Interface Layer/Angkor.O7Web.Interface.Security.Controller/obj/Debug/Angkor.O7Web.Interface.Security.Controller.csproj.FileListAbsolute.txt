@@ -13,6 +13,7 @@ D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security.Controller\b
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security.Controller\bin\Debug\Angkor.O7Web.Domain.Security.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security.Controller\bin\Debug\Castle.Core.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security.Controller\bin\Debug\System.Web.Mvc.dll
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security.Controller\bin\Debug\Oracle.ManagedDataAccess.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security.Controller\bin\Debug\Angkor.O7Framework.Components.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security.Controller\bin\Debug\Angkor.O7Web.Data.Security.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security.Controller\bin\Debug\Angkor.O7Web.Comunication.pdb

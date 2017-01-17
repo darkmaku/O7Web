@@ -1,12 +1,11 @@
 ﻿//Create by Felix A. Bueno
 using System;
 using System.Collections.Generic;
-using System.Web;
 using System.Web.Mvc;
 using Angkor.O7Framework.Common.Model;
 using Angkor.O7Framework.Utility;
 using Angkor.O7Framework.Web.HtmlHelper;
-using Angkor.O7Web.Common.Security.Entity;
+using Angkor.O7Framework.Web.Model;
 using Angkor.O7Web.Common.Utility;
 using Angkor.O7Web.Comunication;
 
@@ -46,9 +45,9 @@ namespace Angkor.O7Web.Interface.Security.Controllers
             
             var serializedCookie = deserialize_cookie(cookie.Value);
             var domain = ProxyDomain.Instance.SecurityDomain(serializedCookie.Login, serializedCookie.Password);
-            var modules = domain.Modules(serializedCookie.CompanyId, serializedCookie.BranchId);
+            var modules = domain.AllModules(serializedCookie.CompanyId, serializedCookie.BranchId);
 
-            var currentSource = modules as O7SuccessResponse<List<Module>>;
+            var currentSource = modules as O7SuccessResponse<List<O7Module>>;
             if (currentSource == null) return Redirect(LinkHelper.SourceLink("Error", "ServerError", Tuple.Create("credential", cookie.Value)));
 
             currentSource.Value1.Append("Url", cookie.Value.ToUriPath());

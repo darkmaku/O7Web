@@ -1,3 +1,4 @@
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Common\bin\Debug\Angkor.O7Web.Domain.Common.dll.config
 D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Common\bin\Debug\Angkor.O7Web.Domain.Common.dll
 D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Common\bin\Debug\Angkor.O7Web.Domain.Common.pdb
 D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Common\bin\Debug\Angkor.O7Framework.Common.dll
@@ -9,6 +10,7 @@ D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Common\bin\Debug\Angkor.O7F
 D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Common\bin\Debug\Angkor.O7Web.Common.Entity.dll
 D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Common\bin\Debug\Angkor.O7Web.Data.Common.dll
 D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Common\bin\Debug\Castle.Core.dll
+D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Common\bin\Debug\Oracle.ManagedDataAccess.dll
 D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Common\bin\Debug\Angkor.O7Web.Data.Common.pdb
 D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Common\bin\Debug\Angkor.O7Web.Common.Entity.pdb
 D:\Projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Common\bin\Debug\Castle.Core.xml

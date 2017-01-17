@@ -3,6 +3,7 @@ D:\Projects\O7Web\2 Comunication Layer\Angkor.O7Web.Comunication\bin\Debug\Angko
 D:\Projects\O7Web\2 Comunication Layer\Angkor.O7Web.Comunication\bin\Debug\Angkor.O7Framework.Infrastructure.dll
 D:\Projects\O7Web\2 Comunication Layer\Angkor.O7Web.Comunication\bin\Debug\Angkor.O7Web.Domain.Common.dll
 D:\Projects\O7Web\2 Comunication Layer\Angkor.O7Web.Comunication\bin\Debug\Angkor.O7Web.Domain.Security.dll
+D:\Projects\O7Web\2 Comunication Layer\Angkor.O7Web.Comunication\bin\Debug\Oracle.ManagedDataAccess.dll
 D:\Projects\O7Web\2 Comunication Layer\Angkor.O7Web.Comunication\bin\Debug\Angkor.O7Framework.Components.dll
 D:\Projects\O7Web\2 Comunication Layer\Angkor.O7Web.Comunication\bin\Debug\Angkor.O7Framework.Common.dll
 D:\Projects\O7Web\2 Comunication Layer\Angkor.O7Web.Comunication\bin\Debug\Angkor.O7Web.Common.Security.Entity.dll

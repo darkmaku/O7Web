@@ -2,12 +2,9 @@
 using System;
 using System.Collections.Specialized;
 using System.Web;
-using Angkor.O7Framework.Infrastructure;
 using Angkor.O7Framework.Utility;
 using Angkor.O7Framework.Web.Base;
 using Angkor.O7Web.Common.Utility;
-using Angkor.O7Web.Domain.Common;
-using Angkor.O7Web.Domain.Security;
 using Angkor.O7Web.Interface.Security.Controllers.Transfer;
 
 namespace Angkor.O7Web.Interface.Security.Controllers

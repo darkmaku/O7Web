@@ -13,6 +13,7 @@ D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\An
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Interface.SharedSource.Controller.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Castle.Core.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\System.Web.Mvc.dll
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Oracle.ManagedDataAccess.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Framework.Components.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Common.Security.Entity.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Data.Security.dll

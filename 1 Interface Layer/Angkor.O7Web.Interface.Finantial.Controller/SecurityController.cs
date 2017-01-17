@@ -37,6 +37,13 @@ namespace Angkor.O7Web.Interface.Finantial.Controller
             if (menusResult == null) return null;            
 
             _authentication.SetMenu(menusResult.Value1);
+
+            var modules = domain.AnotherModules(credentialCookie.CompanyId, credentialCookie.BranchId, menuId);
+            var modulesResult = modules as O7SuccessResponse<List<O7Module>>;
+            if (modulesResult == null) return null;
+
+            modulesResult.Value1.Append("Url", credential.ToUriPath());
+            _authentication.SetModule(modulesResult.Value1);
             
             return RedirectToAction("Index", "Home");
         }

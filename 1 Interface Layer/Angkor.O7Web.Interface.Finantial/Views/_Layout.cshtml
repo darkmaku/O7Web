@@ -75,7 +75,7 @@
                     <li class="nav-header" style="padding-bottom: 16px ! important; padding-top: 16px ! important;">
                         <div class="dropdown profile-element">
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                <span class="clear">
+                                <span class="clear">    
                                     <span class="block m-t-xs"><strong class="font-bold">@User.Name</strong></span>
                                     <span class="text-muted text-xs block">Rol</span>
                                 </span>
@@ -187,9 +187,11 @@
                             Elección de modulos
                         </h3>
                     </div>
-                    <div class="setings-item">
-                        <span>Financiero</span>
-                    </div>
+                    @foreach (var module in Modules) {
+                        <div class="setings-item">
+                            <span onclick="location='@module.Url'" style="cursor: pointer;" class="cool-link">@module.Title (@module.Version)</span>
+                        </div>
+                    }                    
                 </div>
             </div>
         </div>

@@ -45,10 +45,16 @@ namespace Angkor.O7Web.Domain.Security
             return O7SuccessResponse.MakeResponse(userName);
         }
 
-        public override O7Response Modules(string companyId, string branchId)
+        public override O7Response AllModules(string companyId, string branchId)
         {
-            var modules = SecurityDataService.Modules(companyId, branchId);
+            var modules = SecurityDataService.AllModules(companyId, branchId);
             return O7SuccessResponse.MakeResponse(modules);
         }
+
+        public override O7Response AnotherModules(string companyId, string branchId, string moduleId)
+        {
+            var modules = SecurityDataService.AnotherModules(companyId, branchId, moduleId);
+            return O7SuccessResponse.MakeResponse(modules);
+        }        
     }
 }

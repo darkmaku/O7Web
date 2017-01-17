@@ -22,11 +22,11 @@ D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security\bin\Angkor.O
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security\bin\Angkor.O7Web.Interface.SharedSource.Controller.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security\bin\Angkor.O7Web.Common.TransferObject.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security\bin\Angkor.O7Web.Common.Security.Entity.dll
-D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security\bin\Angkor.O7Web.Domain.Common.dll
-D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security\bin\Angkor.O7Framework.Infrastructure.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security\bin\Angkor.O7Web.Data.Security.dll
-D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security\bin\Angkor.O7Framework.Components.dll
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security\bin\Angkor.O7Framework.Infrastructure.dll
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security\bin\Angkor.O7Web.Domain.Common.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security\bin\Angkor.O7Framework.Data.dll
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security\bin\Angkor.O7Framework.Components.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security\bin\Angkor.O7Web.Interface.AppStart.pdb
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security\bin\Angkor.O7Web.Interface.Security.Controllers.pdb
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security\bin\Castle.Core.xml
@@ -43,8 +43,8 @@ D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security\bin\Angkor.O
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security\bin\Angkor.O7Web.Interface.SharedSource.Controller.pdb
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security\bin\Angkor.O7Web.Common.TransferObject.pdb
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security\bin\Angkor.O7Web.Common.Security.Entity.pdb
-D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security\bin\Angkor.O7Web.Domain.Common.pdb
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security\bin\Angkor.O7Web.Data.Security.pdb
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security\bin\Angkor.O7Web.Domain.Common.pdb
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security\bin\es\System.Web.Helpers.resources.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security\bin\es\System.Web.Mvc.resources.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security\bin\es\System.Web.Razor.resources.dll
