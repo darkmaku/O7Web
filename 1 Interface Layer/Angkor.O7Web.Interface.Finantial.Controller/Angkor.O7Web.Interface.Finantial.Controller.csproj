@@ -87,6 +87,7 @@
     <Compile Include="InvoiceController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SecurityController.cs" />
+    <Compile Include="SettingsController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

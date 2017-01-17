@@ -1,6 +1,8 @@
 ﻿// O7ERP Web created by felix_dev
 using Angkor.O7Framework.Infrastructure;
 using Angkor.O7Web.Domain.Common;
+using Angkor.O7Web.Domain.Finantial;
+using Angkor.O7Web.Domain.Finantial.Base;
 using Angkor.O7Web.Domain.Security;
 using Angkor.O7Web.Domain.Security.Base;
 
@@ -20,6 +22,13 @@ namespace Angkor.O7Web.Comunication
             var argDomain = new object[] { login, password };
             var argFlow = new object[] { login };
             return O7DomainInstanceMaker.MakeInstance<SecurityFlow, BasicFlow>(argDomain, argFlow);
+        }
+
+        public FinantialDomain FinantialDomain(string login, string password)
+        {
+            var argDomain = new object[] { login, password };
+            var argFlow = new object[] { login };
+            return O7DomainInstanceMaker.MakeInstance<FinantialFlow, BasicFlow>(argDomain, argFlow);
         }
     }
 }
