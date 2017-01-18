@@ -109,6 +109,10 @@
       <Project>{f4793ccd-cfb9-4afe-a223-4f181c247b88}</Project>
       <Name>Angkor.O7Web.Domain.Security</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\4 Common Layer\Angkor.O7Web.Common.Finantial.Entity\Angkor.O7Web.Common.Finantial.Entity.csproj">
+      <Project>{1FE6DFCB-60C1-45F3-93D2-A36609B97CED}</Project>
+      <Name>Angkor.O7Web.Common.Finantial.Entity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\4 Common Layer\Angkor.O7Web.Common.TransferObject\Angkor.O7Web.Common.TransferObject.csproj">
       <Project>{ADF27482-8376-4B42-9C8D-50D1E8EB8AF9}</Project>
       <Name>Angkor.O7Web.Common.TransferObject</Name>

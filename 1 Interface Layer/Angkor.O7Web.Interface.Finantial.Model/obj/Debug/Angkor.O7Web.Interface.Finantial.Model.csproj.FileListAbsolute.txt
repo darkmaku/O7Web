@@ -1,0 +1,5 @@
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Model\bin\Debug\Angkor.O7Web.Interface.Finantial.Model.dll
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Model\bin\Debug\Angkor.O7Web.Interface.Finantial.Model.pdb
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Model\obj\Debug\Angkor.O7Web.Interface.Finantial.Model.csprojResolveAssemblyReference.cache
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Model\obj\Debug\Angkor.O7Web.Interface.Finantial.Model.dll
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Model\obj\Debug\Angkor.O7Web.Interface.Finantial.Model.pdb

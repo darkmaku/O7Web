@@ -13,7 +13,7 @@ namespace Angkor.O7Web.Data.Finantial.DataMapper
             => new InvoiceDocumentCount
             {
                 DocumentType = Source.GetValue<string>(0), Id = Source.GetValue<string>(1), Min = Source.GetValue<string>(2), Max = Source.GetValue<string>(3),
-                Current = Source.GetValue<string>(4), Default = Source.GetValue<string>(5) == "true", Digital = Source.GetValue<string>(6) == "true"
+                Current = Source.GetValue<string>(4), Default = Source.GetValue<string>(5), Digital = Source.GetValue<string>(6)
             };
     }
 }

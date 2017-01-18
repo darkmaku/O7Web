@@ -8,7 +8,7 @@ namespace Angkor.O7Web.Common.Finantial.Entity
         public string Current { get; set; }
         public string Max { get; set; }
         public string Min { get; set; }
-        public bool Default { get; set; }
-        public bool Digital { get; set; }
+        public string Default { get; set; }
+        public string Digital { get; set; }
     }
 }

@@ -92,17 +92,20 @@
                             @if (menu.Menus.Count > 0) {
                                 <ul class="nav nav-second-level collapse">
                                     @foreach (var subMenu in menu.Menus) {
-                                        <li>
-                                            <a href="@subMenu.Url">@subMenu.Title <span class="fa arrow"></span></a>
+                                        <li>                                            
                                             @if (subMenu.Menus.Count > 0) {
+                                                <a href="@subMenu.Url">@subMenu.Title <span class="fa arrow"></span></a>
                                                 <ul class="nav nav-third-level">
-                                                    @foreach (var finalMenu in subMenu.Menus) {
+                                                    @foreach (var finalMenu in subMenu.Menus)
+                                                    {
                                                         <li>
                                                             <a href="@finalMenu.Url">@finalMenu.Title</a>
                                                         </li>
                                                     }
                                                 </ul>
-                                            }                                                
+                                            } else {
+                                                <a href="@subMenu.Url">@subMenu.Title</a>
+                                            }
                                         </li>
                                     }
                                 </ul>
