@@ -19,6 +19,6 @@ namespace Angkor.O7Web.Domain.Finantial.Base
         public abstract O7Response AllSeries(string companyId, string branchId);
 
         public abstract O7Response AddSeries(string companyId, string branchId, string documentType, string id, string current,
-            string max, string min, string @default, string digital);
+            string max, string min, string @default, string prefix);
     }
 }

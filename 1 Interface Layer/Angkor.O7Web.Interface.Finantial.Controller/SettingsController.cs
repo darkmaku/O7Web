@@ -23,7 +23,15 @@ namespace Angkor.O7Web.Interface.Finantial.Controller
             return new O7JsonResult(response);
         }
 
-        public JsonResult AddSeries(string companyId, string branchId, string documentType, string id, string current,
+        public JsonResult AddSeries(string documentType, string id, string current, string max, string min, 
+            string @default, string prefix)
+        {
+            var domain = ProxyDomain.Instance.FinantialDomain(User.Identity.Name, User.Password);
+            var response = domain.AddSeries(User.Company, User.Branch, documentType, id, current, max, min, @default, prefix);
+            return new O7JsonResult(response);
+        }
+
+        public JsonResult UpdateSeries(string companyId, string branchId, string documentType, string id, string current,
             string max, string min, string @default, string digital)
         {
             var domain = ProxyDomain.Instance.FinantialDomain(User.Identity.Name, User.Password);

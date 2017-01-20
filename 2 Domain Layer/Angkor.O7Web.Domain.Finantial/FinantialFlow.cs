@@ -26,9 +26,9 @@ namespace Angkor.O7Web.Domain.Finantial
         }
 
         public override O7Response AddSeries(string companyId, string branchId, string documentType, string id, string current,
-            string max, string min, string @default, string digital)
+            string max, string min, string @default, string prefix)
         {
-            var result = FinantialDataService.AddSeries(companyId, branchId, documentType, id, current, max, min, @default, digital);
+            var result = FinantialDataService.AddSeries(companyId, branchId, documentType, id, current, max, min, @default, prefix);
             var seriesSerialized = O7JsonSerealizer.Serialize(result);
             return O7SuccessResponse.MakeResponse(seriesSerialized);
         }

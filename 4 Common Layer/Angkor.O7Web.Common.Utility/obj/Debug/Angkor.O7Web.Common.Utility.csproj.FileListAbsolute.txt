@@ -1,5 +1,5 @@
-D:\projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Utility\bin\Debug\Angkor.O7Web.Common.Utility.dll
-D:\projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Utility\bin\Debug\Angkor.O7Web.Common.Utility.pdb
-D:\projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Utility\obj\Debug\Angkor.O7Web.Common.Utility.csprojResolveAssemblyReference.cache
-D:\projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Utility\obj\Debug\Angkor.O7Web.Common.Utility.dll
-D:\projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Utility\obj\Debug\Angkor.O7Web.Common.Utility.pdb
+D:\Projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Utility\bin\Debug\Angkor.O7Web.Common.Utility.dll
+D:\Projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Utility\bin\Debug\Angkor.O7Web.Common.Utility.pdb
+D:\Projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Utility\obj\Debug\Angkor.O7Web.Common.Utility.csprojResolveAssemblyReference.cache
+D:\Projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Utility\obj\Debug\Angkor.O7Web.Common.Utility.dll
+D:\Projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Utility\obj\Debug\Angkor.O7Web.Common.Utility.pdb
