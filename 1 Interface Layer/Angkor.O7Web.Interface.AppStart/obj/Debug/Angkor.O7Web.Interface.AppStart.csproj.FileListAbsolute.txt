@@ -13,6 +13,7 @@ D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\An
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Interface.SharedSource.Controller.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Castle.Core.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\System.Web.Mvc.dll
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Domain.Finantial.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Oracle.ManagedDataAccess.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Framework.Components.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Common.Security.Entity.dll
@@ -20,6 +21,8 @@ D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\An
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Framework.Utility.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Common.TransferObject.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Framework.Data.dll
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Common.Finantial.Entity.dll
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Data.Finantial.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Comunication.pdb
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Domain.Common.pdb
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Domain.Security.pdb
@@ -29,16 +32,13 @@ D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\An
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Interface.SharedSource.Controller.pdb
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Castle.Core.xml
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\System.Web.Mvc.xml
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Domain.Finantial.pdb
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Common.Security.Entity.pdb
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Data.Security.pdb
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Common.TransferObject.pdb
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Common.Finantial.Entity.pdb
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Data.Finantial.pdb
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\es\System.Web.Mvc.resources.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\obj\Debug\Angkor.O7Web.Interface.AppStart.csprojResolveAssemblyReference.cache
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\obj\Debug\Angkor.O7Web.Interface.AppStart.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\obj\Debug\Angkor.O7Web.Interface.AppStart.pdb
-D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Domain.Finantial.dll
-D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Common.Finantial.Entity.dll
-D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Data.Finantial.dll
-D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Domain.Finantial.pdb
-D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Common.Finantial.Entity.pdb
-D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Data.Finantial.pdb

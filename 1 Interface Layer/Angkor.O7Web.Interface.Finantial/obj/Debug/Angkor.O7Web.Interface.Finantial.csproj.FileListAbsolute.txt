@@ -22,11 +22,14 @@ D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\Angkor.
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\Angkor.O7Web.Common.Security.Entity.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\Angkor.O7Web.Data.Security.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\Angkor.O7Framework.Infrastructure.dll
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\Angkor.O7Web.Domain.Finantial.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\Angkor.O7Web.Domain.Common.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\Angkor.O7Web.Common.TransferObject.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\Angkor.O7Framework.Data.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\Castle.Core.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\Angkor.O7Framework.Components.dll
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\Angkor.O7Web.Common.Finantial.Entity.dll
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\Angkor.O7Web.Data.Finantial.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\Angkor.O7Web.Interface.AppStart.pdb
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\System.Web.Helpers.xml
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\System.Web.Mvc.xml
@@ -42,9 +45,12 @@ D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\Angkor.
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\Angkor.O7Web.Interface.SharedSource.Controller.pdb
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\Angkor.O7Web.Common.Security.Entity.pdb
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\Angkor.O7Web.Data.Security.pdb
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\Angkor.O7Web.Domain.Finantial.pdb
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\Angkor.O7Web.Domain.Common.pdb
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\Angkor.O7Web.Common.TransferObject.pdb
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\Castle.Core.xml
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\Angkor.O7Web.Common.Finantial.Entity.pdb
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\Angkor.O7Web.Data.Finantial.pdb
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\es\System.Web.Helpers.resources.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\es\System.Web.Mvc.resources.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\es\System.Web.Razor.resources.dll
@@ -54,9 +60,3 @@ D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\es\Syst
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\obj\Debug\Angkor.O7Web.Interface.Finantial.csprojResolveAssemblyReference.cache
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\obj\Debug\Angkor.O7Web.Interface.Finantial.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\obj\Debug\Angkor.O7Web.Interface.Finantial.pdb
-D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\Angkor.O7Web.Domain.Finantial.dll
-D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\Angkor.O7Web.Common.Finantial.Entity.dll
-D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\Angkor.O7Web.Data.Finantial.dll
-D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\Angkor.O7Web.Domain.Finantial.pdb
-D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\Angkor.O7Web.Common.Finantial.Entity.pdb
-D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial\bin\Angkor.O7Web.Data.Finantial.pdb

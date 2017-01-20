@@ -15,6 +15,21 @@
     <script src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
     @Html.JavaScriptLink("js/plugins/chosen/chosen.jquery.js")
+    <script>
+        function detail(id) {
+            $("#txtModalTitle").text("Detalle serie");
+            $("#btnConfirm").hide();
+        }
+        
+        function update(id) {
+            $("#txtModalTitle").text("Actualizar serie");
+            $("#btnConfirm").show();
+            $("#btnConfirm").attr("action", "2");
+        }
+        
+        function delete(id) {
+        }    
+    </script>
 }
     
 @section section_script {
@@ -26,6 +41,7 @@
                         action: function ( e, dt, node, config ) {
                             $("#txtModalTitle").text("Insertar serie");
                             $("#btnConfirm").attr("action","1");
+                            $("#btnConfirm").show();
                         }
                     }],
         columns:[{ data: "Digital",
@@ -55,9 +71,9 @@
                 { orderable: false,
                    className: "text-center",
                    render: function(data, type, full, meta){
-                        var buttonSearch = "<button type='button' class='btn btn-outline btn-primary'><i class='fa fa-eye' aria-hidden='true'></i></button>&nbsp;";
-                        var buttonEdit = "<button type='button' class='btn btn-outline btn-success'><i class='fa fa-pencil' aria-hidden='true'></i></button>&nbsp;";
-                        var buttonDelete = "<button type='button' class='btn btn-outline btn-danger'><i class='fa fa-trash' aria-hidden='true'></i></button>";
+                        var buttonSearch = "<button type='button' class='btn btn-outline btn-primary' onclick="detail(full."><i class='fa fa-eye' aria-hidden='true'></i></button>&nbsp;";
+                        var buttonEdit = "<button type='button' class='btn btn-outline btn-success' onclick=""><i class='fa fa-pencil' aria-hidden='true'></i></button>&nbsp;";
+                        var buttonDelete = "<button type='button' class='btn btn-outline btn-danger' onclick=""><i class='fa fa-trash' aria-hidden='true'></i></button>";
                         return buttonSearch + buttonEdit + buttonDelete;
                    },
                    width: "15%"
@@ -97,7 +113,7 @@
             documentType.trigger("chosen:updated");
         }).fail(function (result) {
             toastr.error(result.statusText, "Mensaje", { positionClass: "toast-top-full-width" });
-    });
+    });       
 }
 
 <div class="row">

@@ -19,5 +19,6 @@ D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\bin\Debug\es\System.Web.WebPages.resources.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\bin\Debug\es\System.Web.WebPages.Deployment.resources.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\bin\Debug\es\System.Web.WebPages.Razor.resources.dll
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\obj\Debug\Angkor.O7Web.Interface.SharedSource.Controller.csprojResolveAssemblyReference.cache
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\obj\Debug\Angkor.O7Web.Interface.SharedSource.Controller.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\obj\Debug\Angkor.O7Web.Interface.SharedSource.Controller.pdb

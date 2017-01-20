@@ -1,5 +1,4 @@
 D:\Projects\O7Web\4 Common Layer\Angkor.O7Web.Common.TransferObject\bin\Debug\Angkor.O7Web.Common.TransferObject.dll
 D:\Projects\O7Web\4 Common Layer\Angkor.O7Web.Common.TransferObject\bin\Debug\Angkor.O7Web.Common.TransferObject.pdb
-D:\Projects\O7Web\4 Common Layer\Angkor.O7Web.Common.TransferObject\obj\Debug\Angkor.O7Web.Common.TransferObject.csprojResolveAssemblyReference.cache
 D:\Projects\O7Web\4 Common Layer\Angkor.O7Web.Common.TransferObject\obj\Debug\Angkor.O7Web.Common.TransferObject.dll
 D:\Projects\O7Web\4 Common Layer\Angkor.O7Web.Common.TransferObject\obj\Debug\Angkor.O7Web.Common.TransferObject.pdb
