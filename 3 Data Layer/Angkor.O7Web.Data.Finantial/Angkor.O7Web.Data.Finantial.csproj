@@ -46,9 +46,14 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataMapper\InvoiceClientMapper.cs" />
+    <Compile Include="DataMapper\InvoiceDetailsMapper.cs" />
     <Compile Include="DataMapper\InvoiceDocumentCountMapper.cs" />
     <Compile Include="DataMapper\InvoiceDocumentTypeMapper.cs" />
+    <Compile Include="DataMapper\InvoiceSeriesMapper.cs" />
+    <Compile Include="DataMapper\ProductDetailsMapper.cs" />
     <Compile Include="FinantialDataService.cs" />
+    <Compile Include="InvoiceDataService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
