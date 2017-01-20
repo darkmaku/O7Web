@@ -34,7 +34,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DocumentType.cs" />
+    <Compile Include="InvoiceDocumentType.cs" />
     <Compile Include="InvoiceDocumentCount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

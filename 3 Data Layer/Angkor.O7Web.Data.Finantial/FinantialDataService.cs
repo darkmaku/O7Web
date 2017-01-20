@@ -14,6 +14,11 @@ namespace Angkor.O7Web.Data.Finantial
         {
         }
 
+        public virtual List<InvoiceDocumentType> DocumentTypes()
+        {
+            return DataAccess.ExecuteFunction<InvoiceDocumentType>("finantial_invoice.document_type", O7DbParameterCollection.Make, InvoiceDocumentTypeMapper.Class);
+        }
+
         public virtual bool AddSeries(string companyId, string branchId, string documentType, string id, string current,
             string max, string min, string @default, string digital)
         {

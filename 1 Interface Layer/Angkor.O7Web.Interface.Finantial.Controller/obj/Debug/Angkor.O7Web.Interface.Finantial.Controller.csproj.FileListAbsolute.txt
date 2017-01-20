@@ -4,6 +4,7 @@ D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Framework.Infrastructure.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Framework.Utility.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Framework.Web.dll
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Web.Common.Finantial.Entity.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Web.Common.TransferObject.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Web.Common.Utility.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Web.Comunication.dll
@@ -20,13 +21,15 @@ D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\System.Web.WebPages.Razor.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Oracle.ManagedDataAccess.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Framework.Components.dll
-D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Web.Data.Security.dll
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Web.Data.Finantial.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Web.Common.Security.Entity.dll
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Web.Data.Security.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Framework.Data.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Web.Comunication.pdb
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Web.Domain.Common.pdb
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Web.Domain.Finantial.pdb
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Web.Domain.Security.pdb
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Web.Common.Finantial.Entity.pdb
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Web.Common.TransferObject.pdb
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Web.Common.Utility.pdb
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Castle.Core.xml
@@ -36,8 +39,9 @@ D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\System.Web.WebPages.xml
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\System.Web.WebPages.Deployment.xml
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\System.Web.WebPages.Razor.xml
-D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Web.Data.Security.pdb
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Web.Data.Finantial.pdb
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Web.Common.Security.Entity.pdb
+D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Web.Data.Security.pdb
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\es\System.Web.Helpers.resources.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\es\System.Web.Mvc.resources.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\es\System.Web.Razor.resources.dll
@@ -47,7 +51,3 @@ D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\obj\Debug\Angkor.O7Web.Interface.Finantial.Controller.csprojResolveAssemblyReference.cache
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\obj\Debug\Angkor.O7Web.Interface.Finantial.Controller.dll
 D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\obj\Debug\Angkor.O7Web.Interface.Finantial.Controller.pdb
-D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Web.Common.Finantial.Entity.dll
-D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Web.Data.Finantial.dll
-D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Web.Common.Finantial.Entity.pdb
-D:\Projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Finantial.Controller\bin\Debug\Angkor.O7Web.Data.Finantial.pdb

@@ -14,6 +14,8 @@ namespace Angkor.O7Web.Domain.Finantial.Base
             FinantialDataService = O7DataInstanceMaker.MakeInstance<FinantialDataService>(new object[] { login, password });
         }
 
+        public abstract O7Response DocumentTypes();
+
         public abstract O7Response AllSeries(string companyId, string branchId);
 
         public abstract O7Response AddSeries(string companyId, string branchId, string documentType, string id, string current,

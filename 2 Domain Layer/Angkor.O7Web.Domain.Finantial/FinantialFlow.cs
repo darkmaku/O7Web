@@ -11,6 +11,13 @@ namespace Angkor.O7Web.Domain.Finantial
         {
         }
 
+        public override O7Response DocumentTypes()
+        {
+            var series = FinantialDataService.DocumentTypes();
+            var seriesSerialized = O7JsonSerealizer.Serialize(series);
+            return O7SuccessResponse.MakeResponse(seriesSerialized);
+        }
+
         public override O7Response AllSeries(string companyId, string branchId)
         {
             var series = FinantialDataService.AllSeries(companyId, branchId);

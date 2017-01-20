@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataMapper\InvoiceDocumentCountMapper.cs" />
+    <Compile Include="DataMapper\InvoiceDocumentTypeMapper.cs" />
     <Compile Include="FinantialDataService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

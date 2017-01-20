@@ -1,11 +1,8 @@
 ﻿// O7ERP Web created by felix_dev
-
-using System.Collections.Generic;
 using System.Web.Mvc;
 using Angkor.O7Framework.Utility;
 using Angkor.O7Framework.Web.Base;
 using Angkor.O7Framework.Web.WebResult;
-using Angkor.O7Web.Common.Finantial.Entity;
 using Angkor.O7Web.Comunication;
 
 namespace Angkor.O7Web.Interface.Finantial.Controller
@@ -19,13 +16,11 @@ namespace Angkor.O7Web.Interface.Finantial.Controller
             return new O7JsonResult(response);
         }
 
-        public string DocumentTypes()
+        public JsonResult DocumentTypes()
         {
-            var result = new List<DocumentType>();
-            result.Add(new DocumentType {Value = "FCC", Content = "Factura"});
-            result.Add(new DocumentType { Value = "BCC", Content = "Boleta" });
-            result.Add(new DocumentType { Value = "NCC", Content = "Nota de credito" });
-            return O7JsonSerealizer.Serialize(result);
+            var domain = ProxyDomain.Instance.FinantialDomain(User.Identity.Name, User.Password);
+            var response = domain.DocumentTypes();
+            return new O7JsonResult(response);
         }
 
         public JsonResult AddSeries(string companyId, string branchId, string documentType, string id, string current,
