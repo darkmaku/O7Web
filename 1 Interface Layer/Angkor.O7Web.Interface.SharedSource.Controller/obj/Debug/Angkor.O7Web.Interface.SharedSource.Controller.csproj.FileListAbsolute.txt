@@ -22,3 +22,27 @@ D:\projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controll
 D:\projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\obj\Debug\Angkor.O7Web.Interface.SharedSource.Controller.csprojResolveAssemblyReference.cache
 D:\projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\obj\Debug\Angkor.O7Web.Interface.SharedSource.Controller.dll
 D:\projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\obj\Debug\Angkor.O7Web.Interface.SharedSource.Controller.pdb
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\bin\Debug\Angkor.O7Web.Interface.SharedSource.Controller.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\bin\Debug\Angkor.O7Web.Interface.SharedSource.Controller.pdb
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\bin\Debug\System.Web.Helpers.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\bin\Debug\System.Web.Mvc.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\bin\Debug\System.Web.Razor.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\bin\Debug\System.Web.WebPages.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\bin\Debug\System.Web.Helpers.xml
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\bin\Debug\System.Web.Mvc.xml
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\bin\Debug\System.Web.Razor.xml
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\bin\Debug\System.Web.WebPages.xml
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\bin\Debug\es\System.Web.Helpers.resources.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\bin\Debug\es\System.Web.Mvc.resources.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\bin\Debug\es\System.Web.Razor.resources.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\bin\Debug\es\System.Web.WebPages.resources.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\bin\Debug\es\System.Web.WebPages.Deployment.resources.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\bin\Debug\es\System.Web.WebPages.Razor.resources.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\obj\Debug\Angkor.O7Web.Interface.SharedSource.Controller.csprojResolveAssemblyReference.cache
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\obj\Debug\Angkor.O7Web.Interface.SharedSource.Controller.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.SharedSource.Controller\obj\Debug\Angkor.O7Web.Interface.SharedSource.Controller.pdb

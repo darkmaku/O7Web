@@ -10,3 +10,15 @@ D:\projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Advisory\bin\Debug\Angkor.O7Web
 D:\projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Advisory\obj\Debug\Angkor.O7Web.Data.Advisory.csprojResolveAssemblyReference.cache
 D:\projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Advisory\obj\Debug\Angkor.O7Web.Data.Advisory.dll
 D:\projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Advisory\obj\Debug\Angkor.O7Web.Data.Advisory.pdb
+C:\Angkor Web\Estable\O7Web\3 Data Layer\Angkor.O7Web.Data.Advisory\bin\Debug\Angkor.O7Web.Data.Advisory.dll
+C:\Angkor Web\Estable\O7Web\3 Data Layer\Angkor.O7Web.Data.Advisory\bin\Debug\Angkor.O7Web.Data.Advisory.pdb
+C:\Angkor Web\Estable\O7Web\3 Data Layer\Angkor.O7Web.Data.Advisory\bin\Debug\Angkor.O7Framework.Common.dll
+C:\Angkor Web\Estable\O7Web\3 Data Layer\Angkor.O7Web.Data.Advisory\bin\Debug\Angkor.O7Framework.Data.dll
+C:\Angkor Web\Estable\O7Web\3 Data Layer\Angkor.O7Web.Data.Advisory\bin\Debug\Angkor.O7Framework.Infrastructure.dll
+C:\Angkor Web\Estable\O7Web\3 Data Layer\Angkor.O7Web.Data.Advisory\bin\Debug\Angkor.O7Framework.Utility.dll
+C:\Angkor Web\Estable\O7Web\3 Data Layer\Angkor.O7Web.Data.Advisory\bin\Debug\Angkor.O7Web.Common.Advisory.Entity.dll
+C:\Angkor Web\Estable\O7Web\3 Data Layer\Angkor.O7Web.Data.Advisory\bin\Debug\Angkor.O7Framework.Components.dll
+C:\Angkor Web\Estable\O7Web\3 Data Layer\Angkor.O7Web.Data.Advisory\bin\Debug\Angkor.O7Web.Common.Advisory.Entity.pdb
+C:\Angkor Web\Estable\O7Web\3 Data Layer\Angkor.O7Web.Data.Advisory\obj\Debug\Angkor.O7Web.Data.Advisory.csprojResolveAssemblyReference.cache
+C:\Angkor Web\Estable\O7Web\3 Data Layer\Angkor.O7Web.Data.Advisory\obj\Debug\Angkor.O7Web.Data.Advisory.dll
+C:\Angkor Web\Estable\O7Web\3 Data Layer\Angkor.O7Web.Data.Advisory\obj\Debug\Angkor.O7Web.Data.Advisory.pdb

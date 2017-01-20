@@ -3,3 +3,8 @@ D:\projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Utility\bin\Debug\Angkor.O7
 D:\projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Utility\obj\Debug\Angkor.O7Web.Common.Utility.csprojResolveAssemblyReference.cache
 D:\projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Utility\obj\Debug\Angkor.O7Web.Common.Utility.dll
 D:\projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Utility\obj\Debug\Angkor.O7Web.Common.Utility.pdb
+C:\Angkor Web\Estable\O7Web\4 Common Layer\Angkor.O7Web.Common.Utility\bin\Debug\Angkor.O7Web.Common.Utility.dll
+C:\Angkor Web\Estable\O7Web\4 Common Layer\Angkor.O7Web.Common.Utility\bin\Debug\Angkor.O7Web.Common.Utility.pdb
+C:\Angkor Web\Estable\O7Web\4 Common Layer\Angkor.O7Web.Common.Utility\obj\Debug\Angkor.O7Web.Common.Utility.csprojResolveAssemblyReference.cache
+C:\Angkor Web\Estable\O7Web\4 Common Layer\Angkor.O7Web.Common.Utility\obj\Debug\Angkor.O7Web.Common.Utility.dll
+C:\Angkor Web\Estable\O7Web\4 Common Layer\Angkor.O7Web.Common.Utility\obj\Debug\Angkor.O7Web.Common.Utility.pdb

@@ -14,3 +14,19 @@ D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\bin\Debug\Angkor.O
 D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\obj\Debug\Angkor.O7Web.Domain.Security.csprojResolveAssemblyReference.cache
 D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\obj\Debug\Angkor.O7Web.Domain.Security.dll
 D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\obj\Debug\Angkor.O7Web.Domain.Security.pdb
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\bin\Debug\Angkor.O7Web.Domain.Security.dll.config
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\bin\Debug\Angkor.O7Web.Domain.Security.dll
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\bin\Debug\Angkor.O7Web.Domain.Security.pdb
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\bin\Debug\Angkor.O7Framework.Common.dll
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\bin\Debug\Angkor.O7Framework.Components.dll
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\bin\Debug\Angkor.O7Framework.Data.dll
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\bin\Debug\Angkor.O7Framework.Infrastructure.dll
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\bin\Debug\Angkor.O7Framework.Utility.dll
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\bin\Debug\Angkor.O7Framework.Web.dll
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\bin\Debug\Angkor.O7Web.Common.Security.Entity.dll
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\bin\Debug\Angkor.O7Web.Data.Security.dll
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\bin\Debug\Angkor.O7Web.Data.Security.pdb
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\bin\Debug\Angkor.O7Web.Common.Security.Entity.pdb
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\obj\Debug\Angkor.O7Web.Domain.Security.csprojResolveAssemblyReference.cache
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\obj\Debug\Angkor.O7Web.Domain.Security.dll
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\obj\Debug\Angkor.O7Web.Domain.Security.pdb

@@ -19,6 +19,11 @@ namespace Angkor.O7Web.Interface.Finantial.Controller
             return View();
         }
 
+        public ActionResult Index()
+        {
+            return View();
+        }
+
         public JsonResult Invoices_Populate()
         {
             var domain = ProxyDomain.Instance.InvoiceDomain(User.Identity.Name, User.Password);

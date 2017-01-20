@@ -44,3 +44,47 @@ D:\projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\es
 D:\projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\obj\Debug\Angkor.O7Web.Interface.AppStart.csprojResolveAssemblyReference.cache
 D:\projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\obj\Debug\Angkor.O7Web.Interface.AppStart.dll
 D:\projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\obj\Debug\Angkor.O7Web.Interface.AppStart.pdb
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Interface.AppStart.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Interface.AppStart.pdb
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Framework.Common.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Framework.Domain.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Framework.Infrastructure.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Framework.Web.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Comunication.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Domain.Common.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Domain.Security.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Interface.Advisory.Controller.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Interface.Finantial.Controller.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Interface.Security.Controllers.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Interface.SharedSource.Controller.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Castle.Core.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\System.Web.Mvc.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Domain.Finantial.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Framework.Components.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Common.Security.Entity.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Data.Security.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Framework.Utility.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Common.TransferObject.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Framework.Data.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Common.Finantial.Entity.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Data.Finantial.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Comunication.pdb
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Domain.Common.pdb
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Domain.Security.pdb
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Interface.Advisory.Controller.pdb
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Interface.Finantial.Controller.pdb
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Interface.Security.Controllers.pdb
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Interface.SharedSource.Controller.pdb
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Castle.Core.xml
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\System.Web.Mvc.xml
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Domain.Finantial.pdb
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Common.Security.Entity.pdb
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Data.Security.pdb
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Common.TransferObject.pdb
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Common.Finantial.Entity.pdb
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\Angkor.O7Web.Data.Finantial.pdb
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\bin\Debug\es\System.Web.Mvc.resources.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\obj\Debug\Angkor.O7Web.Interface.AppStart.csprojResolveAssemblyReference.cache
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\obj\Debug\Angkor.O7Web.Interface.AppStart.dll
+C:\Angkor Web\Estable\O7Web\1 Interface Layer\Angkor.O7Web.Interface.AppStart\obj\Debug\Angkor.O7Web.Interface.AppStart.pdb

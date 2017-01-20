@@ -6,3 +6,11 @@ D:\projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Advisory.Entity\bin\Debug\A
 D:\projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Advisory.Entity\obj\Debug\Angkor.O7Web.Common.Advisory.Entity.csprojResolveAssemblyReference.cache
 D:\projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Advisory.Entity\obj\Debug\Angkor.O7Web.Common.Advisory.Entity.dll
 D:\projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Advisory.Entity\obj\Debug\Angkor.O7Web.Common.Advisory.Entity.pdb
+C:\Angkor Web\Estable\O7Web\4 Common Layer\Angkor.O7Web.Common.Advisory.Entity\bin\Debug\Angkor.O7Web.Common.Advisory.Entity.dll
+C:\Angkor Web\Estable\O7Web\4 Common Layer\Angkor.O7Web.Common.Advisory.Entity\bin\Debug\Angkor.O7Web.Common.Advisory.Entity.pdb
+C:\Angkor Web\Estable\O7Web\4 Common Layer\Angkor.O7Web.Common.Advisory.Entity\bin\Debug\Angkor.O7Framework.Data.dll
+C:\Angkor Web\Estable\O7Web\4 Common Layer\Angkor.O7Web.Common.Advisory.Entity\bin\Debug\Angkor.O7Framework.Utility.dll
+C:\Angkor Web\Estable\O7Web\4 Common Layer\Angkor.O7Web.Common.Advisory.Entity\bin\Debug\Angkor.O7Framework.Common.dll
+C:\Angkor Web\Estable\O7Web\4 Common Layer\Angkor.O7Web.Common.Advisory.Entity\obj\Debug\Angkor.O7Web.Common.Advisory.Entity.csprojResolveAssemblyReference.cache
+C:\Angkor Web\Estable\O7Web\4 Common Layer\Angkor.O7Web.Common.Advisory.Entity\obj\Debug\Angkor.O7Web.Common.Advisory.Entity.dll
+C:\Angkor Web\Estable\O7Web\4 Common Layer\Angkor.O7Web.Common.Advisory.Entity\obj\Debug\Angkor.O7Web.Common.Advisory.Entity.pdb

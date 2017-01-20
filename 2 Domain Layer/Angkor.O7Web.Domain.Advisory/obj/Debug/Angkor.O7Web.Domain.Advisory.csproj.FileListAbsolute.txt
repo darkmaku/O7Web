@@ -15,3 +15,20 @@ D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\bin\Debug\Castle.C
 D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\obj\Debug\Angkor.O7Web.Domain.Advisory.csprojResolveAssemblyReference.cache
 D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\obj\Debug\Angkor.O7Web.Domain.Advisory.dll
 D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\obj\Debug\Angkor.O7Web.Domain.Advisory.pdb
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\bin\Debug\Angkor.O7Web.Domain.Advisory.dll
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\bin\Debug\Angkor.O7Web.Domain.Advisory.pdb
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\bin\Debug\Angkor.O7Framework.Common.dll
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\bin\Debug\Angkor.O7Framework.Data.dll
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\bin\Debug\Angkor.O7Framework.Infrastructure.dll
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\bin\Debug\Angkor.O7Framework.Utility.dll
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\bin\Debug\Angkor.O7Framework.Web.dll
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\bin\Debug\Angkor.O7Web.Common.Advisory.Entity.dll
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\bin\Debug\Angkor.O7Web.Data.Advisory.dll
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\bin\Debug\Castle.Core.dll
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\bin\Debug\Angkor.O7Framework.Components.dll
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\bin\Debug\Angkor.O7Web.Data.Advisory.pdb
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\bin\Debug\Angkor.O7Web.Common.Advisory.Entity.pdb
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\bin\Debug\Castle.Core.xml
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\obj\Debug\Angkor.O7Web.Domain.Advisory.csprojResolveAssemblyReference.cache
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\obj\Debug\Angkor.O7Web.Domain.Advisory.dll
+C:\Angkor Web\Estable\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\obj\Debug\Angkor.O7Web.Domain.Advisory.pdb
