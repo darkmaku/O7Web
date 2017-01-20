@@ -1,0 +1,5 @@
+D:\projects\O7Web\Angkor.O7Web.Services\4 Data Layer\Angkor.O7Web.Services.FSolution.Data.Finantial\bin\Debug\Angkor.O7Web.Services.FSolution.Data.Finantial.dll
+D:\projects\O7Web\Angkor.O7Web.Services\4 Data Layer\Angkor.O7Web.Services.FSolution.Data.Finantial\bin\Debug\Angkor.O7Web.Services.FSolution.Data.Finantial.pdb
+D:\projects\O7Web\Angkor.O7Web.Services\4 Data Layer\Angkor.O7Web.Services.FSolution.Data.Finantial\obj\Debug\Angkor.O7Web.Services.FSolution.Data.Finantial.csprojResolveAssemblyReference.cache
+D:\projects\O7Web\Angkor.O7Web.Services\4 Data Layer\Angkor.O7Web.Services.FSolution.Data.Finantial\obj\Debug\Angkor.O7Web.Services.FSolution.Data.Finantial.dll
+D:\projects\O7Web\Angkor.O7Web.Services\4 Data Layer\Angkor.O7Web.Services.FSolution.Data.Finantial\obj\Debug\Angkor.O7Web.Services.FSolution.Data.Finantial.pdb

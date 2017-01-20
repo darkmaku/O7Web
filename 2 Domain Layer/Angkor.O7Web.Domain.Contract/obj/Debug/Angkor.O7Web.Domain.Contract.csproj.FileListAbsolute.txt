@@ -1,0 +1,8 @@
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Contract\bin\Debug\Angkor.O7Web.Domain.Contract.dll
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Contract\bin\Debug\Angkor.O7Web.Domain.Contract.pdb
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Contract\bin\Debug\Angkor.O7Framework.Data.dll
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Contract\bin\Debug\Angkor.O7Web.Common.Security.Entity.dll
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Contract\bin\Debug\Angkor.O7Web.Common.Security.Entity.pdb
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Contract\obj\Debug\Angkor.O7Web.Domain.Contract.csprojResolveAssemblyReference.cache
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Contract\obj\Debug\Angkor.O7Web.Domain.Contract.dll
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Contract\obj\Debug\Angkor.O7Web.Domain.Contract.pdb

@@ -1,0 +1,6 @@
+D:\projects\O7Web\Angkor.O7Web.Services\1 Interface Layer\Angkor.O7Web.Interface.Security.Model\bin\Debug\Angkor.O7Web.Interface.Security.Model.dll
+D:\projects\O7Web\Angkor.O7Web.Services\1 Interface Layer\Angkor.O7Web.Interface.Security.Model\bin\Debug\Angkor.O7Web.Interface.Security.Model.pdb
+D:\projects\O7Web\Angkor.O7Web.Services\1 Interface Layer\Angkor.O7Web.Interface.Security.Model\obj\Debug\Angkor.O7Web.Interface.Security.Model.csprojResolveAssemblyReference.cache
+D:\projects\O7Web\Angkor.O7Web.Services\1 Interface Layer\Angkor.O7Web.Interface.Security.Model\obj\Debug\Angkor.O7Web.Interface.Security.Model.dll
+D:\projects\O7Web\Angkor.O7Web.Services\1 Interface Layer\Angkor.O7Web.Interface.Security.Model\obj\Debug\Angkor.O7Web.Interface.Security.Model.pdb
+D:\projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security.Model\obj\Debug\Angkor.O7Web.Interface.Security.Model.csprojResolveAssemblyReference.cache

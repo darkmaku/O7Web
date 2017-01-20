@@ -1,0 +1,4 @@
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain\bin\Debug\Angkor.O7Web.Domain.dll
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain\bin\Debug\Angkor.O7Web.Domain.pdb
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain\obj\Debug\Angkor.O7Web.Domain.dll
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain\obj\Debug\Angkor.O7Web.Domain.pdb

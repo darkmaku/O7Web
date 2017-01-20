@@ -1,0 +1,9 @@
+D:\projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Advisory\bin\Release\Angkor.O7Web.Data.Advisory.dll
+D:\projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Advisory\bin\Release\Angkor.O7Web.Data.Advisory.pdb
+D:\projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Advisory\bin\Release\Angkor.O7Framework.Data.dll
+D:\projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Advisory\bin\Release\Angkor.O7Framework.Utility.dll
+D:\projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Advisory\bin\Release\Angkor.O7Web.Common.Advisory.Entity.dll
+D:\projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Advisory\bin\Release\Angkor.O7Web.Common.Advisory.Entity.pdb
+D:\projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Advisory\obj\Release\Angkor.O7Web.Data.Advisory.csprojResolveAssemblyReference.cache
+D:\projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Advisory\obj\Release\Angkor.O7Web.Data.Advisory.dll
+D:\projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Advisory\obj\Release\Angkor.O7Web.Data.Advisory.pdb

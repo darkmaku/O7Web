@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword />
+    <_PublishTargetUrl>ftp://192.168.1.190/01-Projects/O7ERPWeb/Security/</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Angkor.O7Framework.Data.dll">
+      <publishTime>12/20/2016 17:42:37</publishTime>
+    </File>
+    <File Include="bin/Angkor.O7Framework.Domain.dll">
+      <publishTime>12/14/2016 16:31:19</publishTime>
+    </File>
+    <File Include="bin/Angkor.O7Framework.Utility.dll">
+      <publishTime>12/20/2016 17:55:05</publishTime>
+    </File>
+    <File Include="bin/Angkor.O7Framework.Web.dll">
+      <publishTime>12/27/2016 11:47:39</publishTime>
+    </File>
+    <File Include="bin/Angkor.O7Web.Common.Advisory.Entity.dll">
+      <publishTime>12/28/2016 17:58:35</publishTime>
+    </File>
+    <File Include="bin/Angkor.O7Web.Common.Entity.dll">
+      <publishTime>12/28/2016 17:52:45</publishTime>
+    </File>
+    <File Include="bin/Angkor.O7Web.Common.Security.Entity.dll">
+      <publishTime>12/28/2016 17:58:34</publishTime>
+    </File>
+    <File Include="bin/Angkor.O7Web.Common.TransferObject.dll">
+      <publishTime>12/28/2016 17:58:35</publishTime>
+    </File>
+    <File Include="bin/Angkor.O7Web.Data.Advisory.dll">
+      <publishTime>12/28/2016 17:58:36</publishTime>
+    </File>
+    <File Include="bin/Angkor.O7Web.Data.Common.dll">
+      <publishTime>12/28/2016 17:52:45</publishTime>
+    </File>
+    <File Include="bin/Angkor.O7Web.Data.Security.dll">
+      <publishTime>12/28/2016 17:58:36</publishTime>
+    </File>
+    <File Include="bin/Angkor.O7Web.Domain.Advisory.dll">
+      <publishTime>12/28/2016 17:58:38</publishTime>
+    </File>
+    <File Include="bin/Angkor.O7Web.Domain.Common.dll">
+      <publishTime>12/28/2016 17:52:46</publishTime>
+    </File>
+    <File Include="bin/Angkor.O7Web.Domain.Security.dll">
+      <publishTime>12/28/2016 17:58:38</publishTime>
+    </File>
+    <File Include="bin/Angkor.O7Web.Interface.Advisory.Controller.dll">
+      <publishTime>12/28/2016 17:58:39</publishTime>
+    </File>
+    <File Include="bin/Angkor.O7Web.Interface.AppStart.dll">
+      <publishTime>12/28/2016 17:58:39</publishTime>
+    </File>
+    <File Include="bin/Angkor.O7Web.Interface.Finantial.Controller.dll">
+      <publishTime>12/28/2016 17:58:36</publishTime>
+    </File>
+    <File Include="bin/Angkor.O7Web.Interface.Security.Controllers.dll">
+      <publishTime>12/28/2016 17:58:39</publishTime>
+    </File>
+    <File Include="bin/Angkor.O7Web.Interface.Security.dll">
+      <publishTime>12/28/2016 17:58:40</publishTime>
+    </File>
+    <File Include="bin/Angkor.O7Web.Interface.Security.Model.dll">
+      <publishTime>12/28/2016 17:58:38</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.compiled">
+      <publishTime>12/28/2016 17:58:45</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.dll">
+      <publishTime>12/28/2016 17:58:45</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Helpers.resources.dll">
+      <publishTime>01/28/2015 04:04:36</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Mvc.resources.dll">
+      <publishTime>01/28/2015 04:02:24</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Razor.resources.dll">
+      <publishTime>01/28/2015 04:02:36</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.WebPages.Deployment.resources.dll">
+      <publishTime>01/28/2015 04:04:36</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.WebPages.Razor.resources.dll">
+      <publishTime>01/28/2015 04:04:36</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.WebPages.resources.dll">
+      <publishTime>01/28/2015 04:04:36</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>07/19/2012 10:59:52</publishTime>
+    </File>
+    <File Include="bin/Oracle.ManagedDataAccess.dll">
+      <publishTime>08/24/2016 14:23:38</publishTime>
+    </File>
+    <File Include="bin/PostSharp.dll">
+      <publishTime>12/01/2016 19:13:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>01/28/2015 04:02:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>01/28/2015 04:02:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>10/27/2016 14:57:39</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>11/02/2016 12:43:35</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>12/28/2016 17:58:41</publishTime>
+    </File>
+    <File Include="Views/Authentication/LogIn.cshtml">
+      <publishTime>12/23/2016 16:13:57</publishTime>
+    </File>
+    <File Include="Views/Authentication/SwitchModule.cshtml">
+      <publishTime>12/26/2016 10:49:09</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>11/08/2016 16:36:08</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>12/28/2016 17:58:41</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

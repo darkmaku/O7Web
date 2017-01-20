@@ -1,0 +1,6 @@
+D:\projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Security.Entity\bin\Release\Angkor.O7Web.Common.Security.Entity.dll
+D:\projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Security.Entity\bin\Release\Angkor.O7Web.Common.Security.Entity.pdb
+D:\projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Security.Entity\bin\Release\Angkor.O7Framework.Data.dll
+D:\projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Security.Entity\bin\Release\Angkor.O7Framework.Utility.dll
+D:\projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Security.Entity\obj\Release\Angkor.O7Web.Common.Security.Entity.dll
+D:\projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Security.Entity\obj\Release\Angkor.O7Web.Common.Security.Entity.pdb
