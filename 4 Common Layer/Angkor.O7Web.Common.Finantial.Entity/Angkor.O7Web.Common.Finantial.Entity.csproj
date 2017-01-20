@@ -35,10 +35,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="InvoiceClient.cs" />
+    <Compile Include="InvoiceDetails.cs" />
     <Compile Include="InvoiceDocumentType.cs" />
     <Compile Include="InvoiceDocumentCount.cs" />
-    <Compile Include="InvoiceProducts.cs" />
-    <Compile Include="InvoiceType.cs" />
+    <Compile Include="InvoiceSeries.cs" />
+    <Compile Include="ProductDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

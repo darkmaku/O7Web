@@ -8,11 +8,11 @@ namespace Angkor.O7Web.Common.Finantial.Entity
 {
     public class InvoiceClient
     {
-        public string DocumentoPersonal { get; set; }
-        public string Nombre { get; set; }
-        public string Telefono { get; set; }
-        public string Email { get; set; }
-        public string Direccion { get; set; }
-        public string EsOcasional{ get; set; }
+        public string ClientCode { get; set; }
+        public string ClientType { get; set; }
+        public string DocumentNumber { get; set; }
+        public string ClientName { get; set; }
+        public string ClientPhone { get; set; }
+        public string ClientEmail{ get; set; }
     }
 }
