@@ -16,19 +16,51 @@
     <script src="https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
     @Html.JavaScriptLink("js/plugins/chosen/chosen.jquery.js")
     <script>
-        function detail(id) {
+        function detail(id, start, end, current, type, digital) {
             $("#txtModalTitle").text("Detalle serie");
             $("#btnConfirm").hide();
+            var txtSerie = $("#txtSerie");
+            var txtStart = $("#txtStart");
+            var txtFinal = $("#txtFinal");
+            var txtCurrent = $("#txtCurrent");
+            var slcDocumentType = $("#chkDocumentType");
+            var slcInvoiceType = $("#chkInvoiceType");
+            slcDocumentType.attr("disabled", true);
+            slcDocumentType.val(digital);
+            slcDocumentType.trigger("chosen:updated");
+            slcInvoiceType.attr("disabled", true);
+            slcInvoiceType.val(type);
+            slcInvoiceType.trigger("chosen:updated");
+            txtSerie.val(id);
+            txtSerie.attr('readonly', true);
+            txtStart.val(start);
+            txtStart.attr('readonly', true);
+            txtFinal.val(end);
+            txtFinal.attr('readonly', true);
+            txtCurrent.val(current);
+            txtCurrent.attr('readonly', true);
         }
         
         function update(id) {
             $("#txtModalTitle").text("Actualizar serie");
             $("#btnConfirm").show();
             $("#btnConfirm").attr("action", "2");
+            var txtSerie = $("#txtSerie");
+            var txtStart = $("#txtStart");
+            var txtFinal = $("#txtFinal");
+            var txtCurrent = $("#txtCurrent");
+            var slcDocumentType = $("#chkDocumentType");
+            var slcInvoiceType = $("#chkInvoiceType");            
+            slcDocumentType.val(digital);
+            slcDocumentType.trigger("chosen:updated");
+            slcInvoiceType.val(type);
+            slcInvoiceType.trigger("chosen:updated");
+            txtSerie.val(id);
+            txtStart.val(start);            
+            txtFinal.val(end);            
+            txtCurrent.val(current);            
         }
-        
-        function delete(id) {
-        }    
+  
     </script>
 }
     
@@ -42,6 +74,26 @@
                             $("#txtModalTitle").text("Insertar serie");
                             $("#btnConfirm").attr("action","1");
                             $("#btnConfirm").show();
+                            var txtSerie = $("#txtSerie");
+                            var txtStart = $("#txtStart");
+                            var txtFinal = $("#txtFinal");
+                            var txtCurrent = $("#txtCurrent");
+                            var slcDocumentType = $("#chkDocumentType");
+                            var slcInvoiceType = $("#chkInvoiceType");
+                            slcDocumentType.attr("disabled", false);
+                            slcDocumentType.val("true");
+                            slcDocumentType.trigger("chosen:updated");
+                            slcInvoiceType.attr("disabled", false);
+                            $("#chkInvoiceType option:first-child").attr("selected", "selected");                            
+                            slcInvoiceType.trigger("chosen:updated");
+                            txtSerie.val('');
+                            txtSerie.attr('readonly', false);
+                            txtStart.val('');
+                            txtStart.attr('readonly', false);
+                            txtFinal.val('');
+                            txtFinal.attr('readonly', false);
+                            txtCurrent.val('');
+                            txtCurrent.attr('readonly', false);
                         }
                     }],
         columns:[{ data: "Digital",
@@ -70,10 +122,11 @@
                  },
                 { orderable: false,
                    className: "text-center",
-                   render: function(data, type, full, meta){
-                        var buttonSearch = "<button type='button' class='btn btn-outline btn-primary' onclick="detail(full."><i class='fa fa-eye' aria-hidden='true'></i></button>&nbsp;";
-                        var buttonEdit = "<button type='button' class='btn btn-outline btn-success' onclick=""><i class='fa fa-pencil' aria-hidden='true'></i></button>&nbsp;";
-                        var buttonDelete = "<button type='button' class='btn btn-outline btn-danger' onclick=""><i class='fa fa-trash' aria-hidden='true'></i></button>";
+                    render: function(data, type, full, meta){
+                        var invoiceId = '"'+full.Id+'",'+'"'+full.Max+'",'+'"'+full.Min+'",'+'"'+full.Current+'",'+'"'+full.DocumentType+'",'+'"'+full.Digital+'"';
+                        var buttonSearch = "<button type='button' class='btn btn-outline btn-primary' onclick='detail("+invoiceId+");' data-toggle='modal' data-target='#mdlInsert'><i class='fa fa-eye' aria-hidden='true'></i></button>&nbsp;";
+                        var buttonEdit = "<button type='button' class='btn btn-outline btn-success' onclick='update("+invoiceId+");' data-toggle='modal' data-target='#mdlInsert'><i class='fa fa-pencil' aria-hidden='true'></i></button>&nbsp;";
+                        var buttonDelete = "<button type='button' class='btn btn-outline btn-danger' onclick='delete("+invoiceId+");' data-toggle='modal' data-target='#mdlInsert'><i class='fa fa-trash' aria-hidden='true'></i></button>";
                         return buttonSearch + buttonEdit + buttonDelete;
                    },
                    width: "15%"
@@ -146,40 +199,38 @@
                 <h4 id="txtModalTitle" class="modal-title"></h4>
             </div>
             <div class="modal-body">
-                <div class="col-md-6">
+                <div class="form-horizontal">
                     <div class="form-group">
-                        <label>Tipo de Facturación </label>
-                        <select id="chkDocumentType">
-                            <option value="1">Facturación electrónica</option>
-                            <option value="0">Facturación manual</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label>Tipo de Documento </label>
-                        <select id="chkInvoiceType"></select>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="form-group">
-                        <label>Serie</label>
-                        <input id="txtSerie" type="text" class="form-control"/>
-                    </div>
-                </div>
-                <div class="col-md-9">
-                    <div class="form-group">
-                        <div class="col-md-12">
-                            <label>Correlativos</label>
+                        <div class="col-md-6">
+                            <label>Tipo de Facturación </label>
+                            <select id="chkDocumentType">
+                                <option value="true">Facturación electrónica</option>
+                                <option value="false">Facturación manual</option>
+                            </select>
                         </div>
-                        <div class="col-md-4">
-                            <input id="txtStart" type="text" class="form-control" placeholder="Inicio" />
+                        <div class="col-md-6">
+                            <label>Tipo de Documento </label>
+                            <select id="chkInvoiceType"></select>
                         </div>
-                        <div class="col-md-4">
-                            <input id="txtFinal" type="text" class="form-control" placeholder="Final" />
-                        </div>
-                        <div class="col-md-4">
-                            <input id="txtCurrent" type="text" class="form-control" placeholder="Actual" />
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <label>Serie</label>
+                            <input id="txtSerie" type="text" class="form-control" />
+                        </div>                    
+                        <div class="col-md-9">                        
+                            <div class="col-md-12">
+                                <label>Correlativos</label>
+                            </div>
+                            <div class="col-md-4">
+                                <input id="txtStart" type="text" class="form-control" placeholder="Inicio" />
+                            </div>
+                            <div class="col-md-4">
+                                <input id="txtFinal" type="text" class="form-control" placeholder="Final" />
+                            </div>
+                            <div class="col-md-4">
+                                <input id="txtCurrent" type="text" class="form-control" placeholder="Actual" />
+                            </div>
                         </div>
                     </div>
                 </div>
