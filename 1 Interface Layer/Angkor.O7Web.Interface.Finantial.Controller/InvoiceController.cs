@@ -11,5 +11,11 @@ namespace Angkor.O7Web.Interface.Finantial.Controller
         {
             return null;
         }
+
+        public ActionResult Insert()
+        {
+            return View();
+        }
+
     }
 }
