@@ -1,0 +1,13 @@
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\bin\Release\Angkor.O7Web.Domain.Advisory.dll
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\bin\Release\Angkor.O7Web.Domain.Advisory.pdb
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\bin\Release\Angkor.O7Framework.Data.dll
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\bin\Release\Angkor.O7Framework.Domain.dll
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\bin\Release\Angkor.O7Framework.Utility.dll
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\bin\Release\Angkor.O7Framework.Web.dll
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\bin\Release\Angkor.O7Web.Common.Advisory.Entity.dll
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\bin\Release\Angkor.O7Web.Data.Advisory.dll
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\bin\Release\Angkor.O7Web.Data.Advisory.pdb
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\bin\Release\Angkor.O7Web.Common.Advisory.Entity.pdb
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\obj\Release\Angkor.O7Web.Domain.Advisory.csprojResolveAssemblyReference.cache
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\obj\Release\Angkor.O7Web.Domain.Advisory.dll
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Advisory\obj\Release\Angkor.O7Web.Domain.Advisory.pdb

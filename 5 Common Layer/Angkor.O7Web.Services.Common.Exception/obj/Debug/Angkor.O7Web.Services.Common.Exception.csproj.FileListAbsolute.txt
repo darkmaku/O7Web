@@ -1,0 +1,5 @@
+D:\projects\O7Web\Angkor.O7Web.Services\5 Common Layer\Angkor.O7Web.Services.Common.Exception\bin\Debug\Angkor.O7Web.Services.Common.Exception.dll
+D:\projects\O7Web\Angkor.O7Web.Services\5 Common Layer\Angkor.O7Web.Services.Common.Exception\bin\Debug\Angkor.O7Web.Services.Common.Exception.pdb
+D:\projects\O7Web\Angkor.O7Web.Services\5 Common Layer\Angkor.O7Web.Services.Common.Exception\obj\Debug\Angkor.O7Web.Services.Common.Exception.csprojResolveAssemblyReference.cache
+D:\projects\O7Web\Angkor.O7Web.Services\5 Common Layer\Angkor.O7Web.Services.Common.Exception\obj\Debug\Angkor.O7Web.Services.Common.Exception.dll
+D:\projects\O7Web\Angkor.O7Web.Services\5 Common Layer\Angkor.O7Web.Services.Common.Exception\obj\Debug\Angkor.O7Web.Services.Common.Exception.pdb

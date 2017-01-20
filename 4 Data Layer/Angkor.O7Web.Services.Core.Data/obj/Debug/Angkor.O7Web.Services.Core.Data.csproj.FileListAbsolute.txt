@@ -1,0 +1,12 @@
+D:\projects\O7Web\Angkor.O7Web.Services\4 Data Layer\Angkor.O7Web.Services.Core.Data\bin\Debug\Angkor.O7Web.Services.Core.Data.dll
+D:\projects\O7Web\Angkor.O7Web.Services\4 Data Layer\Angkor.O7Web.Services.Core.Data\bin\Debug\Angkor.O7Web.Services.Core.Data.pdb
+D:\projects\O7Web\Angkor.O7Web.Services\4 Data Layer\Angkor.O7Web.Services.Core.Data\bin\Debug\Angkor.O7Framework.Data.dll
+D:\projects\O7Web\Angkor.O7Web.Services\4 Data Layer\Angkor.O7Web.Services.Core.Data\bin\Debug\Angkor.O7Web.Services.Core.Data.Entity.dll
+D:\projects\O7Web\Angkor.O7Web.Services\4 Data Layer\Angkor.O7Web.Services.Core.Data\bin\Debug\Angkor.O7Web.Services.Core.Data.Entity.pdb
+D:\projects\O7Web\Angkor.O7Web.Services\4 Data Layer\Angkor.O7Web.Services.Core.Data\obj\Debug\Angkor.O7Web.Services.Core.Data.csprojResolveAssemblyReference.cache
+D:\projects\O7Web\Angkor.O7Web.Services\4 Data Layer\Angkor.O7Web.Services.Core.Data\obj\Debug\Angkor.O7Web.Services.Core.Data.dll
+D:\projects\O7Web\Angkor.O7Web.Services\4 Data Layer\Angkor.O7Web.Services.Core.Data\obj\Debug\Angkor.O7Web.Services.Core.Data.pdb
+D:\projects\O7Web\Angkor.O7Web.Services\4 Data Layer\Angkor.O7Web.Services.Core.Data\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\projects\O7Web\4 Data Layer\Angkor.O7Web.Services.Core.Data\obj\Debug\Angkor.O7Web.Services.Core.Data.csprojResolveAssemblyReference.cache
+D:\projects\O7Web\4 Data Layer\Angkor.O7Web.Services.Core.Data\obj\Debug\Angkor.O7Web.Services.Core.Data.dll
+D:\projects\O7Web\4 Data Layer\Angkor.O7Web.Services.Core.Data\obj\Debug\Angkor.O7Web.Services.Core.Data.pdb

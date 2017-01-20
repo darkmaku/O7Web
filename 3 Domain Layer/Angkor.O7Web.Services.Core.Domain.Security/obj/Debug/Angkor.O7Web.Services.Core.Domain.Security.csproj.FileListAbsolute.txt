@@ -1,0 +1,8 @@
+D:\projects\O7Web\Angkor.O7Web.Services\3 Domain Layer\Angkor.O7Web.Services.Core.Domain.Security\bin\Debug\Angkor.O7Web.Services.Core.Domain.Security.dll
+D:\projects\O7Web\Angkor.O7Web.Services\3 Domain Layer\Angkor.O7Web.Services.Core.Domain.Security\bin\Debug\Angkor.O7Web.Services.Core.Domain.Security.pdb
+D:\projects\O7Web\Angkor.O7Web.Services\3 Domain Layer\Angkor.O7Web.Services.Core.Domain.Security\bin\Debug\Angkor.O7Framework.Utility.dll
+D:\projects\O7Web\Angkor.O7Web.Services\3 Domain Layer\Angkor.O7Web.Services.Core.Domain.Security\obj\Debug\Angkor.O7Web.Services.Core.Domain.Security.csprojResolveAssemblyReference.cache
+D:\projects\O7Web\Angkor.O7Web.Services\3 Domain Layer\Angkor.O7Web.Services.Core.Domain.Security\obj\Debug\Angkor.O7Web.Services.Core.Domain.Security.dll
+D:\projects\O7Web\Angkor.O7Web.Services\3 Domain Layer\Angkor.O7Web.Services.Core.Domain.Security\obj\Debug\Angkor.O7Web.Services.Core.Domain.Security.pdb
+D:\projects\O7Web\Angkor.O7Web.Services\3 Domain Layer\Angkor.O7Web.Services.Core.Domain.Security\bin\Debug\Newtonsoft.Json.dll
+D:\projects\O7Web\Angkor.O7Web.Services\3 Domain Layer\Angkor.O7Web.Services.Core.Domain.Security\bin\Debug\Newtonsoft.Json.xml

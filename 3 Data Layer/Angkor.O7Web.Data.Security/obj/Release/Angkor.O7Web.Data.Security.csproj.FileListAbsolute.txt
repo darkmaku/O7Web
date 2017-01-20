@@ -1,0 +1,12 @@
+D:\projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Security\bin\Release\Angkor.O7Web.Data.Security.dll
+D:\projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Security\bin\Release\Angkor.O7Web.Data.Security.pdb
+D:\projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Security\bin\Release\Angkor.O7Framework.Data.dll
+D:\projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Security\bin\Release\Angkor.O7Framework.Utility.dll
+D:\projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Security\bin\Release\Angkor.O7Framework.Web.dll
+D:\projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Security\bin\Release\Angkor.O7Web.Common.Security.Entity.dll
+D:\projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Security\bin\Release\Angkor.O7Framework.Domain.dll
+D:\projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Security\bin\Release\PostSharp.dll
+D:\projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Security\bin\Release\Angkor.O7Web.Common.Security.Entity.pdb
+D:\projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Security\obj\Release\Angkor.O7Web.Data.Security.csprojResolveAssemblyReference.cache
+D:\projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Security\obj\Release\Angkor.O7Web.Data.Security.dll
+D:\projects\O7Web\3 Data Layer\Angkor.O7Web.Data.Security\obj\Release\Angkor.O7Web.Data.Security.pdb

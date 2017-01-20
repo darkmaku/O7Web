@@ -1,0 +1,16 @@
+D:\projects\O7Web\Angkor.O7Web.Services\1 Interface Layer\Angkor.O7Web.Interface.Security.Model\bin\Release\Angkor.O7Web.Interface.Security.Model.dll
+D:\projects\O7Web\Angkor.O7Web.Services\1 Interface Layer\Angkor.O7Web.Interface.Security.Model\bin\Release\Angkor.O7Web.Interface.Security.Model.pdb
+D:\projects\O7Web\Angkor.O7Web.Services\1 Interface Layer\Angkor.O7Web.Interface.Security.Model\obj\Release\Angkor.O7Web.Interface.Security.Model.dll
+D:\projects\O7Web\Angkor.O7Web.Services\1 Interface Layer\Angkor.O7Web.Interface.Security.Model\obj\Release\Angkor.O7Web.Interface.Security.Model.pdb
+D:\projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security.Model\bin\Release\Angkor.O7Web.Interface.Security.Model.dll
+D:\projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security.Model\bin\Release\Angkor.O7Web.Interface.Security.Model.pdb
+D:\projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security.Model\bin\Release\Angkor.O7Framework.Data.dll
+D:\projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security.Model\bin\Release\Angkor.O7Framework.Web.dll
+D:\projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security.Model\bin\Release\Angkor.O7Web.Common.Security.Entity.dll
+D:\projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security.Model\bin\Release\Angkor.O7Framework.Utility.dll
+D:\projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security.Model\bin\Release\Angkor.O7Framework.Domain.dll
+D:\projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security.Model\bin\Release\PostSharp.dll
+D:\projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security.Model\bin\Release\Angkor.O7Web.Common.Security.Entity.pdb
+D:\projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security.Model\obj\Release\Angkor.O7Web.Interface.Security.Model.csprojResolveAssemblyReference.cache
+D:\projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security.Model\obj\Release\Angkor.O7Web.Interface.Security.Model.dll
+D:\projects\O7Web\1 Interface Layer\Angkor.O7Web.Interface.Security.Model\obj\Release\Angkor.O7Web.Interface.Security.Model.pdb

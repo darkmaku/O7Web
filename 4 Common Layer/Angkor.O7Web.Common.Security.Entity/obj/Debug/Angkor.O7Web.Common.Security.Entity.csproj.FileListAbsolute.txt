@@ -1,8 +1,8 @@
-D:\Projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Security.Entity\bin\Debug\Angkor.O7Web.Common.Security.Entity.dll
-D:\Projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Security.Entity\bin\Debug\Angkor.O7Web.Common.Security.Entity.pdb
-D:\Projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Security.Entity\bin\Debug\Angkor.O7Framework.Data.dll
-D:\Projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Security.Entity\bin\Debug\Angkor.O7Framework.Utility.dll
-D:\Projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Security.Entity\bin\Debug\Angkor.O7Framework.Common.dll
-D:\Projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Security.Entity\obj\Debug\Angkor.O7Web.Common.Security.Entity.csprojResolveAssemblyReference.cache
-D:\Projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Security.Entity\obj\Debug\Angkor.O7Web.Common.Security.Entity.dll
-D:\Projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Security.Entity\obj\Debug\Angkor.O7Web.Common.Security.Entity.pdb
+D:\projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Security.Entity\bin\Debug\Angkor.O7Web.Common.Security.Entity.dll
+D:\projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Security.Entity\bin\Debug\Angkor.O7Web.Common.Security.Entity.pdb
+D:\projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Security.Entity\bin\Debug\Angkor.O7Framework.Data.dll
+D:\projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Security.Entity\bin\Debug\Angkor.O7Framework.Utility.dll
+D:\projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Security.Entity\bin\Debug\Angkor.O7Framework.Common.dll
+D:\projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Security.Entity\obj\Debug\Angkor.O7Web.Common.Security.Entity.csprojResolveAssemblyReference.cache
+D:\projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Security.Entity\obj\Debug\Angkor.O7Web.Common.Security.Entity.dll
+D:\projects\O7Web\4 Common Layer\Angkor.O7Web.Common.Security.Entity\obj\Debug\Angkor.O7Web.Common.Security.Entity.pdb

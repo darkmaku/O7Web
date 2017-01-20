@@ -1,0 +1,15 @@
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\bin\Release\Angkor.O7Web.Domain.Security.dll.config
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\bin\Release\Angkor.O7Web.Domain.Security.dll
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\bin\Release\Angkor.O7Web.Domain.Security.pdb
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\bin\Release\Angkor.O7Framework.Data.dll
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\bin\Release\Angkor.O7Framework.Domain.dll
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\bin\Release\Angkor.O7Framework.Infrastructure.dll
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\bin\Release\Angkor.O7Framework.Utility.dll
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\bin\Release\Angkor.O7Web.Common.Security.Entity.dll
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\bin\Release\Angkor.O7Web.Data.Security.dll
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\bin\Release\PostSharp.dll
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\bin\Release\Angkor.O7Web.Data.Security.pdb
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\bin\Release\Angkor.O7Web.Common.Security.Entity.pdb
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\obj\Release\Angkor.O7Web.Domain.Security.csprojResolveAssemblyReference.cache
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\obj\Release\Angkor.O7Web.Domain.Security.dll
+D:\projects\O7Web\2 Domain Layer\Angkor.O7Web.Domain.Security\obj\Release\Angkor.O7Web.Domain.Security.pdb
