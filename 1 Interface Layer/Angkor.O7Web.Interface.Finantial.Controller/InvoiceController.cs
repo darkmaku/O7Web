@@ -31,6 +31,14 @@ namespace Angkor.O7Web.Interface.Finantial.Controller
             return new O7JsonResult(response);
         }
 
+        public JsonResult Get_Clients(string filter)
+        {
+            var domain = ProxyDomain.Instance.InvoiceDomain(User.Identity.Name, User.Password);
+            var response = domain.AllClients(User.Company, User.Branch, filter);
+            return new O7JsonResult(response);
+        }
+
+
 
 
     }
