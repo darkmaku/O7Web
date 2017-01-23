@@ -81,14 +81,15 @@
             var slcDocumentType = $("#chkDocumentType");
             var slcInvoiceType = $("#chkInvoiceType");
             var txtPrefix = $("#txtPrefix");
-            slcDocumentType.attr("disabled", true);
+            slcDocumentType.attr("disabled", false);
             slcDocumentType.val(digital);
             slcDocumentType.trigger("chosen:updated");
-            slcInvoiceType.attr("disabled", true);
+            slcInvoiceType.attr("disabled", false);
             slcInvoiceType.val(type);
             slcInvoiceType.trigger("chosen:updated");
+            $("#txtInvoiceTypeOld").val(slcInvoiceType.val());
             txtSerie.val(id);
-            txtSerie.attr('readonly', true);
+            txtSerie.attr('readonly', false);
             txtStart.val(start);
             txtStart.attr('readonly', false);
             txtFinal.val(end);
@@ -96,6 +97,13 @@
             txtCurrent.val(current);
             txtCurrent.attr('readonly', false);
             txtPrefix.val(prefix);
+            if (digital == "true") {
+                var serieNum = txtSerie.val();
+                $("#txtSerieOld").val(serieNum.substring(1,4));
+            } else {
+                $("#txtSerieOld").val(txtSerie.val());
+            }
+            
             if(prefix == '--')
                 txtPrefix.attr('readonly', true);
         }
@@ -106,7 +114,7 @@
     
 @section section_script {
     var tblSeries = $("#tblSeries").DataTable({
-        searching: false,
+        //searching: false,
         dom: 'Bfrtip',
         buttons: [{ text: 'Agregar',                        
                     action: function ( e, dt, node, config ) {
@@ -217,25 +225,51 @@
     $("#btnConfirm").on("click", function () {
         var value = $(this).attr("action");
         if (value == "1") {
-            var prefixVal = $("#chkDocumentType").val();
+            var prefixVal = $("#chkDocumentType").val();            
+            var serie = $("#txtSerie").val();
+            var _prefix = "";
+            var _id = "";
             if(prefixVal == "true") {
-                var serie = $("#txtSerie").val();
-
-                var _prefix = serie.substring(0, 1);
-                var _id = serie.substring(1, 4);
-                var _max = $("#txtStart").val();                   
-
-                $.ajax({method: "POST", url: "/Finantial/Settings/AddSeries", data: { documentType: $("#chkInvoiceType").val(), id: _id, current: $("#txtCurrent").val(), 
-                        max: _max, min: $("#txtFinal").val(), default: "true", prefix:_prefix} })
-                .done(function (result){
+                _prefix = serie.substring(0, 1);
+                _id = serie.substring(1, 4);
+            }else{
+                _id = serie.substring(0, 3);
+            }
                 
-                }).fail(function (result) {
-                    toastr.error(result.statusText, "Mensaje", {positionClass: "toast-top-full-width" });
-                });    
-            }                  
+            var _max = $("#txtStart").val();                   
+
+            $.ajax({method: "POST", url: "/Finantial/Settings/AddSeries", data: { documentType: $("#chkInvoiceType").val(), id: _id, current: $("#txtCurrent").val(), 
+                    max: $("#txtFinal").val(), min: _max, default: "true", prefix:_prefix} })
+            .done(function (result){
+                console.log(result);
+                toastr.success(result, "Mensaje", {positionClass: "toast-top-full-width" });
+            }).fail(function (result) {
+                toastr.error(result.statusText, "Mensaje", {positionClass: "toast-top-full-width" });
+            });                
         }
         else{
-            if(value == "2") alert("actualizar");
+            if(value == "2") {
+                var prefixVal = $("#chkDocumentType").val();
+                var serie = $("#txtSerie").val();
+                var _prefix = "";
+                if(prefixVal == "true") {
+                    _prefix = serie.substring(0, 1);
+                }
+
+                var _id = serie.substring(1, 4);
+                var _max = $("#txtStart").val();
+
+            $.ajax({method: "POST", url: "/Finantial/Settings/UpdateSeries", data: { documentType: $("#txtInvoiceTypeOld").val(), id: $("#txtSerieOld").val(), 
+                current:$("#txtCurrent").val(), max: $("#txtFinal").val(), min: _max, default: "true", prefix:_prefix, idUpdate:_id, 
+                documentTypeUpdate:$("#chkInvoiceType").val()} })
+            .done(function (result) {
+                console.log(result);
+                toastr.success(result, "Mensaje", {
+                    positionClass: "toast-top-full-width" });
+                }).fail(function (result) {
+                    toastr.error(result.statusText, "Mensaje", {positionClass: "toast-top-full-width" });
+                });
+            }
             else
                 if (value == "3") alert("eliminar");
         }            
@@ -288,6 +322,7 @@
                             <label>Tipo de Documento</label>                            
                             <div class="col-md-12">
                                 <select id="chkInvoiceType"></select>
+                                <input id="txtInvoiceTypeOld" type="hidden" />
                             </div>
                         </div >
                     </div>
@@ -296,6 +331,7 @@
                             <label>Serie</label>
                             <div class="col-md-12">
                                 <input id="txtSerie" type="text" class="form-control" placeholder="Final" />
+                                <input id="txtSerieOld" type="hidden" />
                             </div>
                         </div>
                         <div class="col-md-9">

@@ -1,6 +1,5 @@
 ﻿// O7ERP Web created by felix_dev
 using System.Web.Mvc;
-using Angkor.O7Framework.Utility;
 using Angkor.O7Framework.Web.Base;
 using Angkor.O7Framework.Web.WebResult;
 using Angkor.O7Web.Comunication;
@@ -31,11 +30,12 @@ namespace Angkor.O7Web.Interface.Finantial.Controller
             return new O7JsonResult(response);
         }
 
-        public JsonResult UpdateSeries(string companyId, string branchId, string documentType, string id, string current,
-            string max, string min, string @default, string digital)
+        public JsonResult UpdateSeries(string documentType, string id, string current, string max, string min, 
+            string @default, string prefix, string idUpdate, string documentTypeUpdate)
         {
             var domain = ProxyDomain.Instance.FinantialDomain(User.Identity.Name, User.Password);
-            var response = domain.AddSeries(companyId, branchId, documentType, id, current, max, min, @default, digital);
+            var response = domain.UpdateSeries(User.Company, User.Branch, documentType, id, current, max, min, @default, prefix,
+                idUpdate, documentTypeUpdate);
             return new O7JsonResult(response);
         }
 

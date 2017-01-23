@@ -32,5 +32,15 @@ namespace Angkor.O7Web.Domain.Finantial
             var seriesSerialized = O7JsonSerealizer.Serialize(result);
             return O7SuccessResponse.MakeResponse(seriesSerialized);
         }
+
+        public override O7Response UpdateSeries(string companyId, string branchId, string documentType, string id,
+            string current, string max, string min, string @default, string prefix, string idUpdate, string documentTypeUpdate)
+        {
+            var result = FinantialDataService.UpdateSeries(companyId, branchId, documentType, id, current, max, min,
+                @default, prefix, idUpdate, documentTypeUpdate);
+            var seriesSerialized = O7JsonSerealizer.Serialize(result);
+            return O7SuccessResponse.MakeResponse(seriesSerialized);
+        }
+
     }
 }
