@@ -122,6 +122,16 @@ namespace Angkor.O7Web.Data.Finantial
 
         }
 
+        public virtual List<GenericListValue> AllDirFacs(string companyId, string branchId,string clientId)
+        {
+            var parameters = O7DbParameterCollection.Make;
+            parameters.Add(O7Parameter.Make("p_cia", companyId));
+            parameters.Add(O7Parameter.Make("p_suc", branchId));
+            parameters.Add(O7Parameter.Make("p_cliente", clientId));
+            return DataAccess.ExecuteFunction<GenericListValue>("finantial_invoice.dirs_fac", parameters, InvoiceGenericListMapper.Class);
+
+        }
+
 
 
 

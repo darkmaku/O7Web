@@ -80,6 +80,12 @@ namespace Angkor.O7Web.Interface.Finantial.Controller
             return new O7JsonResult(response);
         }
 
+        public JsonResult GetInvoiceAdresses(string clientId)
+        {
+            var domain = ProxyDomain.Instance.FinantialDomain(User.Identity.Name, User.Password);
+            var response = domain.InvoiceAdresses(User.Company, User.Branch,clientId);
+            return new O7JsonResult(response);
+        }
 
 
 

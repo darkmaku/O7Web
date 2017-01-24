@@ -103,5 +103,12 @@ namespace Angkor.O7Web.Domain.Finantial
             var bussinesslinesSerialized = O7JsonSerealizer.Serialize(bussinesslines);
             return O7SuccessResponse.MakeResponse(bussinesslinesSerialized);
         }
+
+        public override O7Response InvoiceAdresses(string companyId, string branchId,string clientId)
+        {
+            var invoiceadresses = FinantialDataService.AllDirFacs(companyId, branchId,clientId);
+            var invoiceadressesSerialized = O7JsonSerealizer.Serialize(invoiceadresses);
+            return O7SuccessResponse.MakeResponse(invoiceadressesSerialized);
+        }
     }
 }
