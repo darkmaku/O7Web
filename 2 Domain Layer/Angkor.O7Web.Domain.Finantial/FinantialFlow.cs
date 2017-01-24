@@ -1,6 +1,7 @@
 ﻿// O7ERP Web created by felix_dev
 using Angkor.O7Framework.Common.Model;
 using Angkor.O7Framework.Utility;
+using Angkor.O7Web.Data.Finantial;
 using Angkor.O7Web.Domain.Finantial.Base;
 
 namespace Angkor.O7Web.Domain.Finantial
@@ -30,6 +31,34 @@ namespace Angkor.O7Web.Domain.Finantial
         {
             var result = FinantialDataService.AddSeries(companyId, branchId, documentType, id, current, max, min, @default, digital);
             var seriesSerialized = O7JsonSerealizer.Serialize(result);
+            return O7SuccessResponse.MakeResponse(seriesSerialized);
+        }
+
+        public override O7Response AllClients(string companyId, string branchId, string word)
+        {
+            var client = FinantialDataService.AllClients(companyId, branchId, word);
+            var clientSerialized = O7JsonSerealizer.Serialize(client);
+            return O7SuccessResponse.MakeResponse(clientSerialized);
+        }
+
+        public override O7Response AllInvoices(string companyId, string branchId)
+        {
+            var invoices = FinantialDataService.AllInvoices(companyId, branchId);
+            var invoicesSerialized = O7JsonSerealizer.Serialize(invoices);
+            return O7SuccessResponse.MakeResponse(invoicesSerialized);
+        }
+
+        public override O7Response AllProducts(string companyId, string branchId, string ratePerception)
+        {
+            var products = FinantialDataService.AllProducts(companyId, branchId, ratePerception);
+            var productsSerialized = O7JsonSerealizer.Serialize(products);
+            return O7SuccessResponse.MakeResponse(productsSerialized);
+        }
+
+        public override O7Response Series(string companyId, string branchId, string docType)
+        {
+            var series = FinantialDataService.Series(companyId, branchId, docType);
+            var seriesSerialized = O7JsonSerealizer.Serialize(series);
             return O7SuccessResponse.MakeResponse(seriesSerialized);
         }
     }
