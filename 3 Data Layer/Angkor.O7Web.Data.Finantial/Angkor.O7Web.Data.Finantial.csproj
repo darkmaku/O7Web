@@ -53,7 +53,6 @@
     <Compile Include="DataMapper\InvoiceSeriesMapper.cs" />
     <Compile Include="DataMapper\ProductDetailsMapper.cs" />
     <Compile Include="FinantialDataService.cs" />
-    <Compile Include="InvoiceDataService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

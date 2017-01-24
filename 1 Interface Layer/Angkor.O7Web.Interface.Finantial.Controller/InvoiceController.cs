@@ -26,14 +26,14 @@ namespace Angkor.O7Web.Interface.Finantial.Controller
 
         public JsonResult Invoices_Populate()
         {
-            var domain = ProxyDomain.Instance.InvoiceDomain(User.Identity.Name, User.Password);
+            var domain = ProxyDomain.Instance.FinantialDomain(User.Identity.Name, User.Password);
             var response = domain.AllInvoices(User.Company, User.Branch);
             return new O7JsonResult(response);
         }
 
         public JsonResult Get_Clients(string filter)
         {
-            var domain = ProxyDomain.Instance.InvoiceDomain(User.Identity.Name, User.Password);
+            var domain = ProxyDomain.Instance.FinantialDomain(User.Identity.Name, User.Password);
             var response = domain.AllClients(User.Company, User.Branch, filter);
             return new O7JsonResult(response);
         }
