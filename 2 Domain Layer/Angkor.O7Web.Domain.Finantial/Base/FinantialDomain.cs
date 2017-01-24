@@ -39,5 +39,13 @@ namespace Angkor.O7Web.Domain.Finantial.Base
         public abstract O7Response BussinessLine(string companyId, string branchId);
 
         public abstract O7Response InvoiceAdresses(string companyId, string branchId, string clientId);
+
+        public abstract O7Response Currencies();
+
+        public abstract O7Response Languages();
+
+        public abstract O7Response Taxes();
+
+        public abstract O7Response Perceptions();
     }
 }

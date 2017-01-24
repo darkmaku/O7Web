@@ -132,8 +132,37 @@ namespace Angkor.O7Web.Data.Finantial
 
         }
 
+        public virtual List<GenericListValue> AllCurrencies()
+        {
+            var parameters = O7DbParameterCollection.Make;
+            return DataAccess.ExecuteFunction<GenericListValue>("finantial_invoice.money_type", parameters, InvoiceGenericListMapper.Class);
+
+        }
+
+        public virtual List<GenericListValue> AllLanguages()
+        {
+            var parameters = O7DbParameterCollection.Make;
+            return DataAccess.ExecuteFunction<GenericListValue>("finantial_invoice.language_type", parameters, InvoiceGenericListMapper.Class);
+
+        }
+
+        public virtual List<GenericListValue> AllTaxes()
+        {
+            var parameters = O7DbParameterCollection.Make;
+            return DataAccess.ExecuteFunction<GenericListValue>("finantial_invoice.tax_type", parameters, InvoiceGenericListMapper.Class);
+
+        }
+
+        public virtual List<GenericListValue> AllPerception()
+        {
+            var parameters = O7DbParameterCollection.Make;
+            return DataAccess.ExecuteFunction<GenericListValue>("finantial_invoice.percep_type", parameters, InvoiceGenericListMapper.Class);
+
+        }
 
 
 
-    }    
+
+
+    }
 }

@@ -110,5 +110,36 @@ namespace Angkor.O7Web.Domain.Finantial
             var invoiceadressesSerialized = O7JsonSerealizer.Serialize(invoiceadresses);
             return O7SuccessResponse.MakeResponse(invoiceadressesSerialized);
         }
+
+        public override O7Response Currencies()
+        {
+            var invoiceadresses = FinantialDataService.AllCurrencies();
+            var invoiceadressesSerialized = O7JsonSerealizer.Serialize(invoiceadresses);
+            return O7SuccessResponse.MakeResponse(invoiceadressesSerialized);
+        }
+        public override O7Response Languages()
+        {
+            var invoiceadresses = FinantialDataService.AllLanguages();
+            var invoiceadressesSerialized = O7JsonSerealizer.Serialize(invoiceadresses);
+            return O7SuccessResponse.MakeResponse(invoiceadressesSerialized);
+        }
+        public override O7Response Taxes()
+        {
+            var invoiceadresses = FinantialDataService.AllCurrencies();
+            var invoiceadressesSerialized = O7JsonSerealizer.Serialize(invoiceadresses);
+            return O7SuccessResponse.MakeResponse(invoiceadressesSerialized);
+        }
+        public override O7Response Perceptions()
+        {
+            var invoiceadresses = FinantialDataService.AllCurrencies();
+            var invoiceadressesSerialized = O7JsonSerealizer.Serialize(invoiceadresses);
+            return O7SuccessResponse.MakeResponse(invoiceadressesSerialized);
+        }
+
+
+
+        //tip doc ,serie
+        //moneda,idioma
+        //impuesto,percepcion
     }
 }

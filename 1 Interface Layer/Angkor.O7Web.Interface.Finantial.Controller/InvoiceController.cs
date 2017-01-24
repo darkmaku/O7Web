@@ -87,6 +87,50 @@ namespace Angkor.O7Web.Interface.Finantial.Controller
             return new O7JsonResult(response);
         }
 
+        public JsonResult GetDocumentTypes()
+        {
+            var domain = ProxyDomain.Instance.FinantialDomain(User.Identity.Name, User.Password);
+            var response = domain.DocumentTypes();
+            return new O7JsonResult(response);
+        }
+
+        public JsonResult GetSeries(string doctype)
+        {
+            var domain = ProxyDomain.Instance.FinantialDomain(User.Identity.Name, User.Password);
+            var response = domain.Series(User.Company,User.Branch,doctype);
+            return new O7JsonResult(response);
+        }
+
+        public JsonResult GetCurrencies()
+        {
+            var domain = ProxyDomain.Instance.FinantialDomain(User.Identity.Name, User.Password);
+            var response = domain.Currencies();
+            return new O7JsonResult(response);
+        }
+
+        public JsonResult GetLanguages()
+        {
+            var domain = ProxyDomain.Instance.FinantialDomain(User.Identity.Name, User.Password);
+            var response = domain.Languages();
+            return new O7JsonResult(response);
+        }
+
+        public JsonResult GetTaxes()
+        {
+            var domain = ProxyDomain.Instance.FinantialDomain(User.Identity.Name, User.Password);
+            var response = domain.Taxes();
+            return new O7JsonResult(response);
+        }
+
+
+        public JsonResult GetPerception()
+        {
+            var domain = ProxyDomain.Instance.FinantialDomain(User.Identity.Name, User.Password);
+            var response = domain.Perceptions();
+            return new O7JsonResult(response);
+        }
+       
+
 
 
     }
