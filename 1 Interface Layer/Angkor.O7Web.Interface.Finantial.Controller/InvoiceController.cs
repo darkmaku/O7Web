@@ -31,6 +31,18 @@ namespace Angkor.O7Web.Interface.Finantial.Controller
             return new O7JsonResult(response);
         }
 
+        public JsonResult GetConceptsConcepts(string ratePerception)
+        {
+            var domain = ProxyDomain.Instance.FinantialDomain(User.Identity.Name, User.Password);
+            var response = domain.Concepts(User.Company, User.Branch, ratePerception);
+            return new O7JsonResult(response);
+        }
+        public JsonResult GetCenterCost()
+        {
+            var domain = ProxyDomain.Instance.FinantialDomain(User.Identity.Name, User.Password);
+            var response = domain.Cco(User.Company, User.Branch);
+            return new O7JsonResult(response);
+        }
         public JsonResult Get_Clients(string filter)
         {
             var domain = ProxyDomain.Instance.FinantialDomain(User.Identity.Name, User.Password);

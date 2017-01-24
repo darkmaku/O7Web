@@ -48,11 +48,18 @@ namespace Angkor.O7Web.Domain.Finantial
             return O7SuccessResponse.MakeResponse(invoicesSerialized);
         }
 
-        public override O7Response AllProducts(string companyId, string branchId, string ratePerception)
+        public override O7Response Concepts(string companyId, string branchId, string ratePerception)
         {
-            var products = FinantialDataService.AllProducts(companyId, branchId, ratePerception);
+            var products = FinantialDataService.AllConcepts(companyId, branchId, ratePerception);
             var productsSerialized = O7JsonSerealizer.Serialize(products);
             return O7SuccessResponse.MakeResponse(productsSerialized);
+        }
+
+        public override O7Response Cco(string companyId, string branchId)
+        {
+            var cco = FinantialDataService.AllCco(companyId, branchId);
+            var ccoSerialized = O7JsonSerealizer.Serialize(cco);
+            return O7SuccessResponse.MakeResponse(ccoSerialized);
         }
 
         public override O7Response Series(string companyId, string branchId, string docType)
