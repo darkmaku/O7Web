@@ -61,5 +61,47 @@ namespace Angkor.O7Web.Domain.Finantial
             var seriesSerialized = O7JsonSerealizer.Serialize(series);
             return O7SuccessResponse.MakeResponse(seriesSerialized);
         }
+        //cond venta,tipventa ,form pago,codfin,vende,line
+        public override O7Response CondSells()
+        {
+            var condsells = FinantialDataService.AllCondSells();
+            var condsellsSerialized = O7JsonSerealizer.Serialize(condsells);
+            return O7SuccessResponse.MakeResponse(condsellsSerialized);
+        }
+
+        public override O7Response SellTypes()
+        {
+            var selltypes = FinantialDataService.AllSellsTypes();
+            var selltypesSerialized = O7JsonSerealizer.Serialize(selltypes);
+            return O7SuccessResponse.MakeResponse(selltypesSerialized);
+        }
+
+        public override O7Response Payments(string cod_sell)
+        {
+            var payment = FinantialDataService.AllPayements(cod_sell);
+            var paymentSerialized = O7JsonSerealizer.Serialize(payment);
+            return O7SuccessResponse.MakeResponse(paymentSerialized);
+        }
+
+        public override O7Response FinantialCodes()
+        {
+            var finantialcodes = FinantialDataService.AllFinantialCodes();
+            var finantialcodesSerialized = O7JsonSerealizer.Serialize(finantialcodes);
+            return O7SuccessResponse.MakeResponse(finantialcodesSerialized);
+        }
+
+        public override O7Response Sellers(string companyId, string branchId)
+        {
+            var sellers = FinantialDataService.AllSeller(companyId,branchId);
+            var sellersSerialized = O7JsonSerealizer.Serialize(sellers);
+            return O7SuccessResponse.MakeResponse(sellersSerialized);
+        }
+
+        public override O7Response BussinessLine(string companyId, string branchId)
+        {
+            var bussinesslines = FinantialDataService.AllBusinessLines(companyId, branchId);
+            var bussinesslinesSerialized = O7JsonSerealizer.Serialize(bussinesslines);
+            return O7SuccessResponse.MakeResponse(bussinesslinesSerialized);
+        }
     }
 }

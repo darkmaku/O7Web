@@ -25,5 +25,17 @@ namespace Angkor.O7Web.Domain.Finantial.Base
         public abstract O7Response AllInvoices(string companyId, string branchId);
         public abstract O7Response AllProducts(string companyId, string branchId, string percepcionTasa);
         public abstract O7Response Series(string companyId, string branchId, string docType);
+
+        public abstract O7Response CondSells();
+
+        public abstract O7Response SellTypes();
+
+        public abstract O7Response Payments(string cod_sell);
+
+        public abstract O7Response FinantialCodes();
+
+        public abstract O7Response Sellers(string companyId, string branchId);
+
+        public abstract O7Response BussinessLine(string companyId, string branchId);
     }
 }

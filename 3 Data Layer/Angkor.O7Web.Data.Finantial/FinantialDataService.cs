@@ -69,7 +69,7 @@ namespace Angkor.O7Web.Data.Finantial
             parameters.Add(O7Parameter.Make("p_branch", branchId));
             return DataAccess.ExecuteFunction<InvoiceDetails>("finantial_invoice.invoices", parameters, InvoiceDetailsMapper.Class);
         }
-
+   
         public virtual List<ProductDetails> AllProducts(string companyId, string branchId, string ratePerception)
         {
             var parameters = O7DbParameterCollection.Make;
@@ -77,6 +77,49 @@ namespace Angkor.O7Web.Data.Finantial
             parameters.Add(O7Parameter.Make("p_suc", branchId));
             parameters.Add(O7Parameter.Make("p_tasper", ratePerception));
             return DataAccess.ExecuteFunction<ProductDetails>("finantial_invoice.search_concept_product", parameters, ProductDetailsMapper.Class);
+        }
+
+        public virtual List<GenericListValue> AllCondSells()
+        {
+            var parameters = O7DbParameterCollection.Make;
+            return DataAccess.ExecuteFunction<GenericListValue>("finantial_invoice.cond_vta_type", parameters, InvoiceGenericListMapper.Class);
+        }
+
+        public virtual List<GenericListValue> AllSellsTypes()
+        {
+            var parameters = O7DbParameterCollection.Make;
+            return DataAccess.ExecuteFunction<GenericListValue>("finantial_invoice.tip_vta_type", parameters, InvoiceGenericListMapper.Class);
+        }
+
+        public virtual List<GenericListValue> AllPayements(string cond_vta_code)
+        {
+            var parameters = O7DbParameterCollection.Make;
+            parameters.Add(O7Parameter.Make("p_convta", cond_vta_code));
+            return DataAccess.ExecuteFunction<GenericListValue>("finantial_invoice.form_pago_type", parameters, InvoiceGenericListMapper.Class);
+        }
+        //cod finan linneg  vendedor
+        public virtual List<GenericListValue> AllFinantialCodes()
+        {
+            var parameters = O7DbParameterCollection.Make;
+            return DataAccess.ExecuteFunction<GenericListValue>("finantial_invoice.cod_fin_type", parameters, InvoiceGenericListMapper.Class);
+        }
+
+        public virtual List<GenericListValue> AllBusinessLines(string companyId, string branchId)
+        {
+            var parameters = O7DbParameterCollection.Make;
+            parameters.Add(O7Parameter.Make("p_cia", companyId));
+            parameters.Add(O7Parameter.Make("p_suc", branchId));
+            return DataAccess.ExecuteFunction<GenericListValue>("finantial_invoice.lin_neg_type", parameters, InvoiceGenericListMapper.Class);
+
+        }
+
+        public virtual List<GenericListValue> AllSeller(string companyId, string branchId)
+        {
+            var parameters = O7DbParameterCollection.Make;
+            parameters.Add(O7Parameter.Make("p_cia", companyId));
+            parameters.Add(O7Parameter.Make("p_suc", branchId));
+            return DataAccess.ExecuteFunction<GenericListValue>("finantial_invoice.seller_type", parameters, InvoiceGenericListMapper.Class);
+
         }
 
 

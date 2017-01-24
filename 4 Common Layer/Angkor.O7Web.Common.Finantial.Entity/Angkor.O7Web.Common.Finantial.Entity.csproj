@@ -34,6 +34,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GenericListValue.cs" />
     <Compile Include="InvoiceClient.cs" />
     <Compile Include="InvoiceDetails.cs" />
     <Compile Include="InvoiceDocumentType.cs" />

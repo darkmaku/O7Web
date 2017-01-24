@@ -46,6 +46,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataMapper\InvoiceGenericListMapper.cs" />
     <Compile Include="DataMapper\InvoiceClientMapper.cs" />
     <Compile Include="DataMapper\InvoiceDetailsMapper.cs" />
     <Compile Include="DataMapper\InvoiceDocumentCountMapper.cs" />
