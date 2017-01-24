@@ -146,10 +146,10 @@ namespace Angkor.O7Web.Data.Finantial
 
         }
 
-        public virtual List<InvoiceTax> AllTaxes()
+        public virtual List<GenericListValue> AllTaxes()
         {
             var parameters = O7DbParameterCollection.Make;
-            return DataAccess.ExecuteFunction<InvoiceTax>("finantial_invoice.tax_type", parameters, InvoiceTaxMapper.Class);
+            return DataAccess.ExecuteFunction<GenericListValue>("finantial_invoice.tax_type", parameters, InvoiceGenericListMapper.Class);
 
         }
 
