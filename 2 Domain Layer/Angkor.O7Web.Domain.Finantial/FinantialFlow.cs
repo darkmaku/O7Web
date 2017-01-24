@@ -125,13 +125,13 @@ namespace Angkor.O7Web.Domain.Finantial
         }
         public override O7Response Taxes()
         {
-            var invoiceadresses = FinantialDataService.AllCurrencies();
+            var invoiceadresses = FinantialDataService.AllTaxes();
             var invoiceadressesSerialized = O7JsonSerealizer.Serialize(invoiceadresses);
             return O7SuccessResponse.MakeResponse(invoiceadressesSerialized);
         }
         public override O7Response Perceptions()
         {
-            var invoiceadresses = FinantialDataService.AllCurrencies();
+            var invoiceadresses = FinantialDataService.AllPerception();
             var invoiceadressesSerialized = O7JsonSerealizer.Serialize(invoiceadresses);
             return O7SuccessResponse.MakeResponse(invoiceadressesSerialized);
         }
