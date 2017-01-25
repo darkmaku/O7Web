@@ -61,7 +61,8 @@ namespace Angkor.O7Web.Domain.Finantial
                                             string employeeId, string perception,
                                             string donate, string documentTypeRef,
                                             string documentIdRef, string documentOc,
-                                            string guiRem, string addressId)
+                                            string guiRem, string addressId,
+                                            string serieExtRef,string nroDoceExt)
         {
             var invoices = FinantialDataService.AddInvoice(companyId,  branchId,
                                              documentType,  serie,
@@ -76,7 +77,7 @@ namespace Angkor.O7Web.Domain.Finantial
                                              employeeId,  perception,
                                              donate,  documentTypeRef,
                                              documentIdRef,  documentOc,
-                                             guiRem,  addressId);
+                                             guiRem,  addressId,serieExtRef,nroDoceExt);
             var invoicesSerialized = O7JsonSerealizer.Serialize(invoices);
             return O7SuccessResponse.MakeResponse(invoicesSerialized);
         }

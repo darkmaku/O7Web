@@ -42,7 +42,7 @@ namespace Angkor.O7Web.Domain.Finantial.Base
             string employeeId, string perception,
             string donate, string documentTypeRef,
             string documentIdRef, string documentOC,
-            string guiRem, string addressId);
+            string guiRem, string addressId, string serieExtRef, string nroDoceExt);
 
         public abstract O7Response SellTypes();
 

@@ -48,7 +48,8 @@ namespace Angkor.O7Web.Data.Finantial
                                        string employeeId,string perception,
                                        string donate,string documentTypeRef,
                                        string documentIdRef,string documentOC,
-                                       string guiRem,string addressId)
+                                       string guiRem,string addressId, 
+                                       string serieExtRef,string nroExtRef)
         {
             var parameters = O7DbParameterCollection.Make;
             parameters.Add(O7Parameter.Make("p_cia", companyId));
@@ -81,6 +82,8 @@ namespace Angkor.O7Web.Data.Finantial
             parameters.Add(O7Parameter.Make("p_nro_oc", documentOC));
             parameters.Add(O7Parameter.Make("p_nro_gui_rem", guiRem));
             parameters.Add(O7Parameter.Make("p_coddir", addressId));
+            parameters.Add(O7Parameter.Make("p_serdoceref", serieExtRef));
+            parameters.Add(O7Parameter.Make("p_nrodoceref", nroExtRef));
 
             return DataAccess.ExecuteFunction<int>("finantial_invoice.insert_cab_factura", parameters) == 1;
         }

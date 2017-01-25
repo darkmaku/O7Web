@@ -43,7 +43,8 @@ namespace Angkor.O7Web.Interface.Finantial.Controller
                                             string employeeId, string perception,
                                             string donate, string documentTypeRef,
                                             string documentIdRef, string documentOc,
-                                            string guiRem, string addressId)
+                                            string guiRem, string addressId,
+                                            string serieExtRef, string nroDoceExt)
         {
             var domain = ProxyDomain.Instance.FinantialDomain(User.Identity.Name, User.Password);
             var response = domain.AddInvoice(User.Company, User.Branch, 
@@ -59,7 +60,7 @@ namespace Angkor.O7Web.Interface.Finantial.Controller
                                              employeeId, perception,
                                              donate, documentTypeRef,
                                              documentIdRef, documentOc,
-                                             guiRem, addressId);
+                                             guiRem, addressId,serieExtRef,nroDoceExt);
             return new O7JsonResult(response);
         }
 
