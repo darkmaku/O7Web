@@ -52,7 +52,7 @@ namespace Angkor.O7Web.Domain.Finantial
                                             string documentType, string serie,
                                             string currency, string documentDate,
                                             string documentExpiration, string clienteCode
-                                            , string porcTax, string codTax, string clientName
+                                            , string codTax, string clientName
                                             , string invoiceAddress, string clientId, string glosa,
                                             string sellType, string language,
                                             string condSell, string payment,
@@ -63,11 +63,11 @@ namespace Angkor.O7Web.Domain.Finantial
                                             string documentIdRef, string documentOc,
                                             string guiRem, string addressId)
         {
-            var invoices = FinantialDataService.ÁddInvoice(companyId,  branchId,
+            var invoices = FinantialDataService.AddInvoice(companyId,  branchId,
                                              documentType,  serie,
                                              currency,  documentDate,
                                              documentExpiration,  clienteCode
-                                            ,  porcTax,  codTax,  clientName
+                                            ,  codTax,  clientName
                                             ,  invoiceAddress,  clientId,  glosa,
                                              sellType,  language,
                                              condSell,  payment,

@@ -35,11 +35,11 @@ namespace Angkor.O7Web.Data.Finantial
             return DataAccess.ExecuteFunction<int>("O7EXPRESS_PACKAGE_SERIESF.get_seriesF", parameters) == 1;
         }
 
-        public virtual bool ÁddInvoice(string companyId, string branchId, 
+        public virtual bool AddInvoice(string companyId, string branchId, 
                                        string documentType, string serie, 
                                        string currency,string documentDate, 
                                        string documentExpiration,string clienteCode
-                                       ,string porcTax,string codTax,string clientName
+                                       ,string codTax,string clientName
                                        ,string invoiceAddress,string clientId,string glosa,
                                        string sellType,string language,
                                        string condSell,string payment,
@@ -59,7 +59,6 @@ namespace Angkor.O7Web.Data.Finantial
             parameters.Add(O7Parameter.Make("p_fecha_doc", documentDate));
             parameters.Add(O7Parameter.Make("p_fecha_vto", documentExpiration));
             parameters.Add(O7Parameter.Make("p_codcli", clienteCode));
-            parameters.Add(O7Parameter.Make("p_porc_imp_afec", porcTax));
             parameters.Add(O7Parameter.Make("p_cod_imp_afec", codTax));
             parameters.Add(O7Parameter.Make("p_razon_social", clientName));
             parameters.Add(O7Parameter.Make("p_dir_fact", invoiceAddress));
