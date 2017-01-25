@@ -24,10 +24,10 @@ namespace Angkor.O7Web.Interface.Finantial.Controller
             return View();
         }
 
-        public JsonResult Invoices_Populate()
+        public JsonResult Invoices_Populate(string filter)
         {
             var domain = ProxyDomain.Instance.FinantialDomain(User.Identity.Name, User.Password);
-            var response = domain.AllInvoices(User.Company, User.Branch);
+            var response = domain.AllInvoices(User.Company, User.Branch,filter);
             return new O7JsonResult(response);
         }
 

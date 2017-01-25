@@ -22,7 +22,7 @@ namespace Angkor.O7Web.Domain.Finantial.Base
             string max, string min, string @default, string digital);
 
         public abstract O7Response AllClients(string companyId, string branchId, string word);
-        public abstract O7Response AllInvoices(string companyId, string branchId);
+        public abstract O7Response AllInvoices(string companyId, string branchId,string filter);
         public abstract O7Response Concepts(string companyId, string branchId, string percepcionTasa);
         public abstract O7Response Series(string companyId, string branchId, string docType);
         public abstract O7Response Cco(string companyId, string branchId);

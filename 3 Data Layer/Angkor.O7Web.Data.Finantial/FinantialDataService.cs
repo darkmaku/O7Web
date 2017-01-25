@@ -62,11 +62,12 @@ namespace Angkor.O7Web.Data.Finantial
             return DataAccess.ExecuteFunction<InvoiceClient>("finantial_invoice.search_client", parameters, InvoiceClientMapper.Class);
         }
 
-        public virtual List<InvoiceDetails> AllInvoices(string companyId, string branchId)
+        public virtual List<InvoiceDetails> AllInvoices(string companyId, string branchId, string pFilter)
         {
             var parameters = O7DbParameterCollection.Make;
             parameters.Add(O7Parameter.Make("p_cia", companyId));
             parameters.Add(O7Parameter.Make("p_suc", branchId));
+            parameters.Add(O7Parameter.Make("p_filter", pFilter));
             return DataAccess.ExecuteFunction<InvoiceDetails>("finantial_invoice.invoices", parameters, InvoiceDetailsMapper.Class);
         }
    

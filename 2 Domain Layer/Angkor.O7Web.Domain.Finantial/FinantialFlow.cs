@@ -41,9 +41,9 @@ namespace Angkor.O7Web.Domain.Finantial
             return O7SuccessResponse.MakeResponse(clientSerialized);
         }
 
-        public override O7Response AllInvoices(string companyId, string branchId)
+        public override O7Response AllInvoices(string companyId, string branchId,string filter)
         {
-            var invoices = FinantialDataService.AllInvoices(companyId, branchId);
+            var invoices = FinantialDataService.AllInvoices(companyId, branchId,filter);
             var invoicesSerialized = O7JsonSerealizer.Serialize(invoices);
             return O7SuccessResponse.MakeResponse(invoicesSerialized);
         }
