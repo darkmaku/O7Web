@@ -48,6 +48,39 @@ namespace Angkor.O7Web.Domain.Finantial
             return O7SuccessResponse.MakeResponse(invoicesSerialized);
         }
 
+        public override O7Response AddInvoice(string companyId, string branchId,
+                                            string documentType, string serie,
+                                            string currency, string documentDate,
+                                            string documentExpiration, string clienteCode
+                                            , string porcTax, string codTax, string clientName
+                                            , string invoiceAddress, string clientId, string glosa,
+                                            string sellType, string language,
+                                            string condSell, string payment,
+                                            string bussinessline, string finantialcod,
+                                            string telephone, string seller,
+                                            string employeeId, string perception,
+                                            string donate, string documentTypeRef,
+                                            string documentIdRef, string documentOc,
+                                            string guiRem, string addressId)
+        {
+            var invoices = FinantialDataService.ÁddInvoice(companyId,  branchId,
+                                             documentType,  serie,
+                                             currency,  documentDate,
+                                             documentExpiration,  clienteCode
+                                            ,  porcTax,  codTax,  clientName
+                                            ,  invoiceAddress,  clientId,  glosa,
+                                             sellType,  language,
+                                             condSell,  payment,
+                                             bussinessline,  finantialcod,
+                                             telephone,  seller,
+                                             employeeId,  perception,
+                                             donate,  documentTypeRef,
+                                             documentIdRef,  documentOc,
+                                             guiRem,  addressId);
+            var invoicesSerialized = O7JsonSerealizer.Serialize(invoices);
+            return O7SuccessResponse.MakeResponse(invoicesSerialized);
+        }
+
         public override O7Response Concepts(string companyId, string branchId, string ratePerception)
         {
             var concepts = FinantialDataService.AllConcepts(companyId, branchId, ratePerception);

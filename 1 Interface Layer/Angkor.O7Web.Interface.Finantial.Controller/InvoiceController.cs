@@ -31,6 +31,39 @@ namespace Angkor.O7Web.Interface.Finantial.Controller
             return new O7JsonResult(response);
         }
 
+        public JsonResult Insert_Invoice(string documentType, string serie,
+                                            string currency, string documentDate,
+                                            string documentExpiration, string clienteCode
+                                            , string porcTax, string codTax, string clientName
+                                            , string invoiceAddress, string clientId, string glosa,
+                                            string sellType, string language,
+                                            string condSell, string payment,
+                                            string bussinessline, string finantialcod,
+                                            string telephone, string seller,
+                                            string employeeId, string perception,
+                                            string donate, string documentTypeRef,
+                                            string documentIdRef, string documentOc,
+                                            string guiRem, string addressId)
+        {
+            var domain = ProxyDomain.Instance.FinantialDomain(User.Identity.Name, User.Password);
+            var response = domain.AddInvoice(User.Company, User.Branch, 
+                                            documentType, serie,
+                                             currency, documentDate,
+                                             documentExpiration, clienteCode
+                                            , porcTax, codTax, clientName
+                                            , invoiceAddress, clientId, glosa,
+                                             sellType, language,
+                                             condSell, payment,
+                                             bussinessline, finantialcod,
+                                             telephone, seller,
+                                             employeeId, perception,
+                                             donate, documentTypeRef,
+                                             documentIdRef, documentOc,
+                                             guiRem, addressId);
+            return new O7JsonResult(response);
+        }
+
+
         public JsonResult GetConcepts(string ratePerception)
         {
             var domain = ProxyDomain.Instance.FinantialDomain(User.Identity.Name, User.Password);

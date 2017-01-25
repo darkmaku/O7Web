@@ -28,6 +28,22 @@ namespace Angkor.O7Web.Domain.Finantial.Base
         public abstract O7Response Cco(string companyId, string branchId);
         public abstract O7Response CondSells();
 
+
+        public abstract O7Response AddInvoice(string companyId, string branchId,
+            string documentType, string serie,
+            string currency, string documentDate,
+            string documentExpiration, string clienteCode
+            , string porcTax, string codTax, string clientName
+            , string invoiceAddress, string clientId, string glosa,
+            string sellType, string language,
+            string condSell, string payment,
+            string bussinessline, string finantialcod,
+            string telephone, string seller,
+            string employeeId, string perception,
+            string donate, string documentTypeRef,
+            string documentIdRef, string documentOC,
+            string guiRem, string addressId);
+
         public abstract O7Response SellTypes();
 
         public abstract O7Response Payments(string cod_sell);
