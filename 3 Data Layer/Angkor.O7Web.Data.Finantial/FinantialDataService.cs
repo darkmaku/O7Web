@@ -35,7 +35,7 @@ namespace Angkor.O7Web.Data.Finantial
             return DataAccess.ExecuteFunction<int>("O7EXPRESS_PACKAGE_SERIESF.get_seriesF", parameters) == 1;
         }
 
-        public virtual bool AddInvoice(string companyId, string branchId, 
+        public virtual int AddInvoice(string companyId, string branchId, 
                                        string documentType, string serie, 
                                        string currency,string documentDate, 
                                        string documentExpiration,string clienteCode
@@ -85,7 +85,7 @@ namespace Angkor.O7Web.Data.Finantial
             parameters.Add(O7Parameter.Make("p_serdoceref", serieExtRef));
             parameters.Add(O7Parameter.Make("p_nrodoceref", nroExtRef));
 
-            return DataAccess.ExecuteFunction<int>("finantial_invoice.insert_cab_factura", parameters) == 1;
+            return DataAccess.ExecuteFunction<int>("finantial_invoice.insert_cab_factura", parameters);
         }
 
         public virtual List<InvoiceDocumentCount> AllSeries(string companyId, string branchId)
