@@ -50,9 +50,9 @@ namespace Angkor.O7Web.Domain.Finantial
 
         public override O7Response Concepts(string companyId, string branchId, string ratePerception)
         {
-            var products = FinantialDataService.AllConcepts(companyId, branchId, ratePerception);
-            var productsSerialized = O7JsonSerealizer.Serialize(products);
-            return O7SuccessResponse.MakeResponse(productsSerialized);
+            var concepts = FinantialDataService.AllConcepts(companyId, branchId, ratePerception);
+            var conceptsSerialized = O7JsonSerealizer.Serialize(concepts);
+            return O7SuccessResponse.MakeResponse(conceptsSerialized);
         }
 
         public override O7Response Cco(string companyId, string branchId)

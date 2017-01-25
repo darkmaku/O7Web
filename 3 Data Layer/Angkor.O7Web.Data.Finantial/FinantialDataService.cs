@@ -65,19 +65,21 @@ namespace Angkor.O7Web.Data.Finantial
         public virtual List<InvoiceDetails> AllInvoices(string companyId, string branchId)
         {
             var parameters = O7DbParameterCollection.Make;
-            parameters.Add(O7Parameter.Make("p_company", companyId));
-            parameters.Add(O7Parameter.Make("p_branch", branchId));
+            parameters.Add(O7Parameter.Make("p_cia", companyId));
+            parameters.Add(O7Parameter.Make("p_suc", branchId));
             return DataAccess.ExecuteFunction<InvoiceDetails>("finantial_invoice.invoices", parameters, InvoiceDetailsMapper.Class);
         }
    
-        public virtual List<GenericListValue> AllConcepts(string companyId, string branchId, string ratePerception)
+        public virtual List<InvoiceTypeAhead> AllConcepts(string companyId, string branchId, string ratePerception)
         {
             var parameters = O7DbParameterCollection.Make;
             parameters.Add(O7Parameter.Make("p_cia", companyId));
             parameters.Add(O7Parameter.Make("p_suc", branchId));
             parameters.Add(O7Parameter.Make("p_tasper", ratePerception));
-            return DataAccess.ExecuteFunction<GenericListValue>("finantial_invoice.search_concept_product", parameters, InvoiceGenericListMapper.Class);
+            return DataAccess.ExecuteFunction<InvoiceTypeAhead>("finantial_invoice.search_concept_product", parameters, TypeAheadMapper.Class);
         }
+
+     
 
         public virtual List<GenericListValue> AllCondSells()
         {
@@ -160,12 +162,12 @@ namespace Angkor.O7Web.Data.Finantial
 
         }
 
-        public virtual List<GenericListValue> AllCco(string companyId,string branchId)
+        public virtual List<InvoiceTypeAhead> AllCco(string companyId,string branchId)
         {
             var parameters = O7DbParameterCollection.Make;
             parameters.Add(O7Parameter.Make("p_cia", companyId));
             parameters.Add(O7Parameter.Make("p_suc", branchId));
-            return DataAccess.ExecuteFunction<GenericListValue>("finantial_invoice.percep_type", parameters, InvoiceGenericListMapper.Class);
+            return DataAccess.ExecuteFunction<InvoiceTypeAhead>("finantial_invoice.search_cen_cos", parameters,TypeAheadMapper.Class);
 
         }
 
