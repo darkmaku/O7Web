@@ -64,6 +64,22 @@ namespace Angkor.O7Web.Interface.Finantial.Controller
             return new O7JsonResult(response);
         }
 
+        public JsonResult InsertDetailInvoice(string documentType, string documentId,
+                                    string conceptId, string observacion,
+                                    string cantidad, string unitValue,
+                                    string taxId, string perception,
+                                    string ccoId)
+        {
+            var domain = ProxyDomain.Instance.FinantialDomain(User.Identity.Name, User.Password);
+            var response = domain.AddInvoiceDetail(User.Company, User.Branch,
+                                     documentType, documentId,
+                                     conceptId, observacion,
+                                     cantidad, unitValue,
+                                     taxId, perception,
+                                     ccoId);
+            return new O7JsonResult(response);
+        }
+
 
         public JsonResult GetConcepts(string ratePerception)
         {

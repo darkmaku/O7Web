@@ -44,6 +44,13 @@ namespace Angkor.O7Web.Domain.Finantial.Base
             string documentIdRef, string documentOC,
             string guiRem, string addressId, string serieExtRef, string nroDoceExt);
 
+        public abstract O7Response AddInvoiceDetail(string companyId, string branchId,
+            string documentType, string documentId,
+            string conceptId, string observacion,
+            string cantidad, string unitValue,
+            string taxId, string perception,
+            string ccoId);
+
         public abstract O7Response SellTypes();
 
         public abstract O7Response Payments(string cod_sell);

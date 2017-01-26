@@ -88,6 +88,30 @@ namespace Angkor.O7Web.Data.Finantial
             return DataAccess.ExecuteFunction<int>("finantial_invoice.insert_cab_factura", parameters);
         }
 
+        public virtual bool AddInvoiceDetail(
+                                    string companyId, string branchId,
+                                    string documentType,string documentId,
+                                    string conceptId,string observacion,
+                                    string cantidad,string unitValue,
+                                    string taxId,string perception,
+                                    string ccoId
+                                                )
+        {
+            var parameters = O7DbParameterCollection.Make;
+            parameters.Add(O7Parameter.Make("p_cia", companyId));
+            parameters.Add(O7Parameter.Make("p_suc", branchId));
+            parameters.Add(O7Parameter.Make("p_tipdoc", documentType));
+            parameters.Add(O7Parameter.Make("p_nrodoc", documentId));
+            parameters.Add(O7Parameter.Make("p_cod_concepto", conceptId));
+            parameters.Add(O7Parameter.Make("p_observacion", observacion));
+            parameters.Add(O7Parameter.Make("p_cantidad", cantidad));
+            parameters.Add(O7Parameter.Make("p_val_unit", unitValue));
+            parameters.Add(O7Parameter.Make("p_cod_imp", taxId));
+            parameters.Add(O7Parameter.Make("p_perc", perception));
+            parameters.Add(O7Parameter.Make("p_cen_cos", ccoId));
+            return DataAccess.ExecuteFunction<int>("finantial_invoice.insert_row_det_factura", parameters)==1;
+        }
+
         public virtual List<InvoiceDocumentCount> AllSeries(string companyId, string branchId)
         {
             var parameters = O7DbParameterCollection.Make;

@@ -82,6 +82,25 @@ namespace Angkor.O7Web.Domain.Finantial
             return O7SuccessResponse.MakeResponse(invoicesSerialized);
         }
 
+        public override O7Response AddInvoiceDetail(string companyId, string branchId,
+                                    string documentType, string documentId,
+                                    string conceptId, string observacion,
+                                    string cantidad, string unitValue,
+                                    string taxId, string perception,
+                                    string ccoId)
+        {
+            var invoices = FinantialDataService.AddInvoiceDetail( companyId,  branchId,
+                                     documentType,  documentId,
+                                     conceptId,  observacion,
+                                     cantidad,  unitValue,
+                                     taxId,  perception,
+                                     ccoId);
+            var invoicesSerialized = O7JsonSerealizer.Serialize(invoices);
+            return O7SuccessResponse.MakeResponse(invoicesSerialized);
+        }
+
+      
+
         public override O7Response Concepts(string companyId, string branchId, string ratePerception)
         {
             var concepts = FinantialDataService.AllConcepts(companyId, branchId, ratePerception);
