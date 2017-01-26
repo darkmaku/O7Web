@@ -49,7 +49,9 @@ namespace Angkor.O7Web.Data.Finantial.DataMapper
 
                 documentSerieRef = Source.GetValue<string>(26),
 
-                documentNroDoceRef = Source.GetValue<string>(27)
+                documentNroDoceRef = Source.GetValue<string>(27),
+
+                TaxPorc = Source.GetValue<string>(28)
             };
     }
 }

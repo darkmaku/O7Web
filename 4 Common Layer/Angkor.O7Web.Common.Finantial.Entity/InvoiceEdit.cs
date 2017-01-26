@@ -12,6 +12,8 @@ namespace Angkor.O7Web.Common.Finantial.Entity
         public string expirationDate { get; set; }
         public string clientCode { get; set; }
         public string TaxId { get; set; }
+
+        public string TaxPorc { get; set; }
         public string clientName { get; set; }
         public string clientAddressId { get; set; }
         public string clientAddressDescription { get; set; }
