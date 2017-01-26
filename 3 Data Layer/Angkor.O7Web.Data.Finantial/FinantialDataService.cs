@@ -139,6 +139,26 @@ namespace Angkor.O7Web.Data.Finantial
             return DataAccess.ExecuteFunction<InvoiceSeries>("finantial_invoice.serie_ext_type", parameters, InvoiceSeriesMapper.Class);
         }
 
+        public virtual List<SingleValue> DocumentInformation(string companyId, string branchId, string docType)
+        {
+            var parameters = O7DbParameterCollection.Make;
+            parameters.Add(O7Parameter.Make("p_cia", companyId));
+            parameters.Add(O7Parameter.Make("p_suc", branchId));
+            parameters.Add(O7Parameter.Make("p_tip_doc", docType));
+            return DataAccess.ExecuteFunction<SingleValue>("finantial_invoice.confirm_doc", parameters, SingleValueMapper.Class);
+        }
+
+        public virtual List<SingleValue> GetFecVto(string companyId, string branchId, string payment, string documentDate)
+        {
+            var parameters = O7DbParameterCollection.Make;
+            parameters.Add(O7Parameter.Make("p_cia", companyId));
+            parameters.Add(O7Parameter.Make("p_suc", branchId));
+            parameters.Add(O7Parameter.Make("p_fecha", documentDate));
+            parameters.Add(O7Parameter.Make("p_cod_forp", payment));
+            return DataAccess.ExecuteFunction<SingleValue>("finantial_invoice.calcular_fecha_vto", parameters, SingleValueMapper.Class);
+        }
+
+
         public virtual List<InvoiceClient> AllClients(string companyId, string branchId, string word)
         {
             var parameters = O7DbParameterCollection.Make;

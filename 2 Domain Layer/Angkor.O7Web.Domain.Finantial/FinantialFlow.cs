@@ -122,6 +122,20 @@ namespace Angkor.O7Web.Domain.Finantial
             return O7SuccessResponse.MakeResponse(ccoSerialized);
         }
 
+        public override O7Response documentInformation(string companyId, string branchId, string documentType)
+        {
+            var cco = FinantialDataService.DocumentInformation(companyId, branchId, documentType);
+            var ccoSerialized = O7JsonSerealizer.Serialize(cco);
+            return O7SuccessResponse.MakeResponse(ccoSerialized);
+        }
+
+        public override O7Response getExpirationDate(string companyId, string branchId, string payment, string documentDate)
+        {
+            var cco = FinantialDataService.GetFecVto(companyId, branchId, payment,documentDate);
+            var ccoSerialized = O7JsonSerealizer.Serialize(cco);
+            return O7SuccessResponse.MakeResponse(ccoSerialized);
+        }
+
         public override O7Response Series(string companyId, string branchId, string docType)
         {
             var series = FinantialDataService.Series(companyId, branchId, docType);

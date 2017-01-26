@@ -87,6 +87,20 @@ namespace Angkor.O7Web.Interface.Finantial.Controller
             return new O7JsonResult(response);
         }
 
+        public JsonResult DocumentFlg(string documentType)
+        {
+            var domain = ProxyDomain.Instance.FinantialDomain(User.Identity.Name, User.Password);
+            var response = domain.documentInformation(User.Company, User.Branch, documentType);
+            return new O7JsonResult(response);
+        }
+
+        public JsonResult GetExpirationDate(string payment,string documentDate)
+        {
+            var domain = ProxyDomain.Instance.FinantialDomain(User.Identity.Name, User.Password);
+            var response = domain.getExpirationDate(User.Company, User.Branch, payment,documentDate);
+            return new O7JsonResult(response);
+        }
+
 
         public JsonResult GetConcepts(string ratePerception)
         {
