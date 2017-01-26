@@ -115,6 +115,13 @@ namespace Angkor.O7Web.Domain.Finantial
             return O7SuccessResponse.MakeResponse(ccoSerialized);
         }
 
+        public override O7Response ClientDefaultValues(string companyId, string branchId,string clientCode)
+        {
+            var cco = FinantialDataService.ClientDefaultValues(companyId, branchId, clientCode);
+            var ccoSerialized = O7JsonSerealizer.Serialize(cco);
+            return O7SuccessResponse.MakeResponse(ccoSerialized);
+        }
+
         public override O7Response Series(string companyId, string branchId, string docType)
         {
             var series = FinantialDataService.Series(companyId, branchId, docType);

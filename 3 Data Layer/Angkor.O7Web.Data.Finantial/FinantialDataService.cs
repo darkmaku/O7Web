@@ -119,7 +119,16 @@ namespace Angkor.O7Web.Data.Finantial
             parameters.Add(O7Parameter.Make("p_branch", branchId));            
             return DataAccess.ExecuteFunction<InvoiceDocumentCount>("O7EXPRESS_PACKAGE_SERIESF.get_seriesF", parameters, InvoiceDocumentCountMapper.Class);
         }
-    
+
+
+        public virtual List<ClientDefaultValues> ClientDefaultValues(string companyId, string branchId,string clientCode)
+        {
+            var parameters = O7DbParameterCollection.Make;
+            parameters.Add(O7Parameter.Make("p_cia", companyId));
+            parameters.Add(O7Parameter.Make("p_suc", branchId));
+            parameters.Add(O7Parameter.Make("p_codcli", branchId));
+            return DataAccess.ExecuteFunction<ClientDefaultValues>("finantial_invoice.confirm_client", parameters, ClientDefaultValueMapper.Class);
+        }
 
         public virtual List<InvoiceSeries> Series(string companyId, string branchId, string docType)
         {
