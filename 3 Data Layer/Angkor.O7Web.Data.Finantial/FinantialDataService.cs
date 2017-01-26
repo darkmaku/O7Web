@@ -35,8 +35,6 @@ namespace Angkor.O7Web.Data.Finantial
             return DataAccess.ExecuteFunction<int>("O7EXPRESS_PACKAGE_SERIESF.get_seriesF", parameters) == 1;
         }
 
-        public virtu
-
         public virtual int AddInvoice(string companyId, string branchId, 
                                        string documentType, string serie, 
                                        string currency,string documentDate, 
@@ -131,6 +129,16 @@ namespace Angkor.O7Web.Data.Finantial
             return DataAccess.ExecuteFunction<InvoiceEdit>("finantial_invoice.search_fact", parameters, InvoiceMapper.Class);
         }
 
+        public virtual List<InvoiceDetail> GetInvoiceDetail(string companyId, string branchId, string documentType, string documentId)
+        {
+            var parameters = O7DbParameterCollection.Make;
+            parameters.Add(O7Parameter.Make("p_cia", companyId));
+            parameters.Add(O7Parameter.Make("p_suc", branchId));
+            parameters.Add(O7Parameter.Make("p_tipo_doc", documentType));
+            parameters.Add(O7Parameter.Make("p_nro_doc", documentId));
+            return DataAccess.ExecuteFunction<InvoiceDetail>("finantial_invoice.search_fact_detail", parameters, InvoiceDetailMapper.Class);
+        }
+
 
         public virtual List<ClientDefaultValues> ClientDefaultValues(string companyId, string branchId,string clientCode)
         {
@@ -179,13 +187,13 @@ namespace Angkor.O7Web.Data.Finantial
             return DataAccess.ExecuteFunction<InvoiceClient>("finantial_invoice.search_client", parameters, InvoiceClientMapper.Class);
         }
 
-        public virtual List<InvoiceDetails> AllInvoices(string companyId, string branchId, string pFilter)
+        public virtual List<InvoiceBasicInformation> AllInvoices(string companyId, string branchId, string pFilter)
         {
             var parameters = O7DbParameterCollection.Make;
             parameters.Add(O7Parameter.Make("p_cia", companyId));
             parameters.Add(O7Parameter.Make("p_suc", branchId));
             parameters.Add(O7Parameter.Make("p_filter", pFilter));
-            return DataAccess.ExecuteFunction<InvoiceDetails>("finantial_invoice.invoices", parameters, InvoiceDetailsMapper.Class);
+            return DataAccess.ExecuteFunction<InvoiceBasicInformation>("finantial_invoice.invoices", parameters, InvoiceBasicInformationMapper.Class);
         }
    
         public virtual List<InvoiceTypeAhead> AllConcepts(string companyId, string branchId, string ratePerception)

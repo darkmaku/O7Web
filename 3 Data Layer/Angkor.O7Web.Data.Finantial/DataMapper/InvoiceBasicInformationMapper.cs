@@ -4,12 +4,12 @@ using Angkor.O7Web.Common.Finantial.Entity;
 
 namespace Angkor.O7Web.Data.Finantial.DataMapper
 {
-    public class InvoiceDetailsMapper: O7DbMapper<InvoiceDetails>
+    public class InvoiceBasicInformationMapper : O7DbMapper<InvoiceBasicInformation>
     {
-        public static Type Class => typeof(InvoiceDetailsMapper);
+        public static Type Class => typeof(InvoiceBasicInformationMapper);
 
-        public override InvoiceDetails MapTarget()
-            => new InvoiceDetails
+        public override InvoiceBasicInformation MapTarget()
+            => new InvoiceBasicInformation
             {
                 DocumentType = Source.GetValue<string>(0),
                 Serie = Source.GetValue<string>(1),

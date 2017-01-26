@@ -42,5 +42,7 @@ namespace Angkor.O7Web.Common.Finantial.Entity
         public string documentSerieRef { get; set; }
 
         public string documentNroDoceRef { get; set; }
+
+
     }
 }
