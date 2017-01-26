@@ -25,5 +25,7 @@ namespace Angkor.O7Web.Common.Finantial.Entity
 
         public string commentary { get; set; }
 
+        public string conceptContent { get; set; }
+
     }
 }

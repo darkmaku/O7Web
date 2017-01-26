@@ -187,6 +187,25 @@ namespace Angkor.O7Web.Data.Finantial
             return DataAccess.ExecuteFunction<InvoiceClient>("finantial_invoice.search_client", parameters, InvoiceClientMapper.Class);
         }
 
+        public virtual bool GeneratePDF(string companyId, string branchId, string documentType, string documentId)
+        {
+            var parameters = O7DbParameterCollection.Make;
+            parameters.Add(O7Parameter.Make("p_cia", companyId));
+            parameters.Add(O7Parameter.Make("p_suc", branchId));
+            parameters.Add(O7Parameter.Make("p_tipdoc", documentType));
+            parameters.Add(O7Parameter.Make("p_nrodoc", documentId));
+
+            HeadInvoicePDF head =
+                DataAccess.ExecuteFunction<HeadInvoicePDF>("finantial_invoice.head_pdf", parameters,
+                    HeadInvoicePDFMapper.Class)[0];
+            
+            List<DetailInvoicePDF> details = DataAccess.ExecuteFunction<DetailInvoicePDF>("finantial_invoice.detail_pdf", parameters, DetailInvoicePDFMapper.Class);
+
+            return PdfGenerator.generar(head, details,"./Factura.pdf");
+
+        }
+
+
         public virtual List<InvoiceBasicInformation> AllInvoices(string companyId, string branchId, string pFilter)
         {
             var parameters = O7DbParameterCollection.Make;

@@ -115,6 +115,13 @@ namespace Angkor.O7Web.Interface.Finantial.Controller
             return new O7JsonResult(response);
         }
 
+        public JsonResult GeneratePDF(string documentType, string documentId)
+        {
+            var domain = ProxyDomain.Instance.FinantialDomain(User.Identity.Name, User.Password);
+            var response = domain.GeneratePDF(User.Company, User.Branch, documentType, documentId);
+            return new O7JsonResult(response);
+        }
+
 
 
         public JsonResult GetConcepts(string ratePerception)

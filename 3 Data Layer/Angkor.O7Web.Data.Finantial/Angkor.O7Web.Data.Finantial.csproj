@@ -43,17 +43,29 @@
     <Reference Include="Angkor.O7Framework.Utility">
       <HintPath>..\..\6 Libraries\Angkor.O7Framework.Utility.dll</HintPath>
     </Reference>
+    <Reference Include="itextsharp, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\iTextSharp.5.5.10\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataMapper\DetailInvoicePDFMapper.cs" />
+    <Compile Include="DataMapper\HeadInvoicePDFMapper.cs" />
+    <Compile Include="DataMapper\InvoiceDetailMapper.cs" />
+    <Compile Include="DataMapper\InvoiceMapper.cs" />
+    <Compile Include="DataMapper\ClientDefaultValueMapper.cs" />
+    <Compile Include="DataMapper\SingleValueMapper.cs" />
+    <Compile Include="DataMapper\InvoiceTaxMapper.cs" />
     <Compile Include="DataMapper\InvoiceGenericListMapper.cs" />
     <Compile Include="DataMapper\InvoiceClientMapper.cs" />
-    <Compile Include="DataMapper\InvoiceDetailsMapper.cs" />
+    <Compile Include="DataMapper\InvoiceBasicInformationMapper.cs" />
     <Compile Include="DataMapper\InvoiceDocumentCountMapper.cs" />
     <Compile Include="DataMapper\InvoiceDocumentTypeMapper.cs" />
     <Compile Include="DataMapper\InvoiceSeriesMapper.cs" />
-    <Compile Include="DataMapper\ProductDetailsMapper.cs" />
+    <Compile Include="DataMapper\TypeAheadMapper.cs" />
     <Compile Include="FinantialDataService.cs" />
+    <Compile Include="PdfGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -61,6 +73,9 @@
       <Project>{1FE6DFCB-60C1-45F3-93D2-A36609B97CED}</Project>
       <Name>Angkor.O7Web.Common.Finantial.Entity</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

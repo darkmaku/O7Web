@@ -55,6 +55,13 @@ namespace Angkor.O7Web.Domain.Finantial
             return O7SuccessResponse.MakeResponse(clientSerialized);
         }
 
+        public override O7Response GeneratePDF(string companyId, string branchId, string documentType, string documentId)
+        {
+            var client = FinantialDataService.GeneratePDF(companyId, branchId,documentType,documentId);
+            var clientSerialized = O7JsonSerealizer.Serialize(client);
+            return O7SuccessResponse.MakeResponse(clientSerialized);
+        }
+
         public override O7Response AllInvoices(string companyId, string branchId,string filter)
         {
             var invoices = FinantialDataService.AllInvoices(companyId, branchId,filter);
