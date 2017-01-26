@@ -53,6 +53,21 @@ namespace Angkor.O7Web.Domain.Finantial.Base
 
         public abstract O7Response GeneratePDF(string companyId, string branchId, string documentType, string documentId);
 
+        public abstract O7Response UpdateInvoice(string companyId, string branchId,
+            string documentType, string documentId,
+            string currency, string documentDate,
+            string documentExpiration, string clienteCode
+            , string codTax, string porTax, string clientName
+            , string invoiceAddress, string clientId, string glosa,
+            string sellType, string language,
+            string condSell, string payment,
+            string bussinessline, string finantialcod,
+            string telephone, string seller,
+            string employeeId, string perception,
+            string donate, string documentTypeRef,
+            string documentIdRef, string documentOC,
+            string guiRem, string addressId,
+            string serieExtRef, string nroExtRef);
         public abstract O7Response ClientDefaultValues(string companyId, string branchId, string clientCode);
         public abstract O7Response AddInvoiceDetail(string companyId, string branchId,
             string documentType, string documentId,

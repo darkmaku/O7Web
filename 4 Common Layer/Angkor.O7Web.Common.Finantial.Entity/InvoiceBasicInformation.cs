@@ -17,5 +17,7 @@ namespace Angkor.O7Web.Common.Finantial.Entity
         public string ClientName { get; set; }
         public string ClientDoc { get; set; }
 
+        public string State { get; set; }
+
     }
 }

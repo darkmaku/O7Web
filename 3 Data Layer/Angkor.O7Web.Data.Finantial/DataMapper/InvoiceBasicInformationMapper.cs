@@ -19,6 +19,7 @@ namespace Angkor.O7Web.Data.Finantial.DataMapper
                 ClientCode = Source.GetValue<string>(5),
                 ClientName = Source.GetValue<string>(6),
                 ClientDoc = Source.GetValue<string>(7),
+                State = Source.GetValue<string>(8)
             };
     }
 }

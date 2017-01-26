@@ -316,6 +316,60 @@ namespace Angkor.O7Web.Data.Finantial
 
         }
 
+        public virtual int UpdateInvoiceHead(string companyId, string branchId,
+                                        string documentType, string documentId,
+                                       string currency, string documentDate,
+                                       string documentExpiration, string clienteCode
+                                       , string codTax, string porTax,string clientName
+                                       , string invoiceAddress, string clientId, string glosa,
+                                       string sellType, string language,
+                                       string condSell, string payment,
+                                       string bussinessline, string finantialcod,
+                                       string telephone, string seller,
+                                       string employeeId, string perception,
+                                       string donate, string documentTypeRef,
+                                       string documentIdRef, string documentOC,
+                                       string guiRem, string addressId,
+                                       string serieExtRef, string nroExtRef)
+        {
+            var parameters = O7DbParameterCollection.Make;
+            parameters.Add(O7Parameter.Make("p_cia", companyId));
+            parameters.Add(O7Parameter.Make("p_suc", branchId));
+            parameters.Add(O7Parameter.Make("p_tipo_doc", documentType));
+            parameters.Add(O7Parameter.Make("p_nro_doc", documentId));
+            parameters.Add(O7Parameter.Make("p_moneda", currency));
+            parameters.Add(O7Parameter.Make("p_fecha_doc", documentDate));
+            parameters.Add(O7Parameter.Make("p_fecha_vto", documentExpiration));
+            parameters.Add(O7Parameter.Make("p_codcli", clienteCode));
+            parameters.Add(O7Parameter.Make("p_cod_imp_afec", codTax));
+            parameters.Add(O7Parameter.Make("p_por_imp_afec", porTax));
+            parameters.Add(O7Parameter.Make("p_razon_social", clientName));
+            parameters.Add(O7Parameter.Make("p_dir_fact", invoiceAddress));
+            parameters.Add(O7Parameter.Make("p_nro_ruc", clientId));
+            parameters.Add(O7Parameter.Make("p_glosa", glosa));
+            parameters.Add(O7Parameter.Make("p_tipo_venta", sellType));
+            parameters.Add(O7Parameter.Make("p_cod_idioma", language));
+            parameters.Add(O7Parameter.Make("p_cond_venta", condSell));
+            parameters.Add(O7Parameter.Make("p_forma_pago", payment));
+            parameters.Add(O7Parameter.Make("p_linea_negocio", bussinessline));
+            parameters.Add(O7Parameter.Make("p_cod_financiero", finantialcod));
+            parameters.Add(O7Parameter.Make("p_nro_telefono", telephone));
+            parameters.Add(O7Parameter.Make("p_cod_vendedor", seller));
+            parameters.Add(O7Parameter.Make("p_cod_trabajador", employeeId));
+            parameters.Add(O7Parameter.Make("p_porc_perc", perception));
+            parameters.Add(O7Parameter.Make("p_donacion", donate));
+            parameters.Add(O7Parameter.Make("p_doc_ref_1", documentTypeRef));
+            parameters.Add(O7Parameter.Make("p_doc_ref_2", documentIdRef));
+            parameters.Add(O7Parameter.Make("p_nro_oc", documentOC));
+            parameters.Add(O7Parameter.Make("p_nro_gui_rem", guiRem));
+            parameters.Add(O7Parameter.Make("p_coddir", addressId));
+            parameters.Add(O7Parameter.Make("p_serdoceref", serieExtRef));
+            parameters.Add(O7Parameter.Make("p_nrodoceref", nroExtRef));
+            return DataAccess.ExecuteFunction<int>("finantial_invoice.update_invoice", parameters);
+
+        }
+
+
 
 
 
