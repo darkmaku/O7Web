@@ -26,7 +26,8 @@ namespace Angkor.O7Web.Data.Finantial.DataMapper
                 price = Source.GetValue<string>(8),
 
                 commentary = Source.GetValue<string>(9),
-                conceptContent= Source.GetValue<string>(10)
+                conceptContent= Source.GetValue<string>(10),
+                ccoContent= Source.GetValue<string>(11)
             };
     }
 }
