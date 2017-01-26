@@ -45,6 +45,7 @@ namespace Angkor.O7Web.Domain.Finantial.Base
             string guiRem, string addressId, string serieExtRef, string nroDoceExt);
 
         public abstract O7Response getExpirationDate(string companyId, string branchId, string payment, string documentDate);
+        public abstract O7Response GetInvoice(string companyId, string branchId, string documentType, string documentId);
 
         public abstract O7Response documentInformation(string companyId, string branchId, string documentType);
         public abstract O7Response ClientDefaultValues(string companyId, string branchId, string clientCode);

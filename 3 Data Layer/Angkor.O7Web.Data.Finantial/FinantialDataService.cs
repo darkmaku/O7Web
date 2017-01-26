@@ -35,6 +35,8 @@ namespace Angkor.O7Web.Data.Finantial
             return DataAccess.ExecuteFunction<int>("O7EXPRESS_PACKAGE_SERIESF.get_seriesF", parameters) == 1;
         }
 
+        public virtu
+
         public virtual int AddInvoice(string companyId, string branchId, 
                                        string documentType, string serie, 
                                        string currency,string documentDate, 
@@ -117,6 +119,16 @@ namespace Angkor.O7Web.Data.Finantial
             parameters.Add(O7Parameter.Make("p_company", companyId));
             parameters.Add(O7Parameter.Make("p_branch", branchId));            
             return DataAccess.ExecuteFunction<InvoiceDocumentCount>("O7EXPRESS_PACKAGE_SERIESF.get_seriesF", parameters, InvoiceDocumentCountMapper.Class);
+        }
+
+        public virtual List<InvoiceEdit> GetInvoice(string companyId, string branchId,string documentType,string documentId)
+        {
+            var parameters = O7DbParameterCollection.Make;
+            parameters.Add(O7Parameter.Make("p_cia", companyId));
+            parameters.Add(O7Parameter.Make("p_suc", branchId));
+            parameters.Add(O7Parameter.Make("p_tipo_doc", documentType));
+            parameters.Add(O7Parameter.Make("p_nro_doc", documentId));
+            return DataAccess.ExecuteFunction<InvoiceEdit>("finantial_invoice.search_fact", parameters, InvoiceMapper.Class);
         }
 
 
