@@ -34,7 +34,12 @@ namespace Angkor.O7Web.Data.Finantial.DataMapper
                 perception = Source.GetValue<string>(14),
                 total = Source.GetValue<string>(15),
                 totalDescription= Source.GetValue<string>(16),
-                Observacion = Source.GetValue<string>(17)
+                Observacion = Source.GetValue<string>(17),
+                headerLeftLine1 = Source.GetValue<string>(18),
+                headerLeftLine2 = Source.GetValue<string>(19),
+                headerLeftLine3 = Source.GetValue<string>(20),
+                headerLeftLine4 = Source.GetValue<string>(21),
+                headerLeftLine5 = Source.GetValue<string>(22),
             };
     }
 }

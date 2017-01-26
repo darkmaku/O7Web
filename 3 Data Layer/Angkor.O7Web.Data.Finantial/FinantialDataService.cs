@@ -187,7 +187,7 @@ namespace Angkor.O7Web.Data.Finantial
             return DataAccess.ExecuteFunction<InvoiceClient>("finantial_invoice.search_client", parameters, InvoiceClientMapper.Class);
         }
 
-        public virtual bool GeneratePDF(string companyId, string branchId, string documentType, string documentId)
+        public virtual string GeneratePDF(string companyId, string branchId, string documentType, string documentId)
         {
             var parameters = O7DbParameterCollection.Make;
             parameters.Add(O7Parameter.Make("p_cia", companyId));
@@ -202,6 +202,25 @@ namespace Angkor.O7Web.Data.Finantial
             List<DetailInvoicePDF> details = DataAccess.ExecuteFunction<DetailInvoicePDF>("finantial_invoice.detail_pdf", parameters, DetailInvoicePDFMapper.Class);
 
             return PdfGenerator.generar(head, details,"./Factura.pdf");
+
+        }
+        public virtual string GenerateReporte(string companyId, string branchId, string documentType, string documentId)
+        {
+            var parameters = O7DbParameterCollection.Make;
+            parameters.Add(O7Parameter.Make("p_cia", companyId));
+            parameters.Add(O7Parameter.Make("p_suc", branchId));
+            parameters.Add(O7Parameter.Make("p_tipdoc", documentType));
+            parameters.Add(O7Parameter.Make("p_nrodoc", documentId));
+
+            HeadInvoicePDF head =
+                DataAccess.ExecuteFunction<HeadInvoicePDF>("finantial_invoice.head_pdf", parameters,
+                    HeadInvoicePDFMapper.Class)[0];
+
+            List<DetailInvoicePDF> details = DataAccess.ExecuteFunction<DetailInvoicePDF>("finantial_invoice.detail_pdf", parameters, DetailInvoicePDFMapper.Class);
+
+            int result = DataAccess.ExecuteFunction<int>("finantial_invoice.facturar_electronica", parameters);
+
+            return PdfGenerator.generar(head, details, "./Factura.pdf");
 
         }
 
@@ -315,7 +334,16 @@ namespace Angkor.O7Web.Data.Finantial
             return DataAccess.ExecuteFunction<InvoiceTypeAhead>("finantial_invoice.search_cen_cos", parameters,TypeAheadMapper.Class);
 
         }
+        public virtual int DeleteDetailInvoice(string companyId, string branchId,string documentType,string documentId)
+        {
+            var parameters = O7DbParameterCollection.Make;
+            parameters.Add(O7Parameter.Make("p_cia", companyId));
+            parameters.Add(O7Parameter.Make("p_suc", branchId));
+            parameters.Add(O7Parameter.Make("p_tipo_doc", documentType));
+            parameters.Add(O7Parameter.Make("p_nro_doc", documentId));
+            return DataAccess.ExecuteFunction<int>("finantial_invoice.delete_details", parameters);
 
+        }
         public virtual int UpdateInvoiceHead(string companyId, string branchId,
                                         string documentType, string documentId,
                                        string currency, string documentDate,

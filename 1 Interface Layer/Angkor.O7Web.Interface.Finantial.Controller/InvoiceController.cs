@@ -122,6 +122,13 @@ namespace Angkor.O7Web.Interface.Finantial.Controller
             return new O7JsonResult(response);
         }
 
+        public JsonResult GenerateReporte(string documentType, string documentId)
+        {
+            var domain = ProxyDomain.Instance.FinantialDomain(User.Identity.Name, User.Password);
+            var response = domain.GenerateReporte(User.Company, User.Branch, documentType, documentId);
+            return new O7JsonResult(response);
+        }
+
 
 
         public JsonResult GetConcepts(string ratePerception)
@@ -140,6 +147,13 @@ namespace Angkor.O7Web.Interface.Finantial.Controller
         {
             var domain = ProxyDomain.Instance.FinantialDomain(User.Identity.Name, User.Password);
             var response = domain.AllClients(User.Company, User.Branch, filter);
+            return new O7JsonResult(response);
+        }
+
+        public JsonResult DeleteDetailsInvoice(string documentType,string documentId)
+        {
+            var domain = ProxyDomain.Instance.FinantialDomain(User.Identity.Name, User.Password);
+            var response = domain.DeleteDetailInvoice(User.Company, User.Branch, documentType,documentId);
             return new O7JsonResult(response);
         }
 
@@ -234,7 +248,41 @@ namespace Angkor.O7Web.Interface.Finantial.Controller
             var response = domain.Perceptions();
             return new O7JsonResult(response);
         }
-       
+
+        public JsonResult UpdateInvoiceHead(string documentType, string documentId,
+            string currency, string documentDate,
+            string documentExpiration, string clienteCode
+            , string codTax, string porTax, string clientName
+            , string invoiceAddress, string clientId, string glosa,
+            string sellType, string language,
+            string condSell, string payment,
+            string bussinessline, string finantialcod,
+            string telephone, string seller,
+            string employeeId, string perception,
+            string donate, string documentTypeRef,
+            string documentIdRef, string documentOC,
+            string guiRem, string addressId,
+            string serieExtRef, string nroExtRef)
+        {
+            var domain = ProxyDomain.Instance.FinantialDomain(User.Identity.Name, User.Password);
+            var response = domain.UpdateInvoice(User.Company, User.Branch,
+                                         documentType, documentId,
+                                        currency, documentDate,
+                                        documentExpiration, clienteCode
+                                       , codTax, porTax, clientName
+                                       , invoiceAddress, clientId, glosa,
+                                        sellType, language,
+                                        condSell, payment,
+                                        bussinessline, finantialcod,
+                                        telephone, seller,
+                                        employeeId, perception,
+                                        donate, documentTypeRef,
+                                        documentIdRef, documentOC,
+                                        guiRem, addressId,
+                                        serieExtRef, nroExtRef);
+            return new O7JsonResult(response);
+        }
+
 
 
 

@@ -31,5 +31,12 @@ namespace Angkor.O7Web.Common.Finantial.Entity
         public string totalDescription { get; set; }
 
         public string Observacion { get; set; }
+
+        public string headerLeftLine1 { get; set; }
+        public string headerLeftLine2 { get; set; }
+        public string headerLeftLine3 { get; set; }
+        public string headerLeftLine4 { get; set; }
+        public string headerLeftLine5 { get; set; }
+       
     }
 }

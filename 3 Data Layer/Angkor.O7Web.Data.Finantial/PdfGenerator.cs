@@ -2,6 +2,7 @@
 using iTextSharp.text.pdf;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -104,7 +105,7 @@ namespace Angkor.O7Web.Data.Finantial
             };
         }
 
-        public static bool generar(HeadInvoicePDF head,List<DetailInvoicePDF> details,string pathFile)
+        public static string generar(HeadInvoicePDF head,List<DetailInvoicePDF> details,string pathFile)
         {
                 String PDFTitle = head.company;
                 String PDFClientName = head.clientName;
@@ -131,24 +132,20 @@ namespace Angkor.O7Web.Data.Finantial
                 string perc = head.perception;
                 string dateDoc =head.documentDate;
                 string url = head.url;
-
+                string path = "E:/ResumenFactura.pdf";
                 /////////////////////////////////////////////////////////////////////////////////////////////////////////
-                FileStream fs = new FileStream("C:/Users/Mauricio/Desktop/ResumenFactura.pdf", FileMode.Create, FileAccess.Write, FileShare.None);
+                FileStream fs = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.None);
                 Rectangle rec2 = new Rectangle(PageSize.A4);
                 Document doc = new Document(rec2);
                 PdfWriter writer = PdfWriter.GetInstance(doc, fs);
                 iTextSharp.text.Image myImage = iTextSharp.text.Image.GetInstance(url);
-                /*
-                byte[] imageData = ReadFully(DownloadData(url)); //DownloadData function from here
-                MemoryStream stream = new MemoryStream(imageData);
-                Image img = Image.
-                stream.Close(); */
                 doc.Open();
                 var titleFont = FontFactory.GetFont("Arial", 18, Font.BOLD);
                 var subTitleFont = FontFactory.GetFont("Arial", 14, Font.BOLD);
                 var boldTableFont = FontFactory.GetFont("Arial", 8, Font.BOLD);
                 var endingMessageFont = FontFactory.GetFont("Arial", 10, Font.ITALIC);
                 var bodyFont = FontFactory.GetFont("Arial", 8, Font.NORMAL);
+                var bodyHeaderFont = FontFactory.GetFont("Arial", 6, Font.NORMAL);
 
                 //doc.Add(new Paragraph(PDFTitle, titleFont));
                 PdfPTable headerTable = new PdfPTable(2);
@@ -161,14 +158,25 @@ namespace Angkor.O7Web.Data.Finantial
                 PdfPTable nestedHeaderLeftTable = new PdfPTable(2);
                 nestedHeaderLeftTable.DefaultCell.Border = PdfPCell.NO_BORDER;
                 nestedHeaderLeftTable.SetWidths(new float[] { 1f, 3f });
+                nestedHeaderLeftTable.AddCell(myImage);
+                PdfPTable headerSubTitle = new PdfPTable(1);
+                headerSubTitle.DefaultCell.Border = PdfPCell.NO_BORDER;
                 PdfPCell headerTitle = new PdfPCell()
                 {
                     Border = PdfPCell.NO_BORDER,
-                    Padding = 4,
+                    PaddingBottom = 4,
                     Phrase = new Phrase(PDFTitle, titleFont)
                 };
-                nestedHeaderLeftTable.AddCell(myImage);
-                nestedHeaderLeftTable.AddCell(headerTitle);
+                headerSubTitle.AddCell(headerTitle);
+                headerSubTitle.AddCell(new Phrase(head.headerLeftLine1, bodyHeaderFont));
+                headerSubTitle.AddCell(new Phrase(head.headerLeftLine2, bodyHeaderFont));
+                headerSubTitle.AddCell(new Phrase(head.headerLeftLine3, bodyHeaderFont));
+                headerSubTitle.AddCell(new Phrase(head.headerLeftLine4, bodyHeaderFont));
+                headerSubTitle.AddCell(new Phrase(head.headerLeftLine5, bodyHeaderFont));
+                PdfPCell nestedCell = new PdfPCell(headerSubTitle);
+                nestedCell.Padding = 0f;
+                nestedCell.Border = PdfPCell.NO_BORDER;
+                nestedHeaderLeftTable.AddCell(nestedCell);
                 PdfPCell nesthou = new PdfPCell(nestedHeaderLeftTable);
                 nesthou.Border = PdfPCell.NO_BORDER;
                 nesthou.HorizontalAlignment = 1;
@@ -183,16 +191,17 @@ namespace Angkor.O7Web.Data.Finantial
                     PaddingLeft = 20f,
                     Phrase = new Phrase("R.U.C. " + companyDoc, subTitleFont)
                 };
+                float scaleFontSize = 9.7f;
                 PdfPCell headerDocType = new PdfPCell()
                 {
                     Border = PdfPCell.NO_BORDER,
-                    PaddingLeft = 53f,
+                    PaddingLeft = (Math.Abs(170 - documentType.Length * scaleFontSize)) / 2,
                     Phrase = new Phrase(documentType, subTitleFont)
                 };
                 PdfPCell headerSerie = new PdfPCell()
                 {
                     Border = PdfPCell.NO_BORDER,
-                    PaddingLeft = 35f,
+                    PaddingLeft = 25f,
                     Phrase = new Phrase(serieNumber + " - N° " + docNumber, subTitleFont)
                 };
                 nestedHeaderTable.AddCell(headerRUC);
@@ -209,7 +218,6 @@ namespace Angkor.O7Web.Data.Finantial
                 var orderInfoTable = new PdfPTable(4);
                 orderInfoTable.HorizontalAlignment = 0;
                 orderInfoTable.SpacingBefore = 10;
-                orderInfoTable.SpacingAfter = 10;
                 orderInfoTable.DefaultCell.Border = 0;
                 orderInfoTable.SetWidths(new int[] { 2, 5, 2, 7 });
                 orderInfoTable.SpacingBefore = 20;
@@ -223,10 +231,10 @@ namespace Angkor.O7Web.Data.Finantial
                 orderInfoTable.AddCell(new Phrase(PDFClientDocument, bodyFont));
                 orderInfoTable.AddCell(new Phrase("TELÉFONO:", boldTableFont));
                 orderInfoTable.AddCell(new Phrase(PDFClientPhone, bodyFont));
-                orderInfoTable.AddCell(new Phrase("E-MAIL:", boldTableFont));
-                orderInfoTable.AddCell(new Phrase(PDFClientEmail, bodyFont));
                 orderInfoTable.AddCell(new Phrase("FECHA:", boldTableFont));
                 orderInfoTable.AddCell(new Phrase(dateDoc, bodyFont));
+                orderInfoTable.AddCell(" ");
+                orderInfoTable.AddCell(" ");
 
                 doc.Add(orderInfoTable);
                 //Preparing the table header
@@ -238,7 +246,6 @@ namespace Angkor.O7Web.Data.Finantial
                 //fix the absolute width of the table
                 table.LockedWidth = true;
                 table.HorizontalAlignment = 0;
-                table.SpacingBefore = 20f;
                 table.SpacingAfter = 15f;
                 PdfPTable nestedTable = new PdfPTable(5);
                 nestedTable.DefaultCell.Border = PdfPCell.NO_BORDER;
@@ -429,7 +436,7 @@ namespace Angkor.O7Web.Data.Finantial
                     Border = PdfPCell.NO_BORDER,
                     CellEvent = new RoundRectangleForm(),
                     Padding = 4,
-                    Phrase = new Phrase("SON:", boldTableFont)
+                    Phrase = new Phrase("SON: "+head.totalDescription, boldTableFont)
                 };
                 PdfPCell totalCell = new PdfPCell()
                 {
@@ -450,9 +457,9 @@ namespace Angkor.O7Web.Data.Finantial
                 nestedTotalTable.AddCell(totalAmountCell);
                 totalTable.AddCell(nestedTotalTable);
                 doc.Add(totalTable);
-
+                doc.Add(new Paragraph(head.Observacion,bodyFont));
                 doc.Close();
-            return true;
+            return path;
 
             //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
