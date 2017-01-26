@@ -126,7 +126,7 @@ namespace Angkor.O7Web.Data.Finantial
             var parameters = O7DbParameterCollection.Make;
             parameters.Add(O7Parameter.Make("p_cia", companyId));
             parameters.Add(O7Parameter.Make("p_suc", branchId));
-            parameters.Add(O7Parameter.Make("p_codcli", branchId));
+            parameters.Add(O7Parameter.Make("p_codcli", clientCode));
             return DataAccess.ExecuteFunction<ClientDefaultValues>("finantial_invoice.confirm_client", parameters, ClientDefaultValueMapper.Class);
         }
 
